@@ -1,0 +1,5 @@
+= render layout: 'shared/simple_html_email_layout' do
+  .opening= t('user_mailer.welcome_email.opening', email: @user.email)
+  p= t('user_mailer.welcome_email.body_html', subscription_amount: localized_subscription_amount, trial_duration_in_days: @trial_duration_in_days, trial_period_up_to_and_including: @user.localized_trail_period_expired_from)
+            
+

@@ -1,0 +1,287 @@
+en:
+  account: account
+  already_have_an_account: already have an account?
+  back_to: back to
+  back_to_library: back to library
+  cancel: cancel
+  contact: contact
+  dont_have_an_account: don't have an account?
+  edit_settings: edit settings
+  for_questions_please_email_to_html: Questions? Please send an email to %{email}
+  show_books_in_language: show books in languages
+  language: language
+  library: library
+  library_settings: library settings
+  books: books
+  my_account: my account
+  my_stories: my stories
+  no_books_found: no books found
+  new_password_instructions: >
+    We will send you instructions to reset your password. Please type in your email address.
+  save: save
+  search: search
+  search_results: search_results
+  settings: settings
+  show_only_books_from_ages: show only books from ages
+  sign_in: sign in
+  sign_in_here: sign in here
+  sign_out: sign out
+  sign_up: sign up
+  sign_in_with_provider: Sign in with %{provider}
+  sign_up_with_provider: Sign up with %{provider}
+  sign_up_disclaimer_html: >
+    By clicking the <b>%{sign_up}</b> button, you agree to our %{terms_of_service_link} and %{privacy_policy_link}.
+  sign_up_for_wingzzz: sign up for Wingzzz
+  sign_up_for_wingzzz_as_a_teacher: Enjoy the story!
+  sign_up_description_for_teaceher: >
+    Nice that you want to read with your students on Wingzzz!
+    Please fill in your details below and start right away with your 14-day trial. 
+    No payment required. Trial will end automatically unless you decide to continue.
+  statistics: statistics
+  sign_up_success_title: thank you for signing up with us
+  sign_up_success_text: >
+    An email with a confirmation link has been sent to your email address.
+    Please follow the link to activate your account.
+  reset_all_preferences: reset all preferences
+  results_in_other_languages: results in other languages
+  required: required
+  you_can_cancel_anytime: You can cancel at any time.
+  you_can_cancel_anually: (first year pro rata) Can be canceled annually
+  home: home
+  forgot_your_password: forgot your password?
+  reset_password: reset password
+  change_your_password: "Change your password"
+  change_password: change password
+  confirm_your_password: "Confirm your password"
+  activate_subscription:
+    title: "Activate your subscription and get"
+    subscription_perks:
+      - Unlimited amount of children's books
+      - Read anywhere from your browser
+      - Read in any language you want
+    intro_html: >
+      <p><b>GREAT</b> that you are enjoying Wingzzz!<br/>
+      If you want to activate your paid subscription now,
+      you will still receive the remaining days of your free trial.</p>
+    cta_activate: "Activate my subscription"
+    cta_specific_activate: "Activate my <span class='cta-highlight'>%{subscriptionType}</span> subscription"
+    cta_specific_activate_text_only: "Activate my %{subscriptionType} subscription"
+    pricing: "Only %{amount} per month"
+    anual_pricing: "Only %{amount} per year"
+    payment_starts_after_trial_ends: "Payments start after your trial ends"
+    back_to_my_free_trial: "Back to my free trial"
+    student_amount_limit: "Up to %{studentLimit} students"
+    school_subscription_agreement: "I agree to purchase a Wingzzz yearly subscription for my school."
+    school_subscription_invoicing: "A prorated invoice will be generated for the remaining months of this current year and sent to the budget responsible person at your school."
+    invoicing_details: "Invoicing details:"
+    successful_school_subscription_sign_up: "You have successfully signed up for school subscription."
+    school_subscription_description: >
+      Hopelijk zijn jullie aan het genieten van Wingzzz!
+      Tijdens de gratis proefperiode kun je een abonnement afnemen. Natuurlijk maak je eerst je de proefperiode af voordat het abonnement start.
+    school_subscription_cta: Activate your subscription and get
+    school_subscription_perks:
+      - Onbeperkt toegang tot alle kinderboeken  voor je klas of school
+      - Lees samen op het digibord, in kleine groepjes of alleen
+      - Geschikt voor elk apparaat verbonden met internet
+      - Wingzzz is meertalig
+    subscribe_before_trial:
+      "<p>Je betaling begint na je proefperiode: %{endDate}.</p>
+      <p>Welk abonnement past bij jou?</p>"
+  login_as_a_different_user: "Login as a different user"
+  verifying_your_payment: "your payment is being verified"
+  subscription_not_yet_activated: Subscription has not been completed
+  try_again: "try again"
+  privacy_policy: privacy policy
+  terms_of_use: terms and conditions
+  all_rights_reserved: "All rights reserved"
+  trial_days_left:
+    one: "%{count} day left in trial"
+    other: "%{count} days left in trial"
+  age_range:
+    to: to
+    month:
+      one: 1 month
+      other: "%{count} months"
+    year:
+      one: 1 year
+      other: "%{count} years"
+    years_and_over: "%{count}+ years"
+    all_ages: "All ages"
+
+  languages:
+    nl: "Dutch"
+    en: "English"
+    hu: "Hungarian"
+
+  time_ago: "%{time} ago"
+  subscription_and_billing: "subscription & billing"
+  subscription_and_billing_not_found: "no subscription and billing info found"
+  payment_method: "payment method"
+  consumer_name: "consumer name"
+  consumer_account: "card number"
+  card_number: "card number"
+  card_holder: "card holder"
+  card_expiry_date: "expiry date"
+  next_payment_date: "your next billing date is"
+  creditcard: "Credit or debit card"
+  directdebit: "iDeal"
+  paypal: "PayPal"
+  cancel_subscription: "cancel subscription"
+  confirm_canceling_subscription: "Are you sure you want to cancel your subscription?\n\nThis action cannot be undone!"
+  mailer:
+    opening: "Hi %{email},"
+    closing_html: Thanks,<br />The Wingzzz team
+    confirmation_instructions:
+      subject: "Confirmation instructions"
+    reset_password_instructions:
+      subject: "Reset password instructions"
+    unlock_instructions:
+      subject: "Unlock instructions"
+    email_changed:
+      subject: "Email Changed"
+    password_change:
+      subject: "Password Changed"
+  devise_mailer:
+    confirmation_instructions:
+      opening: "Welcome %{email},"
+      body_html: >
+        <p><b>GREAT</b> to have you join us!<br/>
+        Just click on the button below to confirm your account.</p>
+      confirm_my_account: confirm my account
+    reset_password_instructions:
+      body_html: >
+        <p>We received your request to reset your Wingzzz password.</p>
+        <p>Please click on the link below to proceed with the change.</p>
+      body_2_html: >
+        <p>If you didn't make this request, simply ignore this email.</p>
+      change_password: "change password"
+  user_mailer:
+    unsubscribe_email:
+      subject: "Your Wingzzz subscription has been canceled successfully"
+      body_html: >
+        <p>We received your request to cancel your Wingzzz subscription.<br/>
+        Your subscription has now been canceled. You will still have access till the end of your last payed or trial period.</p>
+        <p>We very much regret to see you go.<br/>
+        Please let us know why... Your comments will help us improve our services.</p>
+      go_to_wingzzz: "Get in touch with us"
+    welcome_email:
+      subject: "Welcome to Wingzzz"
+      opening: "Welcome to Wingzzz!"
+      body_html: >
+        <p>Thanks for signing up for the Wingzzz community. We’re so happy you’re here.</p>
+        <p>At Wingzzz we believe that reading stories is the simplest and most powerful way to establish emotional, social and cognitive well being in childhood.
+        Now you can access a wealth of our carefully selected stories and let us support you to raise confident, happy and capable butterflies!</p>
+        <p>Your free trial period will end <span style='text-decoration: underline;'>automatically</span> on: %{trial_period_up_to_and_including}.</p>
+        <p>You can easily switch anytime to a paid subscription (under ‘My account’) now for only %{subscription_amount}/month. You are always free to cancel at any time.</p>
+        <p>Enjoy the story!<br/>
+        The Wingzzz Team</p>
+    welcome_email_for_teachers:
+      subject: "Welcome to Wingzzz. Your reading adventure begins now!"
+      opening: "Welcome to Wingzzz!"
+      body_html: >
+        <p>Thanks for signing up for the Wingzzz community. We’re so happy you’re here.</p>
+        <p>At Wingzzz we believe that reading stories is the simplest and most powerful way to establish emotional, social and cognitive well being in childhood.
+        Now you can access a wealth of our carefully selected stories and let us support you to raise confident, happy and capable butterflies!</p>
+        <p>Your free trial period will end <span style='text-decoration: underline;'>automatically</span> on: %{trial_period_up_to_and_including}.</p>
+        <p>You can easily switch anytime to a paid subscription (under ‘My account’). You can pick a Class subscription (%{subscription_class_amount}/m) or a school
+        subscription (%{subscription_school_amount} p/y).</p>
+        <p>Enjoy the story!<br/>
+        The Wingzzz Team</p>
+    activation_email:
+      subject: "Thank you for subscribing to Wingzzz"
+      opening: "Thank you for subscribing to Wingzzz!"
+      body_html: >
+        <p>You and your child can continue to enjoy instant access to our rapidly growing, multilanguage digital library and read anywhere, anytime on connected devices.</p>
+        <p><b>More books will be available soon!</b></p>
+        <p>Your next payment will be billed on %{next_payment_on}.</p>
+        <p>You can easily cancel at any time (in the app) under <b>My Account.</b></p>
+        <p><b>Enjoy the story!</b></p>
+    activation_email_for_class_subscription:
+      subject: "Thank you for subscribing to Wingzzz"
+      opening: "Thank you for subscribing to Wingzzz!"
+      body_html: >
+        <p>You and your child can continue to enjoy instant access to our rapidly growing, multilanguage digital library and read anywhere, anytime on connected devices.</p>
+        <p><b>More books will be available soon!</b></p>
+        <p>Your next payment will be billed on %{next_payment_on}.</p>
+        <p>You can easily cancel at any time (in the app) under <b>My Account.</b></p>
+        <p><b>Enjoy the story!</b></p>
+    activation_email_for_school_subscription:
+      subject: "Welcome to Wingzzz. Your reading adventure begins now!"
+      opening: "Hi"
+      body_html: >
+        <p>Now, you, your colleagues and your students can all enjoy unlimited access 
+        to our ever growing, multi-language library of popular children’s books.</p>
+        <p>Invitation emails have also been sent to the colleagues you indicated so they can also join your school’s account.</p>
+        <p>Wingzzz will send an invoice to your indicated budget responsible person for the 
+        remaining months of this year. An annual invoice will then be sent automatically next January (renewal is not mandatory). - I would not mention this</p>
+        <p>Just click the button below to access your account.</p>
+        <p><b>Enjoy the story!</b></p>
+    notification_email_about_school_subscription:
+      subject: "Someone has purchased a School Subscription"
+      body_html: >
+        <p>%{user} has purchased a School Subscription, you can find the details below.</p>
+  reminder_mailer:
+    last_day_of_trial_for_teachers:
+      subject: "Your %{trial_duration_in_days}-day free trial will end tomorrow"
+      opening: "Hello from everyone at Wingzzz!"
+      body_html: >
+        <p>We hope that you have been reading plenty of stories and enjoying the Wingzzz experience.</p>
+        <p><b>Your %{trial_duration_in_days}-day free trial will end tomorrow and we hope that you will continue your subscription.</b><br/>
+        Just click the button below to continue.</p>
+        <p><b>Enjoy the story!</b></p>
+      ps_html: >
+        <p>P.S. In the coming weeks we will be adding a variety of great new stories to our ever-expanding library.<br/>
+        Don’t miss out on the fun!</p>
+    last_day_of_trial:
+      subject: "Your %{trial_duration_in_days}-day free trial will end tomorrow"
+      opening: "Hello from everyone at Wingzzz!"
+      body_html: >
+        <p>We hope that you have been reading plenty of stories and enjoying the Wingzzz experience.</p>
+        <p><b>Your %{trial_duration_in_days}-day free trial will end tomorrow and we hope that you will continue your subscription.</b><br/>
+        Just click the button below to continue.</p>
+        <p><b>Enjoy the story!</b></p>
+      ps_html: >
+        <p>P.S. In the coming weeks we will be adding a variety of great new stories to our ever-expanding library.<br/>
+        Don’t miss out on the fun!</p>
+    trial_ended:
+      subject: "Your %{trial_duration_in_days}-day free trial has ended"
+      opening: "Hello from everyone at Wingzzz!"
+      body_html: >
+        <p>We hope that you have been reading plenty of stories and enjoying the Wingzzz experience.</p>
+        <p><b>We noticed your %{trial_duration_in_days}-day free trial has come to an end and hope that you will continue your subscription.</b><br/>
+        Just click the button below to continue.</p>
+        <p><b>Enjoy the story!</b></p>
+      ps_html: >
+        <p>P.S.  you do not wish to continue, we would like to know why. Your comments will help us improve our platform and reading experience. Click the link below to respond.</p>
+    trial_ended_for_teachers:
+      body_html: >
+        <p>We hope that you have been reading plenty of great stories and are enjoying the Wingzzz Experience.</p>
+        <p>We noticed that your 14-day trial has come to an end,
+        but we hope you will continue your subscription with us.
+        Just click on one of the buttons below to continue.</p>
+        <p><b>Enjoy the story!</b></p>
+        <p>Thanks,<br/>
+        The Wingzzz team</p>
+      opening: "Hello from Wingzzz!"
+      ps_html: >
+        <p>P.S. In the coming weeks we will be adding a variety of great new stories to our ever-expanding library.<br/>
+        Don’t miss out on the fun!</p>
+      subject: "Your %{trial_duration_in_days}-day free trial has ended"
+  pdf_to_epub_converter: "Convert PDF to EPUB"
+  published_by: "Published by %{publisher}"
+  written_by: "Written by %{author}"
+  age: "Age"
+  read_book: "Read book"
+  read_to_me: "Read to me"
+  listen_now: "Listen now"
+  recently_added: "Recently added"
+  currently_reading: "My stories"
+  trending_now: "Trending now"
+  invitation_instructions: "Here you can invite new teachers up until a limit."
+  valid_school_subscription: >-
+    Your yearly school subscription is active until: %{school_subscription} <br><br>
+    You can cancel your subscription by sending an e-mail to support@mywingzzz.com.
+  start_to_read: "Start to read!"
+  website_address: "https://mywingzzz.com/home"
+  school_name: "School name"
+  class: "class"

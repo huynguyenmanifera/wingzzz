@@ -1,0 +1,4 @@
+ul.inline-flex.text-xs
+  - I18n.available_locales.each do |locale|
+      li.inline-block.mr-10 class="last:mr-0"
+        = link_to_locale(locale)

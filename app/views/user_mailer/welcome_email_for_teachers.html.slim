@@ -1,0 +1,3 @@
+= render layout: 'shared/simple_html_teacher_email_layout' do
+  .opening= t('user_mailer.welcome_email_for_teachers.opening', email: @user.email)
+  p= t('user_mailer.welcome_email_for_teachers.body_html', subscription_class_amount: localized_class_subscription_amount, subscription_school_amount: localized_school_subscription_amount,  trial_duration_in_days: @trial_duration_in_days, trial_period_up_to_and_including: @user.localized_trail_period_expired_from)

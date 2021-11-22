@@ -1,0 +1,53 @@
+// Exceptional case: use BEM instead of template system because of complex CSS selectors
+.radio-button {
+  @apply inline-flex select-none relative py-2 text-wz-gray-700;
+
+  &__input {
+    @apply opacity-0 cursor-pointer h-0 w-0;
+
+    &:checked ~ .radio-button__box {
+      @apply border-wz-blue-400;
+
+      &:after {
+        @apply bg-wz-blue-400;
+      }
+    }
+
+    &:disabled ~ .radio-button__box,
+    &:disabled ~ .radio-button__label {
+      @apply opacity-50 cursor-not-allowed;
+    }
+  }
+
+  &__box {
+    @apply rounded-full w-6 h-6 relative cursor-pointer border border-wz-gray-600;
+
+    min-width: theme("spacing.6");
+    max-width: theme("spacing.6");
+    min-height: theme("spacing.6");
+    max-height: theme("spacing.6");
+
+    $size: calc(theme("spacing.6") - theme("spacing.2"));
+
+    &:after {
+      @apply bg-wz-light-gray rounded-full absolute top-0 left-0 bottom-0 right-0 m-auto;
+      width: $size;
+      height: $size;
+      content: "";
+    }
+  }
+
+  &:hover
+    .radio-button__input:not(:checked):not(:disabled)
+    ~ .radio-button__box:after {
+    @apply bg-wz-dm-blue-400;
+  }
+
+  &__label {
+    @apply px-2 cursor-pointer;
+
+    &::first-letter {
+      @apply capitalize;
+    }
+  }
+}

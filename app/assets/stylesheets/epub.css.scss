@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+  overflow: hidden;
+
+  &::before {
+    // Give page a default white background
+    background: white;
+    content: " ";
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+}

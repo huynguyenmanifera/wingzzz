@@ -1,0 +1,9 @@
+div.min-h-screen.relative
+  .absolute.w-screen.h-full style=("z-index: -1; overflow: hidden;")
+    .bg-no-repeat.h-full style=(background_style)
+  div.top-0 style=("z-index: 100;")
+    = render(Page::HeaderComponent.new) { header }
+  div.px-16.pt-4.pb-24
+    = content
+
+  div= render(Page::FooterComponent.new(dark_mode: true))

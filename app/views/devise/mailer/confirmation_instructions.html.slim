@@ -1,0 +1,9 @@
+= render layout: 'shared/system_html_email_layout' do
+
+  .opening= t('devise_mailer.confirmation_instructions.opening', email: @email)
+
+  p= t('devise_mailer.confirmation_instructions.body_html')
+  = render('shared/button', label: t('devise_mailer.confirmation_instructions.confirm_my_account').upcase_first, url: confirmation_url(@resource, confirmation_token: @token))
+
+  .closing= t('mailer.closing_html')
+

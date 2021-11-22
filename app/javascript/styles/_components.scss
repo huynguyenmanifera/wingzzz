@@ -1,0 +1,22 @@
+@import "tailwindcss/components";
+
+// Define imports to component related CSS that should be placed
+// in the components folder.
+@import "utilities";
+
+@import "components/link";
+@import "components/btn";
+@import "components/input_wrapper";
+@import "components/input_label";
+@import "components/input_hint";
+@import "components/input";
+@import "components/checkbox";
+@import "components/radio_button";
+@import "components/select_box";
+
+@import "components/icon";
+@import "components/horizontal-scrolling";
+@import "components/currently-reading";
+@import "components/book-list-item";
+@import "components/trending-now";
+@import "components/flipbook";

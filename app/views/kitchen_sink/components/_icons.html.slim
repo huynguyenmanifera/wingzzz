@@ -1,0 +1,24 @@
+div.mb-12
+  h3.text-xl.mb-4.text-gray-700 Icons sizes
+  p.text-sm.mb-4 The icons below should be centered and fill up their corresponding box as much as possible.
+  = render "kitchen_sink/components/icon", icon: "back"
+  = render "kitchen_sink/components/icon", icon: "book"
+  = render "kitchen_sink/components/icon", icon: "checkmark"
+  = render "kitchen_sink/components/icon", icon: "close"
+  = render "kitchen_sink/components/icon", icon: "exit-fullscreen"
+  = render "kitchen_sink/components/icon", icon: "fullscreen"
+  = render "kitchen_sink/components/icon", icon: "heart"
+  = render "kitchen_sink/components/icon", icon: "home"
+  = render "kitchen_sink/components/icon", icon: "page-back"
+  = render "kitchen_sink/components/icon", icon: "page-forward"
+  = render "kitchen_sink/components/icon", icon: "profile"
+  = render "kitchen_sink/components/icon", icon: "restart"
+  = render "kitchen_sink/components/icon", icon: "search"
+  = render "kitchen_sink/components/icon", icon: "settings"
+
+div.mb-12
+  h3.text-xl.mb-4.text-gray-700 Coloring icons
+  p.text-sm.mb-4 Icons below should have different colors.
+  span.inline-block.m-2.text-wz-red-500= render(IconComponent.new(icon: "heart"))
+  span.inline-block.m-2.text-wz-light-blue-500= render(IconComponent.new(icon: "close"))
+  span.inline-block.m-2.text-wz-blue-500= render(IconComponent.new(icon: "search"))

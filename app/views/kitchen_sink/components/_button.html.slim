@@ -1,0 +1,18 @@
+div.mb-6
+  div= ".#{class_names.join('.')}"
+
+  .inline-block.m-4
+    button.btn class=(class_names)
+      = "default"
+
+  .inline-block.m-4
+    button.btn disabled="disabled" class=(class_names)
+      = ":disabled"
+
+  .inline-block.m-4
+    button.btn.btn-sm class=(class_names)
+      = ".btn-sm"
+
+  .inline-block.m-4
+    button.btn.btn-lg class=(class_names)
+      = ".btn-lg"

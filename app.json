@@ -1,0 +1,34 @@
+{
+  "name": "Wingzzz",
+  "addons": ["heroku-postgresql:hobby-dev"],
+  "env": {
+    "RAILS_LOG_TO_STDOUT": "true",
+    "RAILS_SERVE_STATIC_FILES": "true",
+    "RAILS_ENV": "production",
+    "RACK_ENV": "production",
+    "NPM_CONFIG_PRODUCTION": "false",
+    "SECRET_KEY_BASE": {
+      "generator": "secret"
+    },
+    "HEROKU_APP_NAME": {
+      "required": true
+    }
+  },
+  "environments": {
+    "review": {
+      "addons": ["heroku-postgresql:hobby-dev"],
+      "APPSIGNAL_APP_ENV": "staging"
+    }
+  },
+  "scripts": {
+    "postdeploy": "bin/rails db:seed"
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "heroku/ruby"
+    }
+  ]
+}

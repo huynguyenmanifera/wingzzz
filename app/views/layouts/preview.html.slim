@@ -1,0 +1,10 @@
+html
+  head
+    title
+      | Wingzzz
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_pack_tag 'styles', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_pack_tag 'app', 'data-turbolinks-track': 'reload'
+  body.font-sans
+    = yield

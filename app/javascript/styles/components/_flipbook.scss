@@ -1,0 +1,274 @@
+::selection {
+  @apply text-transparent bg-transparent;
+}
+
+.fbook-wrapper {
+  @apply flex justify-center flex-col relative overflow-hidden;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  background-color: theme("colors.wz-gray-700");
+  touch-action: pan-y;
+}
+
+.book-track {
+  @apply max-w-full rounded;
+  background-color: theme("colors.wz-gray-600");
+  height: 8px;
+}
+
+.book-track.book-track-0 {
+  background-color: theme("colors.wz-gray-300");
+}
+
+.fbook-wrapper {
+  .react-transform-component {
+    overflow: visible !important;
+  }
+}
+
+.slider-mark {
+  @apply inline-block bg-transparent;
+  width: 20px;
+  height: 20px;
+  margin-top: -6px;
+  cursor: grab;
+
+  &-inner {
+    @apply inline-block rounded-full;
+    width: 20px;
+    height: 20px;
+    background-color: theme("colors.wz-white");
+  }
+
+  &:active {
+    cursor: grabbing;
+  }
+}
+
+.fbook-bottom-toolbar,
+.fbook-top-toolbar {
+  @apply fixed w-full opacity-0 bg-opacity-0 left-0 transition-all overflow-hidden;
+  -webkit-transition: top 1s, opacity 1s;
+  transition: top 1s, opacity 1s;
+  min-height: 100px;
+  color: theme("colors.wz-white");
+
+  @media (hover: hover) {
+    &:hover {
+      @apply opacity-100;
+    }
+  }
+
+  @media (hover: none) {
+    transition-duration: 1s;
+    &.visible-mobile {
+      transition-duration: 0s;
+      opacity: 1;
+    }
+  }
+}
+
+.fbook-bottom-toolbar {
+  @apply bottom-0 text-center pt-4 transition-all;
+  z-index: 99999;
+  font-family: theme("fontFamily.sans");
+  color: theme("colors.wz-gray-300");
+  background-image: linear-gradient(
+    theme("colors.wz-black-opacity-0") 0%,
+    theme("colors.wz-black-opacity-50") 100%
+  );
+  opacity: 0;
+  animation: fadeoutDelay 4s 0s 1;
+
+  .pagenum {
+    @apply -my-1 mb-3;
+  }
+}
+
+.fbook-top-toolbar {
+  @apply top-0 text-left transition-all;
+  background-image: linear-gradient(
+    theme("colors.wz-black-opacity-50") 0%,
+    theme("colors.wz-black-opacity-0") 100%
+  );
+
+  a {
+    @apply block relative overflow-hidden;
+    width: 60px !important;
+    left: 30px;
+    top: 20px;
+  }
+}
+
+.flipNext,
+.flipPrev {
+  @apply flex items-center overflow-hidden;
+  top: 50%;
+  transform: translate(0%, -50%);
+  min-height: 180px;
+  min-width: 90px;
+  border: none !important;
+  outline: none !important;
+  z-index: 999;
+
+  .flipButtonContainer {
+    @apply transition-all;
+    opacity: 0;
+  }
+
+  // show on hover if possible
+  @media (hover: hover) {
+    &:hover {
+      .flipButtonContainer {
+        opacity: 1;
+      }
+    }
+  }
+
+  // show manually on mobile
+  @media (hover: none) {
+    .flipButtonContainer {
+      transition-duration: 1s;
+      &.visible-mobile {
+        transition-duration: 0s;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.flipNext {
+  @apply right-0;
+}
+
+.flipButtonContainer {
+  @apply opacity-100 ml-auto rounded-full text-center flex items-center;
+  margin-right: -90px;
+  width: 180px;
+  height: 180px;
+  background-color: theme("colors.wz-black-opacity-25");
+
+  svg {
+    @apply h-auto;
+    width: 40px;
+    fill: theme("colors.wz-white");
+    margin-left: 30px;
+  }
+}
+
+.wingzzz-flipbook {
+  height: 100% !important;
+  max-height: 100% !important;
+}
+
+.flipPrev {
+  @apply left-0;
+
+  .flipButtonContainer {
+    @apply mr-auto;
+    margin-left: -90px;
+
+    svg {
+      margin-left: 110px;
+    }
+  }
+}
+
+// hide blue highlight on android
+.fbook-wrapper button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media only screen and (orientation: landscape) {
+  .wingzzz-flipbook {
+    max-width: 100vh;
+    max-height: 100vh !important;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  // hack to scale it all a bit down
+  // needs a proper refactor to have the
+  // grid fit on all size screens
+
+  .fbook-bottom-toolbar {
+    .icon-large {
+      width: 1.8rem;
+      height: 1.8rem;
+    }
+
+    .icon-medium {
+      width: 1.6rem;
+      height: 1.6rem;
+    }
+
+    .mt-4 {
+      margin-top: 0.7rem;
+    }
+
+    .finish button {
+      margin: 0;
+      padding: 2px;
+
+      .icon {
+        display: none;
+      }
+    }
+
+    .full-screen-button {
+      direction: rtl;
+      padding-right: 5px;
+    }
+  }
+
+  .flipNext,
+  .flipPrev {
+    min-width: 60px;
+    .flipButtonContainer {
+      width: 120px;
+      height: 120px;
+      svg {
+        width: 30px;
+      }
+    }
+  }
+  .flipNext {
+    .flipButtonContainer {
+      margin-right: -60px;
+      svg {
+        margin-left: 25px;
+      }
+    }
+  }
+  .flipPrev {
+    .flipButtonContainer {
+      margin-left: -60px;
+      svg {
+        margin-left: 65px;
+      }
+    }
+  }
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeoutDelay {
+  0% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

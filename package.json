@@ -1,0 +1,83 @@
+{
+  "private": true,
+  "name": "wingzzz",
+  "version": "0.1.0",
+  "engines": {
+    "node": "12.x"
+  },
+  "scripts": {
+    "prettier": "prettier '**/*.{rb,scss,js,ts,tsx}'",
+    "test": "jest ./app"
+  },
+  "dependencies": {
+    "@babel/preset-react": "^7.8.3",
+    "@rails/actioncable": "^6.0.0",
+    "@rails/activestorage": "^6.0.0",
+    "@rails/ujs": "^6.0.0",
+    "@rails/webpacker": "4.2.2",
+    "@types/classnames": "^2.2.9",
+    "@types/i18n-js": "^3.0.1",
+    "@types/react-slider": "^1.1.2",
+    "@types/screenfull": "^4.1.0",
+    "async-wait-until": "^2.0.5",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
+    "classnames": "^2.2.6",
+    "epubjs": "^0.3.85",
+    "howler": "^2.2.3",
+    "i18n-js": "^3.5.1",
+    "lodash": "^4.17.19",
+    "page-flip": "file:vendor/StPageFlip",
+    "postcss-calc": "^7.0.2",
+    "postcss-color-function": "^4.1.0",
+    "postcss-import": "^12.0.1",
+    "prop-types": "^15.7.2",
+    "rails-erb-loader": "^5.5.2",
+    "react": "^16.12.0",
+    "react-device-detect": "^1.17.0",
+    "react-dom": "^16.12.0",
+    "react-full-screen": "^1.0.2",
+    "react-inlinesvg": "^1.2.0",
+    "react-loader-spinner": "^4.0.0",
+    "react-pageflip": "^2.0.3",
+    "react-quick-pinch-zoom": "^4.0.2",
+    "react-slider": "^1.1.4",
+    "react-use-gesture": "^9.1.3",
+    "react-zoom-pan-pinch": "^1.6.1",
+    "screenfull": "^5.0.2",
+    "stimulus": "^1.1.1",
+    "tailwindcss": "^1.1.4",
+    "turbolinks": "^5.2.0"
+  },
+  "resolutions": {
+    "page-flip": "file:vendor/StPageFlip"
+  },
+  "devDependencies": {
+    "@prettier/plugin-ruby": "^0.17.0",
+    "@types/howler": "^2.2.4",
+    "@types/jest": "^25.1.2",
+    "@types/lodash": "^4.14.149",
+    "@types/react": "^16.9.17",
+    "@types/react-dom": "^16.9.4",
+    "@types/turbolinks": "^5.2.0",
+    "babel-jest": "^25.1.0",
+    "husky": "^4.0.7",
+    "jest": "^25.1.0",
+    "lint-staged": "^9.5.0",
+    "prettier": "2.2.1",
+    "ts-jest": "^25.2.0",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.7.5",
+    "webpack-dev-server": "^3.10.1"
+  },
+  "lint-staged": {
+    "*.{rb,js,scss,ts,tsx}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+}

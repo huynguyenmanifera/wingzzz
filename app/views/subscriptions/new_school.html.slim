@@ -1,0 +1,33 @@
+= render(Page::Bare::Component.new) do |page|
+  h1.text-xl.mb-5.text-wz-black.text-center
+    = t('activate_subscription.school_subscription_agreement')
+  div.text-center 
+    = t('activate_subscription.school_subscription_invoicing').html_safe
+  h4.py-8 = t('activate_subscription.invoicing_details')
+  - flash.each do |_type, message|
+    h1.text-xl.text-center.mb-5.text-wz-black= message
+  = simple_form_for(@school_subscription, url: create_school_subscription_path(locale: I18n.locale)) do |f|
+    = f.input :contact_email, autofocus: true
+    = f.input :contact_name
+    = f.input :billing_name
+    = f.input :billing_brincode
+    = f.input :billing_address
+    = f.input :billing_city
+    = f.input :billing_postcode
+    = f.hidden_field :school_id
+    = f.hidden_field :user_id
+
+    .text-sm
+      = t( \
+        'sign_up_disclaimer_html', \
+        sign_up: t('sign_up').capitalize,
+        privacy_policy_link: external_link_to(:privacy_policy, class: 'link'), \
+        terms_of_service_link: external_link_to(:terms_of_use, class: 'link') \
+      )
+
+    .mt-8
+      = f.button :submit, t('activate_subscription.cta_specific_activate_text_only', subscriptionType: 'SCHOOL'), class: 'btn-cta w-full text-xs md:text-sm'
+  p.text-center.text-sm.text-blue-600.mt-2
+    = t('activate_subscription.student_amount_limit', studentLimit: '400') 
+    = ' '
+    = t('activate_subscription.anual_pricing', amount: localized_school_subscription_amount)

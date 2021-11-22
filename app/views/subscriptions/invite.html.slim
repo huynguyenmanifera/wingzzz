@@ -1,0 +1,6 @@
+= render(Page::Bare::Component.new) do |page|
+  h1.text-xl.mb-5.text-wz-black= t('activate_subscription.school_subscription_agreement')
+  p= t('activate_subscription.school_subscription_invoicing').html_safe
+  h4= t('activate_subscription.invoicing_details')
+  - flash.each do |_type, message|
+    h1.text-xl.text-center.mb-5.text-wz-black= message

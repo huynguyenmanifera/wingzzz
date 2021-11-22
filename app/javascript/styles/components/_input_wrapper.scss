@@ -1,0 +1,12 @@
+.input-wrapper {
+  @apply my-1 pb-5 block relative;
+}
+
+.input-error {
+  @apply text-wz-red-800 mt-1 text-xs absolute bottom-0 right-0;
+  display: contents;
+}
+
+.input-error::first-letter {
+  @apply capitalize;
+}

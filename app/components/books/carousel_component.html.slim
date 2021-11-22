@@ -1,0 +1,7 @@
+.horizontal-scrolling(data={ controller: 'horizontal-scrolling' })
+  ul(data={ target: 'horizontal-scrolling.list', action: 'scroll->horizontal-scrolling#updateScrollButtons resize@window->horizontal-scrolling#updateScrollButtons' })
+    = render(Books::ListItemComponent.with_collection(books, show_preview: show_preview, item_type: item_type))
+  a.backward(href="#" data={ target: 'horizontal-scrolling.backward', action: 'click->horizontal-scrolling#goBackward' })
+    = render(IconComponent.new(icon: 'page-back', size: 'small'))
+  a.forward(href="#" data={ target: 'horizontal-scrolling.forward', action: 'click->horizontal-scrolling#goForward' })
+    = render(IconComponent.new(icon: 'page-forward', size: 'small'))

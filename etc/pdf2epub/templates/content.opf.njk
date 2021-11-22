@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<package version="3.0" xmlns="http://www.idpf.org/2007/opf" unique-identifier="bookid" prefix="rendition: http://www.idpf.org/vocab/rendition/#">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <meta property="rendition:layout">pre-paginated</meta>
+    <meta property="rendition:orientation">landscape</meta>
+    <meta property="rendition:spread">none</meta>
+  </metadata>
+  <manifest>
+    <item id="toc" href="toc.xhtml" media-type="application/xhtml+xml" properties="nav" />
+    {% for page in pages %}
+      <item id="{{ page.id }}" href="{{ page.id }}.xhtml" media-type="application/xhtml+xml" />
+      <item id="{{ page.id}}-image" href="images/{{ page.path }}" media-type="{{ page.mediaType }}" />
+    {%- endfor %}
+  </manifest>
+  <spine>
+    {% for page in pages %}
+      <itemref idref="{{ page.id }}" />
+    {%- endfor %}
+  </spine>
+</package>

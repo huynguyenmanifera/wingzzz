@@ -1,0 +1,4 @@
+en:
+  components:
+    search_input:
+      placeholder: search books

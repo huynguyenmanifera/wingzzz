@@ -1,0 +1,45 @@
+.book-list-item {
+  &__card {
+    width: 400px;
+  }
+
+  &__thumbnail {
+    width: 200px;
+  }
+}
+
+.audio-icon {
+  @apply absolute right-0 bottom-0 rounded-full p-1 mr-1 mb-1 text-white;
+
+  box-shadow: 0 0px 5px 1px rgba(0, 0, 0, 0.4);
+
+  &.narrated_book {
+    background-color: #14c3f4;
+  }
+
+  &.audio_book {
+    background-color: #993399;
+  }
+
+  .icon {
+    top: -3px;
+  }
+}
+
+.book-btn-purple {
+  background-color: #993399;
+  border-color: #662266;
+
+  &:hover {
+    background-color: #e54ce5;
+  }
+}
+
+.book-btn-blue {
+  background-color: #14c3f4;
+  border-color: #109bc2;
+
+  &:hover {
+    background-color: #5ed5f7;
+  }
+}

@@ -1,0 +1,9 @@
+- if (subscription = field.data)
+  => field.to_s
+  - if subscription.active?
+    => link_to t('administrate.actions.unsubscribe'), unsubscribe_admin_user_path(subscription.user), method: :post, class: 'text-color-red', data: { confirm: I18n.t('administrate.actions.confirm') }
+  | (
+  = link_to 'See Mollie for payment history', 'https://www.mollie.com/dashboard', class: 'link', target: '_blank'
+  | )
+- else
+  | -

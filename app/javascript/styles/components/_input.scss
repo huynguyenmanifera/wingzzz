@@ -1,0 +1,38 @@
+.input {
+  @apply appearance-none box-border border border-wz-gray-600 rounded-sm w-full text-wz-black leading-tight block px-4 py-5/2 text-sm;
+
+  &:active,
+  &:focus {
+    @apply outline-none border-wz-blue-500;
+  }
+}
+
+.input-wrapper--invalid {
+  .input {
+    @apply border-wz-red-800;
+
+    &:active,
+    &:focus {
+      @apply border-wz-red-800;
+    }
+  }
+}
+
+.input-wrapper--dark-mode {
+  .input {
+    @apply bg-transparent border-wz-white-trn-700 text-wz-white;
+
+    &:active,
+    &:focus {
+      @apply border-wz-white;
+    }
+  }
+}
+
+.input-icon-left {
+  @apply pl-12;
+}
+
+.input-icon-right {
+  @apply pr-12;
+}

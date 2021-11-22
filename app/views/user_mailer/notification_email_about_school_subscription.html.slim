@@ -1,0 +1,26 @@
+= render layout: 'shared/system_html_email_layout' do
+    .opening= t('hello', email: @email)
+    p= t('user_mailer.notification_email_about_school_subscription.body_html', user: @user.email)
+
+    table
+        tr
+            td  = t('attributes.contact_email')
+            td  = @school_subscription.contact_email
+        tr
+            td  = t('attributes.contact_name')
+            td  = @school_subscription.contact_name
+        tr    
+            td  = t('attributes.billing_name')
+            td  = @school_subscription.billing_name
+        tr
+            td  = t('attributes.billing_brincode')
+            td  = @school_subscription.billing_brincode
+        tr
+            td  = t('attributes.billing_address')
+            td  = @school_subscription.billing_address
+        tr
+            td  = t('attributes.billing_city')
+            td  = @school_subscription.billing_city
+        tr
+            td  = t('attributes.billing_postcode')
+            td  = @school_subscription.billing_postcode

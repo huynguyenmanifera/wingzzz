@@ -1,0 +1,26 @@
+.text-center.leading-7
+  - if current_user.trial.active?
+    .mb-6= t('activate_subscription.intro_html')
+
+  h1.text-xl.mb-4.text-wz-black= t('activate_subscription.title')
+
+  ul.mb-8.pl-8.text-left
+    - t('activate_subscription.subscription_perks').each do |perk|
+      li.flex.mb-2
+        span.mr-2.mt-1= render(IconComponent.new(icon: "checkmark", size: "tiny"))
+        span= perk
+
+  h2.text-xl.text-wz-black.mb-2= t('activate_subscription.pricing', amount: localized_subscription_amount)
+  - if current_user.trial.active?
+    p
+      = "#{t('activate_subscription.payment_starts_after_trial_ends')}:"
+      br
+      = current_user.localized_trail_period_expired_from
+
+  .mt-4
+    = button_to t('activate_subscription.cta_activate'), subscription_path, method: method, class: 'btn btn-cta mb-3 w-full'
+    - if current_user.trial.active?
+      = link_to t('activate_subscription.back_to_my_free_trial'), root_path, class: 'btn btn-light btn-border mb-3 w-full'
+    .text-xs
+      p.-mb-2= t('you_can_cancel_anytime')
+      = link_to(t('login_as_a_different_user'), destroy_user_session_path, method: Rails.application.config.devise.sign_out_via, class: 'link')

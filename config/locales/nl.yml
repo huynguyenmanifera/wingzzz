@@ -1,0 +1,1268 @@
+---
+"nl":
+  "account": >-
+    account
+  "activate_subscription":
+    "back_to_my_free_trial": >-
+      Terug naar mijn proefperiode
+    "cta_activate": >-
+      Activeer mijn abonnement
+    "cta_specific_activate": >-
+      Ik kies een <span class='cta-highlight'>%{subscriptionType}</span> abonnement
+    "cta_specific_activate_text_only": >-
+      Bevestig aankoop %{subscriptionType} abonnement
+    "intro_html": >-
+      <p>We hopen dat je geniet van Wingzzz!<br/>Als je je abonnement nu activeert,
+      maak je eerst je gratis proefperiode af.<p>
+    "payment_starts_after_trial_ends": >-
+      Je betaling begint na je proefperiode
+    "pricing": >-
+        %{amount} per maand
+    "anual_pricing": >-
+        %{amount} per jaar
+    "subscription_perks":
+    - >-
+      Onbeperkte hoeveel kinderboeken
+    - >-
+      Lees overal met je webbrowser
+    - >-
+      Lees in elke gewenste taal
+    "title": >-
+      Activeer je abonnement en krijg
+    "student_amount_limit": >-
+      toegang voor %{studentLimit} leerlingen voor
+    "school_subscription_agreement": >-
+      Ik wil graag een Wingzzz School abonnement afsluiten.
+    "school_subscription_invoicing": >-
+      <p>Voor het resterende kalenderjaar ontvang jouw school een factuur naar rato.  In het onderstaande formulier kun je aangeven naar wie (of welke afdeling) we de factuur mogen sturen.</p>
+      <p>Na bevestiging van jouw School abonnement kunnen je collega’s ook gebruik maken van Wingzzz in hun eigen klas. Instructies voor het sturen van uitnodigingen ontvang je per e-mail.</p>
+    "invoicing_details": >-
+      Factuurgegevens:
+    "successful_school_subscription_sign_up": >-
+      Successful Signup for school subscription
+    "school_subscription_description": >-
+      Hopelijk zijn jullie aan het genieten van Wingzzz!
+      Tijdens de gratis proefperiode kun je een abonnement afnemen. Natuurlijk maak je eerst jouw proefperiode af voordat het abonnement start.
+    "school_subscription_cta": >-
+      Activeer jouw abonnement en je krijgt:
+    "school_subscription_perks":
+    - >-
+      Onbeperkt toegang tot alle kinderboeken  voor je klas of school
+    - >-
+      Lees samen op het digibord, in kleine groepjes of alleen
+    - >-
+      Geschikt voor elk apparaat verbonden met internet
+    - >-
+      Wingzzz is meertalig
+    "subscribe_before_trial": >-
+      <p>Je betaling begint na je proefperiode: %{endDate}. Welk abonnement past bij jou?</p>
+  "activerecord":
+    "errors":
+      "messages":
+        "record_invalid": >-
+          Validatie mislukt: %{errors}
+        "restrict_dependent_destroy":
+          "has_many": >-
+            Kan item niet verwijderen omdat afhankelijke %{record} bestaan
+          "has_one": >-
+            Kan item niet verwijderen omdat %{record} afhankelijk is
+  "administrate":
+    "actions":
+      "back": >-
+        Terug
+      "confirm": >-
+        Weet je het zeker?
+      "destroy": >-
+        Destroy
+      "edit": >-
+        Edit
+      "edit_resource": >-
+        Edit %{name}
+      "new_resource": >-
+        New %{name}
+      "show_resource": >-
+        Show %{name}
+      "unsubscribe": >-
+        Unsubscribe
+    "controller":
+      "create":
+        "success": >-
+          %{resource} was successfully created.
+      "destroy":
+        "success": >-
+          %{resource} was successfully destroyed.
+      "update":
+        "success": >-
+          %{resource} was successfully updated.
+    "fields":
+      "has_many":
+        "more": >-
+          Showing %{count} of %{total_count}
+        "none": >-
+          None
+    "form":
+      "error": >-
+        error
+      "errors": >-
+        %{pluralized_errors} prohibited this %{resource_name} from being saved:
+    "search":
+      "clear": >-
+        Clear search
+      "label": >-
+        Search %{resource}
+  "age": >-
+    Leeftijd
+  "age_range":
+    "all_ages": >-
+      Alle leeftijden
+    "month":
+      "one": >-
+        1 maand
+      "other": >-
+        %{count} maanden
+    "to": >-
+      tot
+    "year":
+      "one": >-
+        1 jaar
+      "other": >-
+        %{count} jaar
+    "years_and_over": >-
+      %{count}+ jaar
+  "all_rights_reserved": >-
+    Alle rechten voorbehouden
+  "already_have_an_account": >-
+    heb je al een account?
+  "attributes":
+    "email": >-
+      e-mailadres
+    "address": >-
+      adres
+    "postcode": >-
+      postcode 
+    "city": >-
+      plaats
+    "brin_code": >-
+      School BRIN code
+    "locale": >-
+      taal
+    "password": >-
+      wachtwoord
+    "password_confirmation": >-
+      wachtwoord (bevestiging)
+    "remember_me": >-
+      onthoud mij
+    "contact_email": >-
+      Factuur sturen naar (email)
+    "contact_name": >-
+      Factuur sturen naar (naam)
+    "billing_name": >-
+      School naam
+    "billing_brincode": >-
+      School BRIN code
+    "billing_address": >-
+      School adres
+    "billing_city": >-
+      Plaats
+    "billing_postcode": >-
+      School postcode
+  "back_to": >-
+    terug naar
+  "back_to_library": >-
+    terug naar bibliotheek
+  "books": >-
+    Boeken
+  "cancel": >-
+    annuleren
+  "cancel_subscription": >-
+    abonnement beëindigen
+  "card_expiry_date": >-
+    vervaldatum
+  "card_holder": >-
+    kaarthouder
+  "card_number": >-
+    kaartnummer
+  "change_password": >-
+    wachtwoord wijzigen
+  "change_your_password": >-
+    Verander je wachtwoord
+  "components":
+    "search_input":
+      "placeholder": >-
+        zoek naar boeken
+  "confirm_canceling_subscription": "Weet je zeker dat je je abonnement wilt beëindigen?\r\n\r\nDeze
+    handeling kan niet ongedaan worden gemaakt."
+  "confirm_your_password": >-
+    Bevestig je wachtwoord
+  "consumer_account": >-
+    kaartnummer
+  "consumer_name": >-
+    naam
+  "contact": >-
+    contact
+  "creditcard": >-
+    creditcard of bankpas
+  "currently_reading": >-
+    Mijn verhalen
+  "date":
+    "abbr_day_names":
+    - >-
+      zo
+    - >-
+      ma
+    - >-
+      di
+    - >-
+      wo
+    - >-
+      do
+    - >-
+      vr
+    - >-
+      za
+    "abbr_month_names":
+    -
+    - >-
+      jan
+    - >-
+      feb
+    - >-
+      mrt
+    - >-
+      apr
+    - >-
+      mei
+    - >-
+      jun
+    - >-
+      jul
+    - >-
+      aug
+    - >-
+      sep
+    - >-
+      okt
+    - >-
+      nov
+    - >-
+      dec
+    "day_names":
+    - >-
+      zondag
+    - >-
+      maandag
+    - >-
+      dinsdag
+    - >-
+      woensdag
+    - >-
+      donderdag
+    - >-
+      vrijdag
+    - >-
+      zaterdag
+    "formats":
+      "default": >-
+        %d-%m-%Y
+      "long": >-
+        %e %B %Y
+      "short": >-
+        %e %b
+    "month_names":
+    -
+    - >-
+      januari
+    - >-
+      februari
+    - >-
+      maart
+    - >-
+      april
+    - >-
+      mei
+    - >-
+      juni
+    - >-
+      juli
+    - >-
+      augustus
+    - >-
+      september
+    - >-
+      oktober
+    - >-
+      november
+    - >-
+      december
+    "order":
+    - :day
+    - :month
+    - :year
+  "datetime":
+    "distance_in_words":
+      "about_x_hours":
+        "one": >-
+          ongeveer een uur
+        "other": >-
+          ongeveer %{count} uur
+      "about_x_months":
+        "one": >-
+          ongeveer een maand
+        "other": >-
+          ongeveer %{count} maanden
+      "about_x_years":
+        "one": >-
+          ongeveer een jaar
+        "other": >-
+          ongeveer %{count} jaar
+      "almost_x_years":
+        "one": >-
+          bijna een jaar
+        "other": >-
+          bijna %{count} jaar
+      "half_a_minute": >-
+        een halve minuut
+      "less_than_x_minutes":
+        "one": >-
+          minder dan een minuut
+        "other": >-
+          minder dan %{count} minuten
+      "less_than_x_seconds":
+        "one": >-
+          minder dan een seconde
+        "other": >-
+          minder dan %{count} seconden
+      "over_x_years":
+        "one": >-
+          meer dan een jaar
+        "other": >-
+          meer dan %{count} jaar
+      "x_days":
+        "one": >-
+          1 dag
+        "other": >-
+          %{count} dagen
+      "x_minutes":
+        "one": >-
+          1 minuut
+        "other": >-
+          %{count} minuten
+      "x_months":
+        "one": >-
+          1 maand
+        "other": >-
+          %{count} maanden
+      "x_seconds":
+        "one": >-
+          1 seconde
+        "other": >-
+          %{count} seconden
+      "x_years":
+        "one": >-
+          1 jaar
+        "other": >-
+          %{count} jaar
+    "prompts":
+      "day": >-
+        dag
+      "hour": >-
+        uur
+      "minute": >-
+        minuut
+      "month": >-
+        maand
+      "second": >-
+        seconde
+      "year": >-
+        jaar
+  "devise":
+    "confirmations":
+      "confirmed": >-
+        Je account is bevestigd.
+      "send_instructions": >-
+        Je ontvangt via e-mail instructies hoe je je account kan bevestigen.
+      "send_paranoid_instructions": >-
+        Als je e-mailadres bestaat in de database, ontvang je via e-mail instructies
+        hoe je je account kan bevestigen.
+    "failure":
+      "already_authenticated": >-
+        Je bent al ingelogd.
+      "inactive": >-
+        Je account is nog niet geactiveerd.
+      "invalid": >-
+        Ongeldig %{authentication_keys}of wachtwoord.
+      "last_attempt": >-
+        Je hebt nog een poging over voordat je account wordt geblokkeerd.
+      "locked": >-
+        Je account is gelocked.
+      "not_found_in_database": >-
+        Ongeldig %{authentication_keys}of wachtwoord.
+      "timeout": >-
+        Je sessie is verlopen, log a.u.b. opnieuw in.
+      "unauthenticated": ''
+      "unconfirmed": >-
+        Je dient eerst je account te bevestigen.
+      "invited": >-
+        U bent reeds uitgenodigd, accepteer de uitnodiging die u heeft ontvangen per mail om uw account te accepteren.
+    "invitations":
+      "send_instructions": "Een uitnodigingsmail aan %{email} is verstuurd."
+      "invitation_token_invalid": "De uitnodigingscode is ongeldig!"
+      "updated": "Uw wachtwoord is ingesteld. U bent nu ingelogd."
+      "updated_not_active": "Uw wachtwoord is ingesteld."
+      "no_invitations_remaining": "Geen uitnodigingen over."
+      "invitation_removed": "Uw uitnodiging is verwijderd."
+      "new":
+        "header": "Verstuur uitnodiging"
+        "submit_button": "Verstuur een uitnodiging"
+      "edit":
+        "header": "Stel Uw wachtwoord in"
+        "submit_button": "Stel mijn wachtwoord in"
+    "mailer":
+      "confirmation_instructions":
+        "subject": >-
+          Bevestiging mailadres
+      "email_changed":
+        "subject": >-
+          E-mailadres gewijzigd
+      "password_change":
+        "subject": >-
+          Wachtwoord gewijzigd
+      "reset_password_instructions":
+        "subject": >-
+          Wachtwoord resetten
+      "unlock_instructions":
+        "subject": >-
+          Unlock instructies
+      "invitation_instructions":
+        "subject": >- 
+          Jouw uitnodiging voor het Wingzzz School abonnement
+        "hello": >-
+          Beste %{email}
+        "someone_invited_you": >-
+          Iemand heeft U uitgenodigd voor %{url}, U kunt de uitnodiging accepteren via onderstaande link.
+        "accept": >-
+          Accepteer uitnodiging
+        "accept_until": >-
+          Deze uitnodoging vervalt per %{due_date}.
+        "ignore": >-
+          Indien U de uitnodiging niet wenst te accepteren, negeer dan alstublieft deze email.<br />\nUw account wordt niet aangemaakt indien U niet via bovenstaande link uw wachtwoord aanmaakt.
+        "teacher_invite": >-
+          <p>Jouw school heeft onlangs een Wingzzz School abonnement afgenomen. 
+          Dit betekend dat ook jij en jouw leerlingen gebruik kunnen maken van het 
+          Wingzzz kinderboekenplatform en de online bibliotheek vol fantastische 
+          verhalen.</p>
+          <p>Je collega heeft je uitgenodigd om je eigen account te activeren. 
+          Zo kun jij eenvoudig aan de slag met Wingzzz.</p>
+          <p>Jouw e-mailadres is je gebruikersnaam. Je kan jouw eigen wachtwoord 
+          aanmaken wanneer je je registreert door op onderstaande knop te klikken.</p>
+          <p>Met welk avontuur ga je van start? Klik op de knop om de uitnodiging te accepteren.</p>
+          <p>Wij wensen je en jouw klas veel leesplezier. Mochten er vragen zijn dan horen we het graag.</p>
+          <p>Met vriendelijke groeten,<br/>
+          Het Wingzzz team</p>
+    "omniauth_callbacks":
+      "failure": >-
+        Kon je niet aanmelden met je %{kind} account, omdat "%{reason}".
+      "success": >-
+        Successvol aangemeld met je %{kind} account.
+    "passwords":
+      "no_token": >-
+        Je kan deze pagina niet benaderen zonder een "wachtwoord reset e-mail"
+      "send_instructions": >-
+        Je ontvangt via e-mail instructies hoe je je wachtwoord moet resetten.
+      "send_paranoid_instructions": >-
+        Als je e-mailadres bestaat in de database, ontvang je via e-mail instructies
+        hoe je je wachtwoord moet resetten.
+      "updated": >-
+        Je wachtwoord is gewijzigd. Je bent nu ingelogd.
+      "updated_not_active": >-
+        Je wachtwoord is gewijzigd.
+    "registrations":
+      "destroyed": >-
+        Je account is verwijderd, wellicht tot ziens!
+      "signed_up": >-
+        Je bent ingeschreven.
+      "signed_up_but_inactive": >-
+        Je bent ingeschreven. Je kon alleen niet automatisch ingelogd worden omdat
+        je account nog niet geactiveerd is.
+      "signed_up_but_locked": >-
+        Je bent ingeschreven. Je kon alleen niet automatisch ingelogd worden omdat
+        je account geblokkeerd is.
+      "signed_up_but_unconfirmed": >-
+        Je ontvangt via e-mail instructies hoe je je account kunt activeren.
+      "updated": >-
+        Je account gegevens zijn opgeslagen.
+      "updated_but_not_signed_in": >-
+        Je account is succesvol bijgewerkt, maar aangezien je wachtwoord is gewijzigd,
+        dien je opnieuw in te loggen
+      "update_needs_confirmation": >-
+        Je hebt je e-mailadres succesvol gewijzigd, maar we moeten je nieuwe mailadres
+        nog verifiëren. Controleer je e-mail en klik op de link in de mail om je mailadres
+        te verifiëren.
+    "sessions":
+      "signed_in": ''
+      "signed_out": ''
+    "unlocks":
+      "send_instructions": >-
+        Je ontvangt via e-mail instructies hoe je je account kan unlocken.
+      "send_paranoid_instructions": >-
+        Als je e-mailadres bestaat in de database, ontvang je via e-mail instructies
+        hoe je je account kan unlocken.
+      "unlocked": >-
+        Je account is ge-unlocked. Je kan nu weer inloggen.
+  "devise_mailer":
+    "confirmation_instructions":
+      "body_html": "<p><b>GEWELDIG</b> om je te mogen verwelkomen!<br/>\r\nKlik op
+        onderstaande link om je account te bevestigen.</p>"
+      "confirm_my_account": >-
+        account bevestigen
+      "opening": >-
+        Welkom %{email},
+    "reset_password_instructions":
+      "body_2_html": >-
+        <p>Als jij hier niet om hebt gevraagd, kun je deze e-mail gewoon negeren.</p>
+      "body_html": "<p>We hebben een verzoek ontvangen om je Wingzzz wachtwoord te
+        herstellen.</p>\r\n<p>Klik op onderstaande link om je wachtwoord te herstellen.</p>"
+      "change_password": >-
+        wachtwoord wijzigen
+  "directdebit": >-
+    iDeal
+  "dont_have_an_account": >-
+    heb je nog geen account?
+  "edit_book": >-
+    boek bewerken
+  "edit_epub": >-
+    EPUB bewerken
+  "edit_epub_instructions": >-
+    De inhoud, dus niet de bovenliggende folder, van de EPUB (META-INF, mimetype and
+    OEBPS) moet gecomprimeerd worden naar een bestand. Wanneer je de bovenliggende
+    folder zipt, zal de EPUB niet goed geladen kunnen worden.
+  "edit_settings": >-
+    instellingen aanpassen
+  "epub_was_successfully_updated": >-
+    De EPUB is bijgewerkt.
+  "errors":
+    "format": >-
+      %{attribute} %{message}
+    "messages":
+      "accepted": >-
+        moet worden geaccepteerd
+      "already_confirmed": >-
+        is reeds bevestigd
+      "blank": >-
+        moet opgegeven zijn
+      "carrierwave_download_error": >-
+        kan niet worden gedownload
+      "carrierwave_integrity_error": >-
+        is niet van een toegestane bestandstype
+      "carrierwave_processing_error": >-
+        kan niet worden verwerkt
+      "confirmation": >-
+        komt niet overeen met %{attribute}
+      "confirmation_period_expired": >-
+        moet worden bevestigd binnen %{period}, probeer het a.u.b. nog een keer
+      "content_type_blacklist_error": >-
+        You are not allowed to upload %{content_type} files
+      "content_type_whitelist_error": >-
+        You are not allowed to upload %{content_type} files, allowed types: %{allowed_types}
+      "empty": >-
+        moet opgegeven zijn
+      "equal_to": >-
+        moet gelijk zijn aan %{count}
+      "even": >-
+        moet even zijn
+      "exclusion": >-
+        is gereserveerd
+      "expired": >-
+        is verlopen, vraag een nieuwe aan
+      "extension_blacklist_error": >-
+        You are not allowed to upload %{extension} files, prohibited types: %{prohibited_types}
+      "extension_whitelist_error": >-
+        You are not allowed to upload %{extension} files, allowed types: %{allowed_types}
+      "greater_than": >-
+        moet groter zijn dan %{count}
+      "greater_than_or_equal_to": >-
+        moet groter dan of gelijk zijn aan %{count}
+      "inclusion": >-
+        is niet in de lijst opgenomen
+      "invalid": >-
+        is ongeldig
+      "less_than": >-
+        moet minder zijn dan %{count}
+      "less_than_or_equal_to": >-
+        moet minder dan of gelijk zijn aan %{count}
+      "max_size_error": >-
+        File size should be less than %{max_size}
+      "mini_magick_processing_error": >-
+        Failed to manipulate with MiniMagick, maybe it is not an image? Original Error:
+        %{e}
+      "min_size_error": >-
+        File size should be greater than %{min_size}
+      "model_invalid": >-
+        Validatie mislukt: %{errors}
+      "not_an_integer": >-
+        moet een geheel getal zijn
+      "not_a_number": >-
+        is geen getal
+      "not_found": >-
+        niet gevonden
+      "not_locked": >-
+        is niet gesloten
+      "not_saved":
+        "one": >-
+          Kon de %{resource} niet opslaan:
+        "other": >-
+          Kon de %{resource} niet opslaan:
+      "odd": >-
+        moet oneven zijn
+      "other_than": >-
+        moet anders zijn dan %{count}
+      "present": >-
+        moet leeg zijn
+      "required": >-
+        moet bestaan
+      "rmagick_processing_error": >-
+        Failed to manipulate with rmagick, maybe it is not an image?
+      "taken": >-
+        is al in gebruik
+      "too_long":
+        "one": >-
+          is te lang (maximaal %{count} teken)
+        "other": >-
+          is te lang (maximaal %{count} tekens)
+      "too_short":
+        "one": >-
+          is te kort (minimaal %{count} teken)
+        "other": >-
+          is te kort (minimaal %{count} tekens)
+      "wrong_length":
+        "one": >-
+          heeft onjuiste lengte (moet 1 teken lang zijn)
+        "other": >-
+          heeft onjuiste lengte (moet %{count} tekens lang zijn)
+    "template":
+      "body": >-
+        Er zijn problemen met de volgende velden:
+      "header":
+        "one": >-
+          %{model} niet opgeslagen: 1 fout gevonden
+        "other": >-
+          %{model} niet opgeslagen: %{count} fouten gevonden
+  "flash":
+    "actions":
+      "create":
+        "notice": >-
+          %{resource_name} was successfully created.
+      "destroy":
+        "alert": >-
+          %{resource_name} could not be destroyed.
+        "notice": >-
+          %{resource_name} was successfully destroyed.
+      "update":
+        "notice": >-
+          %{resource_name} was successfully updated.
+  "forgot_your_password": >-
+    wachtwoord vergeten?
+  "for_questions_please_email_to_html": >-
+    Heb je vragen? Stuur een e-mail naar %{email}
+  "front":
+    "book_progress": >-
+      %{current} van %{total}
+    "finish": >-
+      beëindigen
+  "helpers":
+    "label":
+      "profile":
+        "max_age_in_months": >-
+          Max. leeftijd
+        "min_age_in_months": >-
+          Min. leeftijd
+    "page_entries_info":
+      "entry":
+        "zero": >-
+          entries
+        "one": >-
+          entry
+        "other": >-
+          entries
+      "more_pages":
+        "display_entries": >-
+          Displaying %{entry_name} <b>%{first}&nbsp;-&nbsp;%{last}</b> of <b>%{total}</b>
+          in total
+      "one_page":
+        "display_entries":
+          "zero": >-
+            No %{entry_name} found
+          "one": >-
+            Displaying <b>1</b> %{entry_name}
+          "other": >-
+            Displaying <b>all %{count}</b> %{entry_name}
+    "select":
+      "prompt": >-
+        Maak een keuze
+    "submit":
+      "create": >-
+        %{model} toevoegen
+      "submit": >-
+        %{model} opslaan
+      "update": >-
+        %{model} bijwerken
+  "home": >-
+    Home
+  "language": >-
+    taal
+  "languages":
+    "en": >-
+      Engels
+    "hu": >-
+      Hongaars
+    "nl": >-
+      Nederlands
+  "library": >-
+    bibliotheek
+  "library_settings": >-
+    bibliotheek-instellingen
+  "login_as_a_different_user": >-
+    Inloggen als een andere gebruiker
+  "mailer":
+    "closing_html": >-
+      Dank je wel,<br/>Het Wingzzz team
+    "opening": >-
+      Hallo %{email},
+  "my_account": >-
+    mijn account
+  "my_stories": >-
+    mijn verhalen
+  "new_password_instructions": >-
+    We sturen je een instructie voor het herstellen van je wachtwoord. Voer hiervoor
+    je e-mailadres in.
+  "next_payment_date": >-
+    je volgende factureringsdatum is
+  "no_books_found": >-
+    geen boeken gevonden
+  "number":
+    "currency":
+      "format":
+        "delimiter": >-
+          .
+        "format": >-
+          %u %n
+        "precision": >-
+          2
+        "separator": >-
+          ,
+        "significant": false
+        "strip_insignificant_zeros": false
+        "unit": >-
+          €
+    "format":
+      "delimiter": >-
+        .
+      "precision": >-
+        2
+      "separator": >-
+        ,
+      "significant": false
+      "strip_insignificant_zeros": false
+    "human":
+      "decimal_units":
+        "format": >-
+          %n %u
+        "units":
+          "billion": >-
+            miljard
+          "million": >-
+            miljoen
+          "quadrillion": >-
+            biljard
+          "thousand": >-
+            duizend
+          "trillion": >-
+            biljoen
+          "unit": ''
+      "format":
+        "delimiter": ''
+        "precision": >-
+          3
+        "significant": true
+        "strip_insignificant_zeros": true
+      "storage_units":
+        "format": >-
+          %n %u
+        "units":
+          "byte":
+            "one": >-
+              byte
+            "other": >-
+              bytes
+          "eb": >-
+            EB
+          "gb": >-
+            GB
+          "kb": >-
+            KB
+          "mb": >-
+            MB
+          "pb": >-
+            PB
+          "tb": >-
+            TB
+    "percentage":
+      "format":
+        "delimiter": ''
+        "format": >-
+          %n%
+    "precision":
+      "format":
+        "delimiter": ''
+  "payment_method": >-
+    betalingswijze
+  "paypal": >-
+    PayPal
+  "pdf_to_epub_converter": >-
+    Converteer PDF naar EPUB
+  "preview": >-
+    voorbeeld
+  "privacy_policy": >-
+    privacybeleid
+  "published_by": >-
+    Uitgegeven door %{publisher}
+  "written_by": >-
+    Geschreven door %{author}
+  "ransack":
+    "all": >-
+      all
+    "and": >-
+      and
+    "any": >-
+      any
+    "asc": >-
+      ascending
+    "attribute": >-
+      attribute
+    "combinator": >-
+      combinator
+    "condition": >-
+      condition
+    "desc": >-
+      descending
+    "or": >-
+      or
+    "predicate": >-
+      predicate
+    "predicates":
+      "blank": >-
+        is blank
+      "cont": >-
+        contains
+      "cont_all": >-
+        contains all
+      "cont_any": >-
+        contains any
+      "does_not_match": >-
+        doesn't match
+      "does_not_match_all": >-
+        doesn't match all
+      "does_not_match_any": >-
+        doesn't match any
+      "end": >-
+        ends with
+      "end_all": >-
+        ends with all
+      "end_any": >-
+        ends with any
+      "eq": >-
+        equals
+      "eq_all": >-
+        equals all
+      "eq_any": >-
+        equals any
+      "false": >-
+        is false
+      "gt": >-
+        greater than
+      "gt_all": >-
+        greater than all
+      "gt_any": >-
+        greater than any
+      "gteq": >-
+        greater than or equal to
+      "gteq_all": >-
+        greater than or equal to all
+      "gteq_any": >-
+        greater than or equal to any
+      "in": >-
+        in
+      "in_all": >-
+        in all
+      "in_any": >-
+        in any
+      "lt": >-
+        less than
+      "lt_all": >-
+        less than all
+      "lt_any": >-
+        less than any
+      "lteq": >-
+        less than or equal to
+      "lteq_all": >-
+        less than or equal to all
+      "lteq_any": >-
+        less than or equal to any
+      "matches": >-
+        matches
+      "matches_all": >-
+        matches all
+      "matches_any": >-
+        matches any
+      "not_cont": >-
+        doesn't contain
+      "not_cont_all": >-
+        doesn't contain all
+      "not_cont_any": >-
+        doesn't contain any
+      "not_end": >-
+        doesn't end with
+      "not_end_all": >-
+        doesn't end with all
+      "not_end_any": >-
+        doesn't end with any
+      "not_eq": >-
+        not equal to
+      "not_eq_all": >-
+        not equal to all
+      "not_eq_any": >-
+        not equal to any
+      "not_in": >-
+        not in
+      "not_in_all": >-
+        not in all
+      "not_in_any": >-
+        not in any
+      "not_null": >-
+        is not null
+      "not_start": >-
+        doesn't start with
+      "not_start_all": >-
+        doesn't start with all
+      "not_start_any": >-
+        doesn't start with any
+      "null": >-
+        is null
+      "present": >-
+        is present
+      "start": >-
+        starts with
+      "start_all": >-
+        starts with all
+      "start_any": >-
+        starts with any
+      "true": >-
+        is true
+    "search": >-
+      search
+    "search_results": >-
+      zoekresultaten
+    "sort": >-
+      sort
+    "value": >-
+      value
+  "read_book": >-
+    Boek lezen
+  "read_to_me": >-
+    Lees me voor
+  "listen_now": >-
+    Luister nu
+  "recently_added": >-
+    Onlangs toegevoegd
+  "reminder_mailer":
+    "last_day_of_trial_for_teachers":
+      "body_html": >-
+        <p>Hopelijk ben je samen met je leerlingen aan het genieten van alle
+        verhalen en hebben jullie al veel boeken samen, in kleine groepjes of
+        alleen kunnen lezen.</p>
+        <p>We willen je laten weten dat de gratis proefperiode van %{trial_duration_in_days}
+        dagen morgen eindigt. Zijn jullie je nog niet klaar met lezen en wensen jullie
+        nog meer avonturen te beleven met Wingzzz? Dat kan!</p>
+        <p>Hiervoor heb je een abonnement nodig. Je kan kiezen tussen een Klas
+        abonnement of een School abonnement.</p
+        <p>Kies hieronder het abonnement naar wens om verder te lezen met Wingzzz.</p>
+        <p>Bedankt en veel leesplezier,<br/>Het Wingzzz team<p>
+      "opening": >-
+        Hallo,
+      "ps_html": >-
+        <p>P.S. In de komende weken zullen we een verscheidenheid aan geweldige nieuwe
+        verhalen toevoegen aan onze steeds groter wordende bibliotheek.<br/>Zorg dat
+        je erbij bent!</p>
+      "subject": >-
+        Je %{trial_duration_in_days}-daagse gratis proefperiode loopt morgen af
+    "last_day_of_trial":
+      "body_html": >-
+        <p>We hopen dat je veel verhalen hebt gelezen en hebt genoten van de Wingzzz-ervaring.</p>
+        <p><b>Je gratis proefperiode van %{trial_duration_in_days} dagen loopt morgen
+        af en we hopen dat je doorgaat met je abonnement.</b><br/> Klik hiervoor op
+        de onderstaande knop om door te gaan.</p> <p><b>Geniet van de verhalen!</b></p>
+      "opening": >-
+        Hallo van ons allemaal bij Wingzzz!
+      "ps_html": >-
+        <p>P.S. In de komende weken zullen we een verscheidenheid aan geweldige nieuwe
+        verhalen toevoegen aan onze steeds groter wordende bibliotheek.<br/>Zorg dat
+        je erbij bent!</p>
+      "subject": >-
+        Je %{trial_duration_in_days}-daagse gratis proefperiode loopt morgen af
+    "trial_ended":
+      "body_html": >-
+        <p>We hopen dat je veel verhalen hebt gelezen en hebt genoten van de Wingzzz-ervaring.</p>
+        <p><b>Je gratis proefperiode van %{trial_duration_in_days} dagen is inmiddels
+        afgelopen en we hopen dat je doorgaat met je abonnement.</b><br/> Klik hiervoor
+        op de onderstaande knop om door te gaan.</p> <p><b>Geniet van de verhalen!</b></p>
+      "opening": >-
+        Hallo van ons allemaal bij Wingzzz!
+      "ps_html": >-
+        <p>P.S. als je niet door wilt gaan met Wingzzz, zouden we graag willen weten
+        waarom. Jouw feedback helpt ons om ons platform te verbeteren. Klik hiervoor
+        op de onderstaande link.</p>
+      "subject": >-
+        Jouw %{trial_duration_in_days}-daagse gratis proefperiode is afgelopen
+    "trial_ended_for_teachers":
+      "body_html": >-
+        <p>Op dit moment kunnen jij en je leerlingen geen verhalen meer lezen bij
+        Wingzzz want je gratis proefperiode is voorbij. We hopen dat jullie
+        hebben genoten.<p>
+        <p>Wil je nog meer avonturen beleven met Wingzzz? Dat kan! Hiervoor
+        heb je een abonnement nodig. Je kan kiezen tussen een Klas abonnement
+        of een School abonnement.<p>
+        <p>Kies hieronder het abonnement naar wens om verder te lezen met Wingzzz.<p>
+        <p>Bedankt en veel leesplezier,<br/>Het Wingzzz team<p>
+      "opening": >-
+        Hallo,
+      "ps_html": >-
+        PS: Let op want binnenkort wordt onze online bibliotheek weer uitgebreid met nieuwe fantastische verhalen. Mis het niet!
+      "subject": >-
+        Je gratis proefperiode van Wingzzz is nu afgelopen
+  "required": >-
+    verplicht
+  "reset_all_preferences": >-
+    alle voorkeuren wissen
+  "reset_password": >-
+    wachtwoord herstellen
+  "results_in_other_languages": >-
+    resultaten in andere talen
+  "save": >-
+    opslaan
+  "search": >-
+    zoeken
+  "settings": >-
+    instellingen
+  "show_book": >-
+    boek tonen
+  "show_books_in_language": >-
+    boeken tonen in taal
+  "show_only_books_from_ages": >-
+    alleen boeken tonen voor leeftijd
+  "sign_in": >-
+    inloggen
+  "sign_in_with_provider": >-
+    Meld je aan met %{provider}
+  "sign_up_with_provider": >-
+    aanmelden met %{provider}
+  "sign_in_here": >-
+    hier inloggen
+  "sign_out": >-
+    uitloggen
+  "sign_up": >-
+    registreren
+  "sign_up_disclaimer_html": >-
+    Door op de onderstaande knop te klikken, ga je akkoord met onze %{terms_of_service_link}
+    en %{privacy_policy_link}
+  "sign_up_for_wingzzz": >-
+    aanmelden voor Wingzzz
+  "sign_up_for_wingzzz_as_a_teacher": >-
+    aanmelden voor Wingzzz als leerkracht
+  "sign_up_description_for_teaceher": >-
+    Wat leuk dat je met jouw leerlingen Wingzzz wilt gaan proberen. 
+    Vul je gegevens in en je kan 14 dagen zoveel 
+    boeken lezen als je wilt, helemaal gratis. De proefperiode stopt automatisch, deze gaat dus niet over in 
+    een betaald abonnement. Veel plezier met lezen!
+  "sign_up_success_text": >-
+    Een bevestigingsmail met daarin een link is naar je e-mailadres gestuurd. Zodra
+    je op deze link klikt, is je account geactiveerd.
+  "sign_up_success_title": >-
+    bedankt voor je aanmelding
+  "simple_form":
+    "error_notification":
+      "default_message": >-
+        Bekijk de onderstaande problemen:
+    "hints":
+      "user":
+        "edit":
+          "password": >-
+            (minimaal %{minimum_password_length} karakters)
+        "new":
+          "password": >-
+            (minimaal %{minimum_password_length} karakters)
+    "labels":
+      "user":
+        "edit":
+          "password": >-
+            Nieuw wachtwoord
+          "password_confirmation": >-
+            Bevestig je wachtwoord
+    "no": >-
+      Nee
+    "required":
+      "html": >-
+        <div class="input-label__required">*</div>
+      "mark": >-
+        *
+      "text": >-
+        verplicht
+    "yes": >-
+      Ja
+  "statistics": >-
+    Statistieken
+  "subscription_and_billing": >-
+    abonnement & betaling
+  "subscription_and_billing_not_found": >-
+    geen abonnements- of betalingsinfo gevonden
+  "subscription_not_yet_activated": >-
+    Je abonnement is nog niet voltooid
+  "support":
+    "array":
+      "last_word_connector": >-
+        en
+      "two_words_connector": >-
+        en
+      "words_connector": >-
+        ,
+  "terms_of_use": >-
+    gebruiksvoorwaarden
+  "time_ago": >-
+    %{time} geleden
+  "time":
+    "am": >-
+      's ochtends
+    "formats":
+      "default": >-
+        %a %d %b %Y %H:%M:%S %Z
+      "long": >-
+        %d %B %Y %H:%M
+      "short": >-
+        %d %b %H:%M
+    "pm": >-
+      's middags
+  "trending_now": >-
+    Populaire boeken
+  "trial_days_left":
+    "one": >-
+      Nog %{count} dag gratis
+    "other": >-
+      Nog %{count} dagen gratis
+  "try_again": >-
+    opnieuw proberen
+  "user_mailer":
+    "activation_email":
+      "body_html": >-
+        <p>Je kunt nu samen met je kind(eren) genieten van toegang tot onze snel groeiende,
+        meertalige, digitale bibliotheek met bekende kinderboeken.</p><p><b>Meer boeken
+        zijn onderweg!</b></p> <p>Je volgende factureringsdatum is %{next_payment_on}.</p>
+        <p>Je kunt eenvoudig en op ieder moment opzeggen in de app bij <b>Mijn Account</b>.</p><p><b>Enjoy
+        the story!</b></p>
+      "opening": >-
+        Bedankt voor het abonneren op Wingzzz!
+      "subject": >-
+        Bedankt voor het abonneren op Wingzzz
+    "activation_email_for_class_subscription":
+      "body_html": >-
+        <p>Je kunt nu samen met je leerlingen genieten van toegang tot onze snel groeiende, meertalig, digitale bibliotheek met bekende kinderboeken.</p>
+        <p><b>Meer boeken zijn onderweg!</b></p>
+        <p>Je volgende factureringsdatum is %{next_payment_on}.</p>
+        <p>Je kunt eenvoudig en op ieder moment opzeggen in de app bij <b>Mijn Account</b>.</p>
+        <p><b>Enjoy the story!</b></p>
+      "opening": >-
+        Bedankt voor het abonneren op Wingzzz!
+      "subject": >-
+        Bedankt voor het abonneren op Wingzzz
+    "activation_email_for_school_subscription":
+      "body_html": >-
+        <p>Bedankt, leuk dat je gekozen hebt voor een Wingzzz School abonnement. 
+        Jij en je collega’s kunnen nu samen met jullie leerlingen blijven genieten van onze digitale bibliotheek. 
+        En het leuke is, er komen telkens nieuwe boeken bij!</p>
+        <p>Samen lezen is leuk en met Wingzzz staat er altijd een verhaal klaar, je kan zelfs kiezen voor een andere taal.</p> 
+        <p>We kunnen ons voorstellen dat ook je collega’s zo snel mogelijk aan 
+        de slag willen gaan met Wingzzz. Nodig nu je collega’s uit om ook gebruik 
+        te maken van het School abonnement via Mijn account (binnen de app).</p>
+        <p>Wingzzz stuurt de factuur voor dit kalenderjaar, naar rato, naar de persoon die hier verantwoordelijk voor is. Deze heb je opgegeven bij het activeren.</p>
+        <p>Met welk avontuur ga je nu van start? Klik op de knop om naar je account te gaan.</p>
+        <p>Heb je vragen of zijn er onduidelijkheden, laat het ons weten. We helpen je graag.</p>
+      "opening": >-
+        Hallo,
+      "subject": >-
+        Bedankt voor het abonneren – je Wingzzz leesavontuur gaat verder
+    "unsubscribe_email":
+      "body_html": >-
+        <p>We hebben je verzoek om je abonnement te beëindigen ontvangen.<br/>Je abonnement
+        is inmiddels stopgezet. Je hebt tot het einde van de (proef-)periode toegang
+        tot de Wingzzz bibliotheek.</p><p>We vinden het erg jammer dat je gaat.<br/>We
+        horen graag van je wat we er aan kunnen doen om onze service te verbeteren.</p>
+      "go_to_wingzzz": >-
+        Neem contact met ons op
+      "subject": >-
+        Je Wingzzz abonnement is beëindigd
+    "welcome_email":
+      "body_html": >-
+        <p>Welkom bij Wingzzz, wat leuk dat je je hebt aangemeld. Bij Wingzzz geloven wij in de kracht van verhalen lezen.
+        Het is niet alleen ontzettend leuk maar het helpt kinderen bij hun sociale, emotionele en cognitieve ontwikkeling.</p>
+        <p>Nu heb je toegang tot een schat aan mooie verhalen.  'Welk boek ga je het eerste lezen?’</p>
+        <p>De proefperiode eindigt <span style='text-decoration: underline'>automatisch</span> op %{trial_period_up_to_and_including}.</p>
+        <p>Daarna kun je eenvoudig overstappen op een betaald abonnement (binnen de app) nu voor slechts %{subscription_amount} per maand.</p>
+        <p>Je kan altijd op elk moment annuleren.</p>
+        <p>Veel leesplezier,<br>
+        Het Wingzzz team</p>
+      "opening": >-
+        Hallo!
+      "subject": >-
+        Welkom bij Wingzzz
+    "welcome_email_for_teachers":
+      "subject": "Welkom bij Wingzzz, je leesavontuur gaat beginnen"
+      "opening": "Hallo,"
+      "body_html": >-
+        <p>Welkom bij Wingzzz, wat ontzettend leuk dat je je hebt aangemeld. Bij Wingzzz geloven we in de kracht van verhalen lezen. 
+        Het is niet alleen leuk maar het helpt kinderen bij hun sociale, emotionele en cognitieve ontwikkeling.</p>
+        <p>Nu heb je samen met je leerlingen toegang tot een schat aan mooie verhalen. We helpen je graag om naast de leesvaardigheid ook het leesplezier te vergroten.</p>
+        <p>Deel jouw logingegevens met je leerlingen zodat zij in groepjes of zelfstandig aan de slag kunnen met Wingzzz. Welk boek gaan jullie het eerste lezen?</p>
+        <p>Je kunt nu 14 dagen gratis gebruik maken van Wingzzz. De proefperiode eindigt automatisch op %{trial_period_up_to_and_including}.</p>
+        <p>Daarna kun je eenvoudig overstappen op een betaald abonnement (binnen de app). Je kan kiezen tussen een Klas abonnement (%{subscription_class_amount}/m) of een School abonnement (%{subscription_school_amount} p/j).</p>
+        <p>Mochten er vragen zijn laat het ons gerust weten. We helpen je graag.</p>
+        <p>Veel leesplezier,<br/>
+        Het Wingzzz team</p>
+  "verifying_your_payment": >-
+    je betaling wordt geverifieerd
+  "views":
+    "pagination":
+      "first": >-
+        &laquo; First
+      "last": >-
+        Last &raquo;
+      "next": >-
+        Next &rsaquo;
+      "previous": >-
+        &lsaquo; Prev
+      "truncate": >-
+        &hellip;
+  "you_can_cancel_anytime": >-
+    Maandelijks opzegbaar
+  "you_can_cancel_anually": >-
+    (eerste jaar naar rato) Jaarlijks opzegbaar
+  "start_to_read": >-
+    Start met lezen
+  "website_address": >-
+    https://mywingzzz.com
+  "school_name": >-
+    Schoolnaam
+  "class": >-
+    klas
+  "invitation_instructions": >-
+    Nodig nu een collega uit om ook gebruik te maken van het School abonnement. Je kan meerdere collega’s nog makkelijk uitnodigen via Mijn account. 
+  "valid_school_subscription": >- 
+    Jouw School abonnement is actief. De volgende factureringsdatum is: %{school_subscription} <br><br>
+    Voor die datum kan je makkelijk opzeggen, stuur een e-mail naar support@mywingzzz.com.

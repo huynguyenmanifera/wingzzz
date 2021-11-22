@@ -1,0 +1,75 @@
+# Settings in this file are accessible by using `Wingzzz.config`.
+# See also config/application.rb.
+#
+default: &default
+  s3: &s3
+    region: "eu-west-1"
+    access_key_id: '<%= ENV["AWS_ACCESS_KEY_ID"] %>'
+    secret_access_key: '<%= ENV["AWS_SECRET_ACCESS_KEY"] %>'
+    bucket_name: '<%= ENV["AWS_BUCKET_NAME"] %>'
+  admin:
+    name: '<%= ENV["ADMIN_NAME"] %>'
+    password: '<%= ENV["ADMIN_PASSWORD"] %>'
+  books:
+    storage: "Local" # Can be one of: Local, S3
+  external_urls:
+    contact: https://mywingzzz.com/HOME_NL/contact.html?_ga=2.258866698.1092233683.1601290738-131483274.1595657181
+    privacy_policy: https://www.mywingzzz.com/privacy.html
+    statistics: https://wz-redash.herokuapp.com/
+    terms_of_use: https://www.mywingzzz.com/terms-and-conditions.html
+    pdf_to_epub_converter: "https://wz-book-converter.herokuapp.com/"
+  kitchen_sink:
+    enabled: <%= ActiveModel::Type::Boolean.new.cast(ENV['KITCHEN_SINK']) %>
+  action_mailer:
+    sender: "Wingzzz <noreply@mywingzzz.com>"
+    user_name: "apikey"
+    password: '<%= ENV["SENDGRID_API_KEY"] %>'
+    domain: "mywingzzz.com"
+  mollie:
+    api_key: '<%= ENV["MOLLIE_API_KEY"] %>'
+  trial:
+    duration_in_days: <%= ENV.fetch("TRIAL_DURATION_DAYS", 14).to_i %>
+  subscription: &subscription
+    amount:
+      value: '<%= ENV.fetch("SUBSCRIPTION_AMOUNT_VALUE", "7.99") %>' # Must be string
+      currency: "EUR"
+    amount_for_class_subscription:
+      value: '<%= ENV.fetch("CLASS_SUBSCRIPTION_AMOUNT_VALUE", "7.99") %>' # Must be string
+      currency: "EUR"
+    amount_for_school_subscription:
+      value: '<%= ENV.fetch("SCHOOL_SUBSCRIPTION_AMOUNT_VALUE", "59.99") %>' # Must be string
+      currency: "EUR"
+    interval:
+      value: <%= ENV.fetch("SUBSCRIPTION_INTERVAL_VALUE", 1).to_i %>
+      unit: '<%= ENV.fetch("SUBSCRIPTION_INTERVAL_UNIT", "month") %>' # The maximum interval is 1 year
+  tolk:
+    url: '<%= ENV["TOLK_URL"] %>'
+  support_email: support@mywingzzz.com
+  admin_email: <%= ENV["ADMIN_EMAIL"] %>
+  google_tag_manager_container_id: '<%= ENV["GOOGLE_TAG_MANAGER_CONTAINER_ID"] %>'
+
+development:
+  <<: *default
+  books:
+    storage: '<%= ENV["BOOKS_STORAGE"] || "Local" %>'
+  s3:
+    <<: *s3
+    bucket_name: "wingzzz-development-web"
+  exit_node_host: '<%= ENV["EXIT_NODE_HOST"] %>'
+
+test:
+  <<: *default
+  s3:
+    <<: *s3
+    bucket_name: "wingzzz-test-web"
+  google_tag_manager_container_id: "dummy-123"
+  subscription:
+    <<: *subscription
+    interval:
+      value: <%= ENV.fetch("SUBSCRIPTION_INTERVAL_VALUE", 30).to_i %>
+      unit: '<%= ENV.fetch("SUBSCRIPTION_INTERVAL_UNIT", "days") %>' # The maximum interval is 1 year
+
+production:
+  <<: *default
+  books:
+    storage: S3

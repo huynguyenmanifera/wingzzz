@@ -1,0 +1,23 @@
+.icon {
+  @apply h-8 w-8 fill-current relative block;
+
+  > svg {
+    @apply overflow-visible;
+  }
+}
+
+.icon-tiny {
+  @apply h-4 w-4;
+}
+
+.icon-small {
+  @apply h-5 w-5;
+}
+
+.icon-medium {
+  @apply h-8 w-8;
+}
+
+.icon-large {
+  @apply h-10 w-10;
+}

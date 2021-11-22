@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Wingzzz PDF2EPUB</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/chota@latest">
+    <style>
+      :root {
+        --color-primary: #ff4562;
+        --grid-maxWidth: 80rem;
+      }
+
+      #download {
+        display: none;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2 style="margin-bottom: 0;">Converting PDF to EPUB</h2>
+      <p>Conversion can take up to 1 minute for large books.</p>
+
+      <p id="progress" class="bg-light">Converting, please wait...</p>
+      <a id="download" href="#">Download PDF (one-time only)</a>
+    </div>
+
+    <script>
+      const jobStatus = new EventSource("/jobs/<%= jobId %>/status");
+
+      const progress = document.getElementById("progress");
+      const downloadBtn = document.getElementById("download");
+
+      jobStatus.addEventListener("progress", function(e) {
+        progress.textContent += ".";
+      });
+
+      jobStatus.addEventListener("completed", function(e) {
+        <% if(notify) { %>
+        window.Notification && new Notification("Wingzzz PDF conversion completed");
+        <% } %>
+
+        progress.className = "bg-success";
+        progress.textContent = "Conversion completed.";
+
+        const message = JSON.parse(e.data);
+
+        download.href = message.url;
+        download.style.display = "block";
+      });
+
+      jobStatus.addEventListener("failed", function(e) {
+        alert("There was a problem converting your file.");
+        jobStatus.close();
+
+        window.location.replace("/");
+      });
+    </script>
+  </body>
+</html>

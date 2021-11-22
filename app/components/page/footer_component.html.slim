@@ -1,0 +1,8 @@
+div.h-20
+div.text-xs.absolute.bottom-0.left-0.right-0.px-5
+  div.max-w-screen-lg.mx-auto.pb-8
+    ul.text-center
+      li(class=copyright_notice_classes)= copyright_notice
+
+      - external_links_keys.each do |key|
+        li= external_link_to(key, class: link_classes)

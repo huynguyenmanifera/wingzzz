@@ -1,0 +1,49 @@
+li(*li_attributes)
+    = li_content_wrapper do
+      - case item_type
+        - when :card
+          .relative(class='w-5/12')
+            = image_tag @book.cover.thumbnail.url, class: 'shadow-xl'
+            - unless @book.regular?
+              .audio-icon(class=audio_icon)
+                = render(IconComponent.new(icon: audio_icon, size: 'medium'))
+          .pl-5(class='w-7/12')
+            .text-xl.tracking-wide.mb-4= @book.title
+            - if @book.publisher
+              .text-sm= t('published_by', publisher: @book.publisher.name)
+            - if @book.authors
+              .text-sm= t('written_by', author: @book.show_authors)
+        - when :concise
+          .transition.duration-300.transform.relative(class='hover:shadow-xl hover:scale-105')
+            = image_tag @book.cover.thumbnail.url, class: 'bg-white opacity-85 xl:hover:opacity-100 transition duration-300', title: @book.title
+            - unless @book.regular?
+              .audio-icon(class=audio_icon)
+                = render(IconComponent.new(icon: audio_icon, size: 'medium'))
+
+    - if @show_preview
+        template(data={ target: 'book.template' })
+          = render(ModalComponent.new(size: :medium)) do
+              .flex.h-full
+                div(class='w-5/12')
+                  .pt-2.mr-10.relative
+                    = link_to @book do
+                      = image_tag(@book.cover.thumbnail.url, class: 'w-full transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110')
+                      - unless @book.regular?
+                        .audio-icon(class=audio_icon)
+                          = render(IconComponent.new(icon: audio_icon, size: 'medium'))
+                .flex.flex-col(class='w-7/12')
+                  .flex-grow
+                    .text-xl.tracking-wide.mb-4= @book.title
+                    - if @book.publisher
+                      .text-xs.text-wz-white-trn-500.mb-4(class='-mt-3')= t('published_by', publisher: @book.publisher.name)
+                    - if @book.authors
+                      .text-xs.text-wz-white-trn-500.mb-4(class='-mt-3')= t('written_by', author: @book.show_authors)
+                    .text-sm.mb-4
+                      = t('age')
+                      | :
+                      =< @book.formatted_age_range
+                    - if @book.summary?
+                      .overflow-y-auto(style='max-height: 12rem;')= simple_format(@book.summary, class: 'text-xs')
+
+                  .mt-6
+                    = read_button

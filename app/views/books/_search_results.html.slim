@@ -1,0 +1,8 @@
+- if search_results.filters[:q] && search_results.filters[:q].strip.length > 0
+  .search_results
+    h2.text-xl.tracking-wide.text-wz-white.my-2= t('search_results').capitalize
+    = render(Books::GridComponent.new(books: search_results.results_current_language.decorate))
+
+    - if search_results.results_other_languages.any?
+      h2.text-xl.tracking-wide.text-wz-white.my-2= t('results_in_other_languages').capitalize
+      = render(Books::GridComponent.new(books: search_results.results_other_languages.decorate))

@@ -1,0 +1,21 @@
+html
+  head
+    title
+      | Wingzzz
+    = csrf_meta_tags
+    = csp_meta_tag
+    meta name="locale" content=I18n.locale
+    - if @mobile_friendly
+      meta name="viewport" content="device-width,initial-scale=1"
+    - if @mobile_fixed
+      meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    - if @mobile_reset
+      meta name="viewport" content="width=device-width*2"
+
+    link(rel="apple-touch-icon", href="icon.png")
+    = stylesheet_pack_tag 'styles', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_pack_tag 'translations.js'
+    = javascript_pack_tag 'app', 'data-turbolinks-track': 'reload'
+
+  body.font-sans
+    = yield

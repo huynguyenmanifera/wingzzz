@@ -1,0 +1,27 @@
+
+= render(Page::Bare::Component.new(dark_mode: true)) do |page|
+  - flash_messages(type: :notice).each do |type, message|
+    h1.text-xl.mb-10.text-wz-white= message
+
+  h1.text-xl.mb-5.text-wz-white= t('sign_in').capitalize
+  - flash_messages(type: [:error, :alert]).each do |type, message|
+    div.mb-4.text-wz-red-500.text-sm= message
+
+  = simple_form_for(resource, as: resource_name, url: session_path(resource_name, locale: I18n.locale)) do |f|
+    = f.input :email, autofocus: true, autocomplete: :email, wrapper_html: { class: 'input-wrapper--dark-mode' }
+    = f.input :password, autocomplete: 'current-password', hint: false, wrapper_html: { class: 'pb-0 input-wrapper--dark-mode' }
+    .text-right.text-xs= link_to t('forgot_your_password').capitalize, new_user_password_path(locale: I18n.locale), class: "link font-bold text-wz-white"
+
+    .mt-8
+      = f.button :submit, t('sign_in').capitalize, class: 'btn-cta mr-4'
+      .text-sm.text-wz-white
+        = t('dont_have_an_account').upcase_first + " "
+        = link_to t('sign_up').capitalize, new_registration_path(resource_name, locale: I18n.locale), class: "link font-bold text-wz-white"
+
+    - if ENV['FACEBOOK_APP_ID'].present?
+      .mt-8
+        = link_to t('sign_in_with_provider', provider: 'Facebook'), user_facebook_omniauth_authorize_path, method: :post, class: 'btn text-white w-full border-blue-900 bg-blue-800 hover:bg-blue-900'
+
+    - if ENV['GOOGLE_APP_ID'].present?
+      .mt-8
+        = link_to t('sign_in_with_provider', provider: 'Google'), user_google_oauth2_omniauth_authorize_path, method: :post, class: 'btn w-full text-white border-red-800 bg-red-700 hover:bg-red-800'

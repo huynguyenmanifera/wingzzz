@@ -1,0 +1,4 @@
+en:
+  front:
+    book_progress: "%{current} of %{total}"
+    finish: finish

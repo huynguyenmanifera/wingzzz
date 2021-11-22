@@ -1,0 +1,18 @@
+en:
+  attributes:
+    email: email address
+    address: address
+    postcode: postcode
+    city: city
+    brin_code: brin code
+    locale: language
+    password: password
+    password_confirmation: password (confirmation)
+    remember_me: remember me
+    contact_email: Budget responsible person (email)
+    contact_name: Budget responsible person (name)
+    billing_name: Billing school name
+    billing_brincode: Billing school brin code
+    billing_address: Billing school address
+    billing_city: Billing school city
+    billing_postcode: Billing school postcode

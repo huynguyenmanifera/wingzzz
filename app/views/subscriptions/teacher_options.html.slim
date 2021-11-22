@@ -1,0 +1,39 @@
+= render(Page::Bare::Component.new) do |page|
+    - if current_user.trial.active?
+        p.text-wz-gray-600.text-lg.text-center
+            = t('activate_subscription.school_subscription_description')
+
+    h3.text-black.text-lg.text-center.centered.font-bold.pt-8
+        = t('activate_subscription.school_subscription_cta')
+    div.text-wz-gray-600.text-md.pt-8
+        - t('activate_subscription.school_subscription_perks').each do |perk|
+            li.flex.mb-2
+                span.mr-2.mt-1= render(IconComponent.new(icon: "checkmark", size: "tiny"))
+                span= perk
+    div.text-wz-gray-600.text-md.text-center.py-4
+        - if current_user.trial.active?
+            = t('activate_subscription.subscribe_before_trial', endDate: I18n.l(current_user.trial&.expires_after, format: :long)).html_safe
+    div.pb-8
+        p.centered
+            = link_to t('activate_subscription.cta_specific_activate', subscriptionType: t('class').upcase).html_safe, subscription_path, method: 'post', class: 'btn btn-cta mb-3 w-full'
+            p.text-wz-light-blue-600.text-center
+                span.pr-2.text-sm = t('activate_subscription.student_amount_limit', studentLimit: '35')
+            p.text-wz-light-blue-600.text-center
+                b.text-md = t('activate_subscription.pricing', amount: localized_class_subscription_amount)
+            p.text-wz-light-blue-600.text-center.text-sm
+                = t('you_can_cancel_anytime')
+    p.centered
+        = render('shared/button', label: t('activate_subscription.cta_specific_activate', subscriptionType: 'SCHOOL').html_safe, url: new_school_subscription_url)
+        p.text-wz-light-blue-600.text-center
+            span.pr-2.text-sm = t('activate_subscription.student_amount_limit', studentLimit: '400')
+        p.text-wz-light-blue-600.text-center
+            b.text-md = t('activate_subscription.anual_pricing', amount: localized_school_subscription_amount)
+        p.text-wz-light-blue-600.text-center.text-sm
+            = t('you_can_cancel_anually')
+
+
+        p.centered.pt-8
+            - if current_user.trial.active?
+                = link_to t('activate_subscription.back_to_my_free_trial'), root_path, class: 'btn btn-light btn-border mb-3 w-full'
+        p.text-wz-light-blue-600.text-center.text-xs.mt-2
+            = link_to(t('login_as_a_different_user'), destroy_user_session_path, method: Rails.application.config.devise.sign_out_via, class: 'link')

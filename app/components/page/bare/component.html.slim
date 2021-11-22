@@ -1,0 +1,11 @@
+.min-h-screen.relative
+  .fixed.w-screen.h-full style=("z-index: -1; overflow: hidden;")
+    .bg-no-repeat.h-full style=(background_style)
+  .text-right.px-32.pb-12.pt-8= render(LanguageSwitcherComponent.new(dark_mode: dark_mode))
+  .px-16.pb-24
+    .max-w-sm.mx-auto.left-0.right-0
+      .text-center.pb-16
+        .inline-block= render(LogoComponent.new(dark_mode: dark_mode))
+      = content
+
+  div= render(Page::FooterComponent.new(dark_mode: dark_mode))

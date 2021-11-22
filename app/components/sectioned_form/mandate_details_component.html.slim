@@ -1,0 +1,3 @@
+= render(SectionedForm::InputPreviewComponent.new(label: t('payment_method').capitalize)) { payment_images_and_words }
+- attributes.each do |attr|
+  = render(SectionedForm::InputPreviewComponent.new(label: t(attr).capitalize)) { send(attr) }

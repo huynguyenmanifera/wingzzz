@@ -1,0 +1,6 @@
+.w-screen.h-screen.fixed.left-0.right-0.top-0(data={ controller: 'modal' } style='z-index: 1000;')
+  .w-full.h-full.absolute.top-0.bg-wz-black.bg-opacity-50(data= { action: 'click->modal#close' })
+  div(class=modal_class)
+    button.text-wz-white.absolute.right-0.p-6(class='hover:opacity-75 focus:outline-none active:outline-none' data={ action: 'click->modal#close' })
+      = render(IconComponent.new(icon: "close", size: 'tiny'))
+    .w-full.h-full.p-10= content

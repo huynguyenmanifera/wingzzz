@@ -1,0 +1,4 @@
+- if trending_now.any?
+  .trending-now
+    h2.text-xl.tracking-wide.text-wz-white.mt-2.mb-5= t('trending_now')
+    = render(Books::CarouselComponent.new(books: trending_now, item_type: :card))

@@ -1,0 +1,12 @@
+attributes:
+  - content
+  - inheritance
+filename: 'doc/erd'
+filetype: svg
+inheritance: true
+notation: bachman
+title: false
+exclude: >
+  ActiveRecord::InternalMetadata, ActiveRecord::SchemaMigration,
+  Tolk::Locale, Tolk::Phrase, Tolk::Translation,
+  primary::SchemaMigration

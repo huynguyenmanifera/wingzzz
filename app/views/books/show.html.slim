@@ -1,0 +1,15 @@
+#epub_app
+javascript:
+  renderComponent('EpubApp', 'epub_app', {
+    bookId: #{@book.id},
+    epubFileURL: "#{@book.epub_url}",
+    audioFileURL: "#{{@book.audio.url}}",
+    coverURL: "#{{@book.cover.url}}",
+    bookType: "#{@book.book_type}",
+    layout: "#{@book.layout}",
+    stylesheetURL: "#{stylesheet_url('epub')}",
+    bookSessionURL: "#{book_book_session_path @book}",
+    initialPage: #{ @book_session.current_page },
+    backURL: "#{books_path}",
+    readerChoice: "#{@book.reader}"
+  })

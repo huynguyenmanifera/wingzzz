@@ -1,0 +1,26 @@
+// This utility makes an assumption on de the element structure,
+// which is an anti-pattern within Tailwind. However, this allows
+// us to have a pure CSS search input field.
+input:placeholder-shown + .hide-if-input-before-has-placeholder-shown {
+  opacity: 0;
+}
+
+.capitalize-first-letter::first-letter {
+  @apply capitalize;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.animate-fade-out {
+  animation-name: fadeOut;
+  animation-duration: 0.6s;
+  animation-delay: 6s;
+  animation-fill-mode: forwards;
+}

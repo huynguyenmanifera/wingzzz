@@ -1,0 +1,18 @@
+= render(Page::AccountComponent.new) do |page|
+  = render(SectionedForm::Component.new(title: t('account').capitalize)) do
+    = render(SectionedForm::SectionComponent.new) do
+      = render(SectionedForm::SectionTitleComponent.new(title: (t('settings').capitalize)))
+      = render(SectionedForm::SectionContentComponent.new) do
+        = render(SectionedForm::InputPreviewComponent.new(label: User.human_attribute_name(:email).capitalize)) { current_user.email }
+        = render(SectionedForm::InputPreviewComponent.new(label: t('language').capitalize)) { t("languages.#{current_user.locale}").capitalize }
+        .text-right.mt-6
+          = link_to t('edit_settings').capitalize, edit_account_settings_path, class: 'btn btn-light btn-border'
+
+    = render(SectionedForm::SectionComponent.new) do
+      = render(SectionedForm::SectionTitleComponent.new(title: (t('subscription_and_billing').capitalize))) do
+        - unless !current_user.subscription || current_user.subscription.canceled?
+          = button_to t('cancel_subscription').capitalize, unsubscribe_account_path, class: 'link text-sm', data: { confirm: t('confirm_canceling_subscription') }, onclick: "dataLayer.push({ event: 'unsubscribe' });"
+      = render(SectionedForm::SectionContentComponent.new) do
+        = render(SectionedForm::SubscriptionAndBillingDetailsComponent.new(user: current_user))
+
+  =render(NewTeacherComponent.new(user: current_user)) if current_user.has_role? :school_subscription_owner

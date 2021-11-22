@@ -1,0 +1,13 @@
+= render(Page::Bare::Component.new) do |page|
+  h1.text-xl.mb-5.text-wz-black= t('forgot_your_password').capitalize
+  p.text-sm.my-10= t('new_password_instructions')
+
+  = simple_form_for(resource, as: resource_name, url: password_path(resource_name, locale: I18n.locale), html: { method: :post }) do |f|
+    = f.input :email, autofocus: true, autocomplete: :email
+
+    .mt-6
+      = f.button :submit, t('reset_password').upcase_first, class: 'btn-cta'
+
+  .mt-8.text-sm
+    = t('back_to').upcase_first + " "
+    = link_to t('sign_in').capitalize, new_session_path(resource_name, locale: I18n.locale), class: "link font-bold"

@@ -1,0 +1,14 @@
+div(data={ controller: 'invitations' })
+  button.btn.btn-cta(data={ action: 'click->invitations#open' })
+    span.flex-1= t('devise.invitations.new.submit_button').capitalize
+
+  template(data={ target: 'invitations.template' })
+    = render(ModalComponent.new(size: :medium)) do
+        h3.text-xl.mb-4.text-wz-gray-500 = t "devise.invitations.new.header"
+        p.text-lg.mb-4.text-wz-gray-500 = t "invitation_instructions"
+        = simple_form_for(@user, as: :user, url: '/users/invitation', html: { method: :post }) do |f|
+            = f.error_notification
+            .form-inputs
+            = f.input :email
+            .form-actions
+            = f.button :submit, t("devise.invitations.new.submit_button"), class: 'btn-cta w-full'

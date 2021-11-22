@@ -1,0 +1,53 @@
+  table border="0" cellpadding="0" cellspacing="0" role="presentation" style="margin:0 auto; max-width:600px;"
+    tr
+      td &nbsp;
+    tr border="0" cellpadding="0" cellspacing="0"
+      td align="center" border="0" cellpadding="0" cellspacing="0"
+        a href= t('website_address')
+          = image_tag("teacher_email_header2.jpg", width: "600")
+    tr
+      td
+        .content-inner
+          = yield
+    tr 
+      td
+        div style="background-image: url('#{image_url('welcome_email_flowers_bg.jpg')}'); background-position: center; background-size: contain; width: 600px; height: 151px; display: block; margin: 0 auto;"
+          table border="0" cellpadding="0" cellspacing="0" style="margin: 0 auto; max-width: 600px;"
+            tr 
+              td colspan="3" height="20" &nbsp;
+            tr 
+              td width="150" &nbsp;
+              td width="200"
+                = render('shared/button', label: t('start_to_read'), url: root_url)
+              td width="150" &nbsp;
+            tr 
+              td colspan="3" height="20"
+        div style="background-color: #16c3f3"
+          table 
+            tbody
+              tr 
+                td colspan="5" height="20"
+              tr
+                td width="180" height="50" 
+                td width="60" height="50" valign="middle" align="center"
+                  a href='https://www.facebook.com/wingzzz#{@user.locale.upcase}'
+                    = image_tag('icons/emails/email-footer-facebook-logo.png')
+                td width="60" height="50" valign="middle" align="center"
+                  a href='https://www.instagram.com/wingzzz#{@user.locale}'
+                    = image_tag('icons/emails/email-footer-insta-logo.png')
+                td width="60" height="50" valign="middle" align="center"
+                  a href= t('website_address')
+                    = image_tag('icons/emails/email-footer-link-logo.png')
+                td width="180" height="50"
+              tr
+                td colspan="5"
+                  hr style="border: 0; border-top: 1px solid white; width: 480px;"
+              tr
+                td colspan="5"
+                  div style="text-align: center; font-size: 13px; color: white;"
+                    = '© Wingzzz B.V.'
+                    br
+                    = t('for_questions_please_email_to_html', \
+                    email: link_to(Wingzzz.config.support_email, "mailto:#{Wingzzz.config.support_email}", class: 'link'))
+              tr
+                td colspan="5" &nbsp;

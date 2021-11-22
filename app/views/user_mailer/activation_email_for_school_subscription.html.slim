@@ -1,0 +1,5 @@
+= render layout: 'shared/simple_html_teacher_email_layout' do
+  .opening= t('user_mailer.activation_email_for_school_subscription.opening', email: @user.email)
+  p= t('user_mailer.activation_email_for_school_subscription.body_html')
+
+  .closing= t('mailer.closing_html')

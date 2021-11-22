@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Wingzzz PDF2EPUB</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/chota@latest">
+    <style>
+      :root {
+        --color-primary: #ff4562;
+        --grid-maxWidth: 80rem;
+      }
+      button {
+        margin-top: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Convert PDF to EPUB</h2>
+      <p>Please select a PDF file. Conversion can take up to 1 minute for large books.</p>
+
+      <form action="/api/convert" method="post" enctype="multipart/form-data"
+        onsubmit="this.submit.disabled = true; this.submit.textContent = 'Uploading...';">
+        <input type="file" name="pdf" accept="application/pdf" required autocomplete="false" />
+
+        <button name="submit" type="submit">Convert</button>
+
+        <span id="notify-container">
+          <input name="notify" id="notify" type="checkbox" /><label for="notify">Notify on completion</label>
+        </span>
+      </form>
+    </div>
+    <script>
+      if(! window.Notification) {
+        document.getElementById("notify-container").remove();
+      } else {
+        document.getElementById("notify").addEventListener("change", (event) => {
+          if(event.target.checked) {
+            Notification.requestPermission();
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

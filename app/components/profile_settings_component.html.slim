@@ -1,0 +1,46 @@
+div(data={ controller: 'profile-settings' })
+  button.text-wz-white.link.flex.items-center.p-4(data={ action: 'click->profile-settings#open' })
+    span.pr-2= render(IconComponent.new(icon: 'settings', size: 'small'))
+    span.flex-1= t('settings').capitalize
+
+  template(data={ target: 'profile-settings.template' })
+    = render(ModalComponent.new(size: :medium)) do
+        = simple_form_for profile do |f|
+          .flex.flex-col
+            .flex-1.flex-grow
+              .text-xl.tracking-wide.mb-4= t('library_settings').capitalize
+
+              .mb-5
+                .text-sm.mb-2= t('show_only_books_from_ages').capitalize
+                .flex.items-center(data={ target: 'profile-settings.ageRangeSelector' })
+                  .flex-1(style="max-width: 12rem;")
+                    = f.input :min_age_in_months,
+                      collection: min_age_in_months_collection,
+                      wz_label: false,
+                      wrapper: false,
+                      selected: profile.min_age_in_months || '',
+                      input_html: { wz_wrapper_html: { class: 'select-box select-box--transparent select-box--compact', data: { target: 'profile-settings.minAgeInMonthsWrapper' } }, data: { target: 'profile-settings.minAgeInMonths', action: 'profile-settings#minAgeInMonthsChange' } }
+
+                  .px-4.text-sm= t('age_range.to')
+
+                  .flex-1(style='max-width: 12rem;')
+                    = f.input :max_age_in_months,
+                      collection: max_age_in_months_collection,
+                      wz_label: false,
+                      wrapper: false,
+                      selected: profile.max_age_in_months || '',
+                      input_html: { wz_wrapper_html: { class: 'select-box select-box--transparent select-box--compact', data: { target: 'profile-settings.maxAgeInMonthsWrapper' } }, data: { target: 'profile-settings.maxAgeInMonths', action: 'profile-settings#maxAgeInMonthsChange' } }
+
+              .mb-5
+                .text-sm.mb-2= t('show_books_in_language').capitalize
+                .flex-1(style='max-width: 12rem;')
+                  = f.input :content_language,
+                    collection: language_collection,
+                    include_blank: false,
+                    wz_label: false,
+                    wrapper: false,
+                    input_html: { wz_wrapper_html: { class: 'select-box select-box--transparent' }, data: { target: 'profile-settings.contentLanguage' } }
+
+            .flex.items-center.justify-between.mt-5
+              = f.submit t('reset_all_preferences'), class: 'text-wz-white bg-transparent link text-sm', name: 'reset', tabindex: -1
+              = f.submit t('save').capitalize, class: 'btn btn-primary'

@@ -1,0 +1,29 @@
+= render(Page::Bare::Component.new) do |page|
+  h1.text-xl.mb-5.text-wz-black= t('sign_up_for_wingzzz').upcase_first
+  = simple_form_for(resource, as: resource_name, url: registration_path(resource_name, locale: I18n.locale)) do |f|
+    = f.input :email, autofocus: true, autocomplete: :email
+    = f.input :password, autocomplete: 'current-password', hint: (@minimum_password_length && t('simple_form.hints.user.new.password', minimum_password_length: @minimum_password_length))
+    = f.input :password_confirmation, autocomplete: 'new-password'
+
+    .text-sm
+      = t( \
+        'sign_up_disclaimer_html', \
+        sign_up: t('sign_up').capitalize,
+        privacy_policy_link: external_link_to(:privacy_policy, class: 'link'), \
+        terms_of_service_link: external_link_to(:terms_of_use, class: 'link') \
+      )
+
+    .mt-8
+      = f.button :submit, t('sign_up').capitalize, class: 'btn-cta w-full'
+
+    - if ENV['FACEBOOK_APP_ID'].present?
+      .mt-8
+        = link_to t('sign_up_with_provider', provider: 'Facebook'), user_facebook_omniauth_authorize_path, method: :post, class: 'btn text-white w-full bg-blue-800 hover:bg-blue-900'
+
+    - if ENV['GOOGLE_APP_ID'].present?
+      .mt-8
+        = link_to t('sign_up_with_provider', provider: 'Google'), user_google_oauth2_omniauth_authorize_path, method: :post, class: 'btn w-full text-white bg-red-700 hover:bg-red-800'
+
+    .mt-8.text-sm
+      = t('already_have_an_account').upcase_first + " "
+      = link_to t('sign_in_here').capitalize, new_session_path(resource_name, locale: I18n.locale), class: "link font-bold"

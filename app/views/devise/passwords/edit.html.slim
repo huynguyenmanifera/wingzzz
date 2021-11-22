@@ -1,0 +1,13 @@
+= render(Page::Bare::Component.new) do |page|
+  h1.text-2xl.mb-5.text-gray-700= t('change_your_password').capitalize
+  = simple_form_for(resource, as: resource_name, url: password_path(resource_name, locale: I18n.locale), html: { method: :put }) do |f|
+    = f.hidden_field :reset_password_token
+    = f.input :password, autocomplete: 'new-password', hint: (@minimum_password_length && t('simple_form.hints.user.new.password', minimum_password_length: @minimum_password_length))
+    = f.input :password_confirmation, autocomplete: 'new-password'
+
+    .mt-6
+      = f.button :submit, t('change_password').upcase_first, class: 'btn-cta'
+
+  .mt-8.text-sm
+    = t('back_to').upcase_first + " "
+    = link_to t('sign_in').capitalize, new_session_path(resource_name, locale: I18n.locale), class: "link font-bold"

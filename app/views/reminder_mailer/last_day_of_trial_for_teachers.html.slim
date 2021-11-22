@@ -1,0 +1,18 @@
+= render layout: 'shared/simple_html_teacher_email_layout' do
+  .opening= t('reminder_mailer.last_day_of_trial_for_teachers.opening', email: @user.email)
+  p= t('reminder_mailer.last_day_of_trial_for_teachers.body_html', trial_duration_in_days: @trial_duration_in_days)
+  = render('shared/button', label: t('activate_subscription.cta_specific_activate', subscriptionType: 'KLAS').html_safe, url: new_subscription_url)
+  p.centered.btn-cta-subtext
+    b= t('activate_subscription.student_amount_limit', studentLimit: '35')
+    br
+    b= t('activate_subscription.pricing', amount: localized_class_subscription_amount)
+    br
+    = t('you_can_cancel_anytime')
+  = render('shared/button', label: t('activate_subscription.cta_specific_activate', subscriptionType: 'SCHOOL').html_safe, url: new_school_subscription_url)
+  p.centered.btn-cta-subtext
+    b= t('activate_subscription.student_amount_limit', studentLimit: '400')
+    br
+    b= t('activate_subscription.anual_pricing', amount: localized_school_subscription_amount)
+    br
+    = t('you_can_cancel_anually')
+  p= t('reminder_mailer.last_day_of_trial_for_teachers.ps_html')

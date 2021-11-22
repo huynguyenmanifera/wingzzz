@@ -1,0 +1,101 @@
+// Exceptional case: use BEM instead of template system because of complex CSS selectors
+.checkbox {
+  @apply inline-flex select-none relative py-2 text-wz-gray-700;
+
+  &__input {
+    @apply opacity-0 cursor-pointer h-0 w-0;
+
+    &:checked ~ .checkbox__box {
+      @apply bg-wz-blue-400 border-wz-blue-400;
+
+      .checkbox__box__mark {
+        &:before,
+        &:after {
+          @apply block;
+        }
+      }
+
+      &:after {
+        @apply hidden;
+      }
+    }
+
+    &:disabled ~ .checkbox__box,
+    &:disabled ~ .checkbox__label {
+      @apply opacity-50 cursor-not-allowed;
+    }
+  }
+
+  &__box {
+    @apply rounded-sm w-6 h-6 relative cursor-pointer border border-wz-gray-700;
+
+    &:after {
+      @apply bg-wz-light-gray absolute top-0 left-0 bottom-0 right-0 m-auto;
+      width: 70%;
+      height: 70%;
+      content: "";
+    }
+
+    &__mark {
+      $thickness: 13%;
+      $left: 42%;
+      $bottom: 20%;
+      $length-left: 43%;
+      $length-right: 66%;
+      $angle-left: -45deg;
+      $angle-right: 36deg;
+
+      &:before,
+      &:after {
+        @apply rounded-full absolute hidden bg-wz-white origin-bottom;
+
+        width: $thickness;
+        bottom: $bottom;
+        content: "";
+      }
+
+      &:before {
+        height: $length-left;
+        left: $left;
+        transform: rotate($angle-left);
+      }
+
+      &:after {
+        height: $length-right;
+        left: $left - ($thickness / 2);
+        transform: rotate($angle-right);
+      }
+    }
+  }
+
+  &:hover .checkbox__input:not(:checked):not(:disabled) ~ .checkbox__box:after {
+    @apply bg-wz-dm-blue-400;
+  }
+
+  &__label {
+    @apply px-2 cursor-pointer self-center flex-1;
+
+    &::first-letter {
+      @apply capitalize;
+    }
+  }
+
+  &--transparent {
+    .checkbox {
+      &__box {
+        @apply w-6 h-6 border-wz-white;
+      }
+
+      &__label {
+        color: rgba(255, 255, 255, 0.5);
+      }
+    }
+  }
+}
+
+@-moz-document url-prefix() {
+  .checkbox {
+    // Firefox applies unncessary wrapping to text labels if 'inline-flex' is used
+    display: flex;
+  }
+}

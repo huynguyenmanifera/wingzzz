@@ -1,0 +1,1174 @@
+---
+"hu":
+  "account": >-
+    fiókom
+  "activate_subscription":
+    "back_to_my_free_trial": >-
+      Vissza az ingyenes próbaidőszakomra!
+    "cta_activate": >-
+      Aktiválom az előfizetésem.
+    "cta_specific_activate": >-
+      "Activate my <span class='cta-highlight'>%{subscriptionType}</span> Subscription"
+    "cta_specific_activate_text_only": >-
+      "Activate my %{subscriptionType} Subscription"
+    "intro_html": >-
+      <p><b>Örülünk</b>, hogy tetszik a Wingzzz szolgáltatásunk.<br/>Ha szeretnéd
+      aktiválni már most az előfizetésed, az ingyenes próbaidőszakod megmaradt napjait
+      hozzáadjuk a lejárati dátumhoz, így ezek a napok se fognak elveszni.</p>
+    "payment_starts_after_trial_ends": >-
+      Előfizetésed a próbaidőszak lejárta után ekkortól élesedik
+    "pricing": >-
+      Csak %{amount}/hónap
+    "subscription_perks":
+      - >-
+        számtalan mesekönyvhöz férhetsz hozzá,
+      - >-
+        bárhol olvashatod őket internetes böngésződön keresztül,
+      - >-
+        bármelyik nyelven, amelyiken szeretnéd!
+    "title": >-
+      Aktiváld az előfizetésed és máris
+    "student_amount_limit": >-
+      Up to %{studentLimit} students
+    "school_subscription_agreement": >-
+      I agree to purchase a Wingzzz yearly subscription for my school.
+    "school_subscription_invoicing": >-
+      A prorated invoice will be generated for the remaining months of this current year and sent to the budget responsible person at your school.
+    "invoicing_details": >-
+      Invoicing details:
+    "successful_school_subscription_sign_up": >-
+      Sikeresen felíratkoztál az éves iskolai előfizetésre.
+  "activerecord":
+    "errors":
+      "messages":
+        "record_invalid": >-
+          Sikertelen érvényesítés %{errors}
+        "restrict_dependent_destroy":
+          "has_many": >-
+            Nem lehet törölni az adatot, mert a %{record} adat kapcsolódik hozzá.
+          "has_one": >-
+            Nem lehet törölni az adatot, mert a %{record} adat kapcsolódik hozzá.
+  "administrate":
+    "actions":
+      "back": >-
+        Vissza
+      "confirm": >-
+        Biztos benne?
+      "destroy": >-
+        Töröl
+      "edit": >-
+        Szerkeszt
+      "edit_resource": >-
+        Szerkeszt %{name}
+      "new_resource": >-
+        Új %{name}
+      "show_resource": >-
+        Mutasd %{name}
+      "unsubscribe": >-
+        Leiratkozás
+    "controller":
+      "create":
+        "success": >-
+          %{resource} sikeresen létre lett hozva.
+      "destroy":
+        "success": >-
+          %{resource} sikeresen törölve lett.
+      "update":
+        "success": >-
+          %{resource} sikeresen frissítve lett.
+    "fields":
+      "has_many":
+        "more": >-
+          %{count} a %{total_count} összegből
+        "none": >-
+          Nincs
+    "form":
+      "error": >-
+        Hiba
+      "errors": >-
+        %{pluralized_errors} megtiltotta a %{resource_name} mentését:
+    "search":
+      "clear": >-
+        Keresés törlése
+      "label": >-
+        Keresés %{resource}
+  "age": >-
+    Kor
+  "age_range":
+    "all_ages": >-
+      Minden korosztály
+    "month":
+      "one": >-
+        1 hónapos
+      "other": >-
+        %{count} hónap
+    "to": >-
+      -
+    "year":
+      "one": >-
+        1 éves
+      "other": >-
+        %{count} éves
+    "years_and_over": >-
+      %{count}+ éves
+  "all_rights_reserved": >-
+    Minden jog fenntartva.
+  "already_have_an_account": >-
+    Van már fiókja?
+  "attributes":
+    "email": >-
+      e-mail cím
+    "address": >-
+      cím
+    "postcode": >-
+      irányitószám
+    "city": >-
+      város
+    "brin_code": >-
+      iskola
+    "locale": >-
+      nyelv
+    "password": >-
+      jelszó
+    "password_confirmation": >-
+      jelszó (megerősítése)
+    "remember_me": >-
+      Emlékezz rám!
+    "contact_email": >-
+      Számlázásért felelős (email)
+    "contact_name": >-
+      Számlázásért felelős (név)
+    "billing_name": >-
+      Iskola neve
+    "billing_brincode": >-
+      Iskola kódja
+    "billing_address": >-
+      Iskola címe
+    "billing_city": >-
+      Város
+    "billing_postcode": >-
+      Irányítószám
+  "back_to": >-
+    Vissza
+  "back_to_library": >-
+    Vissza a könyvtárhoz
+  "books": >-
+    Könyvek
+  "cancel": >-
+    Törlés
+  "cancel_subscription": >-
+    Előfizetés törlése
+  "card_expiry_date": >-
+    Lejárati dátum
+  "card_holder": >-
+    Kártya tulajdonosa
+  "card_number": >-
+    Kártyaszám
+  "change_password": >-
+    Jelszó megváltoztatása
+  "change_your_password": >-
+    Változtasd meg a jelszavadat!
+  "components":
+    "search_input":
+      "placeholder": >-
+        Könyv keresése
+  "confirm_canceling_subscription": "Biztos benne, hogy törölni kívánja az előfizetését?
+    \r\n\r\nNem visszafordítható!"
+  "confirm_your_password": >-
+    Jelszó megerősítése
+  "consumer_account": >-
+    Kártyaszám
+  "consumer_name": >-
+    Név
+  "contact": >-
+    Kapcsolat
+  "creditcard": >-
+    Hitelkártya vagy bankkártya
+  "currently_reading": >-
+    Saját meséim
+  "date":
+    "abbr_day_names":
+      - >-
+        v.
+      - >-
+        h.
+      - >-
+        k.
+      - >-
+        sze.
+      - >-
+        cs.
+      - >-
+        p.
+      - >-
+        szo.
+    "abbr_month_names":
+      -
+      - >-
+        jan.
+      - >-
+        febr.
+      - >-
+        márc.
+      - >-
+        ápr.
+      - >-
+        máj.
+      - >-
+        jún.
+      - >-
+        júl.
+      - >-
+        aug.
+      - >-
+        szept.
+      - >-
+        okt.
+      - >-
+        nov.
+      - >-
+        dec.
+    "day_names":
+      - >-
+        vasárnap
+      - >-
+        hétfő
+      - >-
+        kedd
+      - >-
+        szerda
+      - >-
+        csütörtök
+      - >-
+        péntek
+      - >-
+        szombat
+    "formats":
+      "default": >-
+        %Y.%m.%d.
+      "long": >-
+        %Y. %B %e.
+      "short": >-
+        %b %e.
+    "month_names":
+      -
+      - >-
+        január
+      - >-
+        február
+      - >-
+        március
+      - >-
+        április
+      - >-
+        május
+      - >-
+        június
+      - >-
+        július
+      - >-
+        augusztus
+      - >-
+        szeptember
+      - >-
+        október
+      - >-
+        november
+      - >-
+        december
+    "order":
+      - :év
+      - :hónap
+      - :nap
+  "datetime":
+    "distance_in_words":
+      "about_x_hours":
+        "one": >-
+          kb. 1 órája
+        "other": >-
+          kb. %{count} órája
+      "about_x_months":
+        "one": >-
+          kb. 1 hónapja
+        "other": >-
+          kb. %{count} hónapja
+      "about_x_years":
+        "one": >-
+          kb. 1 éve
+        "other": >-
+          kb. %{count} éve
+      "almost_x_years":
+        "one": >-
+          majdnem 1 éve
+        "other": >-
+          majdnem %{count} éve
+      "half_a_minute": >-
+        fél perce
+      "less_than_x_minutes":
+        "one": >-
+          kevesebb, mint 1 perce
+        "other": >-
+          kevesebb, mint %{count} perce
+      "less_than_x_seconds":
+        "one": >-
+          kevesebb, mint 1 másodperce
+        "other": >-
+          kevesebb, mint %{count} másodperce
+      "over_x_years":
+        "one": >-
+          több, mint 1 éve
+        "other": >-
+          több, mint %{count} éve
+      "x_days":
+        "one": >-
+          1 napja
+        "other": >-
+          %{count} napja
+      "x_minutes":
+        "one": >-
+          1 perce
+        "other": >-
+          %{count} perce
+      "x_months":
+        "one": >-
+          1 hónapja
+        "other": >-
+          %{count} hónapja
+      "x_seconds":
+        "one": >-
+          1 másodperce
+        "other": >-
+          %{count} másodperce
+      "x_years":
+        "one": >-
+          1 year
+        "other": >-
+          %{count} years
+    "prompts":
+      "day": >-
+        Nap
+      "hour": >-
+        Óra
+      "minute": >-
+        Perc
+      "month": >-
+        Hónap
+      "second": >-
+        Másodperc
+      "year": >-
+        Év
+  "devise":
+    "confirmations":
+      "confirmed": >-
+        Köszönjük, az e-mail címedet sikeresen megerősítetted.
+      "send_instructions": >-
+        Pár percen belül kapni fogsz egy e-mailt az e-mail címed megerősítéséhez szükséges
+        lépésekről.
+      "send_paranoid_instructions": >-
+        Amennyiben az e-mail címed már létezik az adatbázisunkban, pár percen belül
+        kapni fogsz egy e-mailt az e-mail címed megerősítéséhez szükséges lépésekről.
+    "failure":
+      "already_authenticated": >-
+        Már bejelentkeztél.
+      "inactive": >-
+        A fiókod még nem lett aktiválva.
+      "invalid": >-
+        Hibás %{authentication_keys} cím vagy jelszó.
+      "last_attempt": >-
+        Már csak egy próbálkozásod maradt, mielőtt a fiókod lezárásra kerül.
+      "locked": >-
+        A fiókodat blokkoltuk.
+      "not_found_in_database": >-
+        Hibás %{authentication_keys} cím vagy jelszó.
+      "timeout": >-
+        A munkamenet lejárt. Jelentkezz be újra a folytatáshoz!
+      "unauthenticated": ''
+      "unconfirmed": >-
+        A folytatás előtt meg kell erősítened az e-mail címed.
+    "mailer":
+      "confirmation_instructions":
+        "subject": >-
+          Megerősítési lépések
+      "email_changed":
+        "subject": >-
+          E-mail cím megváltoztatva
+      "password_change":
+        "subject": >-
+          Jelszó megváltoztatva
+      "reset_password_instructions":
+        "subject": >-
+          Jelszó visszaállítási lépések
+      "unlock_instructions":
+        "subject": >-
+          Feloldási lépések
+    "omniauth_callbacks":
+      "failure": >-
+        %{kind} nem azonosítható, mert %{reason}.
+      "success": >-
+        Sikeres hitelesítés a %{kind} fiókról.
+    "passwords":
+      "no_token": >-
+        Nem férhetsz hozzá az oldalhoz jelszó visszaállító e-mail nélkül. Ellenőrizd,
+        hogy az e-mailben megadott teljes URL-t használd.
+      "send_instructions": >-
+        Pár percen belül kapni fogsz egy e-mailt arról, hogy hogyan tudod visszaállítani
+        a jelszavadat.
+      "send_paranoid_instructions": >-
+        Ha létezik az e-mail cím, pár percen belül kapni fogsz egy e-mailt arról,
+        hogy hogyan tudod visszaállítani a jelszavadat.
+      "updated": >-
+        Jelszavadat sikeresen frissítettük. Most már be vagy jelentkezve.
+      "updated_not_active": >-
+        Jelszavad sikeresen meg lett változtatva.
+    "registrations":
+      "destroyed": >-
+        Fiókodat sikeresen töröltük. Reméljük, hamarosan viszontláthatunk!
+      "signed_up": >-
+        Üdvözlünk! Sikeresen regisztráltál.
+      "signed_up_but_inactive": >-
+        Sikeresen regisztráltál. Ennek ellenére sajnos nem tudunk beléptetni, ugyanis
+        a fiókod még nem lett aktiválva.
+      "signed_up_but_locked": >-
+        Sikeresen regisztráltál. Ennek ellenére nem tudunk beléptetni, ugyanis a fiókod
+        zárolva lett.
+      "signed_up_but_unconfirmed": "Küldtünk egy üzenetet a megerősítési linkkel az
+        e-mail címedre. Kérjük, hogy használd a linket a fiókod aktiválásához.\r\n\r\nNem
+        találod? Kérjük ellenőrizd a Spam / Promóciók mappában is!"
+      "updated": >-
+        Fiókodat sikeresen frissítettük.
+      "updated_but_not_signed_in": >-
+        Fiókodat sikeresen frissítettük, de mivel a jelszavadat módosítottad, ezért
+        újra be kell lépned.
+      "update_needs_confirmation": >-
+        Sikeresen megváltoztattad az e-mail címedet, de szükségünk van az új e-mail
+        címed megerősítésére. Kérlek ellenőrizd az e-mailedet, és kattints a levélben
+        szereplő megerősítési linkre az e-mail címed megerősítéséhez.
+    "sessions":
+      "already_signed_out": ''
+      "signed_in": ''
+      "signed_out": ''
+    "unlocks":
+      "send_instructions": >-
+        Pár percen belül kapsz egy e-mailt a fiókod feloldásához szükséges lépésekkel.
+      "send_paranoid_instructions": >-
+        Amennyiben a fiókod már létezik, pár percen belül kapsz e-mailt a feloldáshoz
+        szükséges lépésekkel.
+      "unlocked": >-
+        Fiókodat sikeresen feloldottuk. Jelentkezz be a folytatáshoz.
+  "devise_mailer":
+    "confirmation_instructions":
+      "body_html": >-
+        <p><b>Üdvözlünk</b> , örülünk, hogy csatlakoztál a Wingzzz tagjai közé!<br/>
+        A fiókodhoz tartozó e-mail címet a lenti linkre kattintva erősítheted meg.</p>
+      "confirm_my_account": >-
+        Fiók megerősítése
+      "opening": >-
+        Üdvözlünk %{email},
+    "reset_password_instructions":
+      "body_2_html": >-
+        Amennyiben nem te kérted, kérjük ne vedd figyelembe a lenti e-mailt.
+      "body_html": >-
+        <p>Wingzzz jelszavadnak megváltoztatására vonatkozó kérelmet kaptunk tőled.</p>
+        <p>Amennyiben te kérted, kérjük, nyomd meg a lenti gombot és kövesd a lépéseket!</p>
+      "change_password": >-
+        Jelszó megváltoztatása
+  "directdebit": >-
+    iDeal
+  "dont_have_an_account": >-
+    Még nincs fiókod?
+  "edit_book": >-
+    Könyv módosítása
+  "edit_epub": >-
+    EPUB módosítása
+  "edit_epub_instructions": >-
+    Szükséges az EPUB tömörítése zip file-ba (META-INF, mimetype és OEBPS). Ha az
+    e fájlokat tartalmazó szülő mappát tömöríted, akkor az EPUB nem töltődik be megfelelően.
+  "edit_settings": >-
+    beállítások módosítása
+  "epub_was_successfully_updated": >-
+    EPUB sikeresen feltöltve
+  "errors":
+    "format": >-
+      %{attribute} %{message}
+    "messages":
+      "accepted": >-
+        nincs elfogadva
+      "already_confirmed": >-
+        Már meg lett erősítve, kérjük jelentkezz be!
+      "blank": >-
+        nincs megadva
+      "carrierwave_download_error": >-
+        nincs letöltve
+      "carrierwave_integrity_error": >-
+        nem engedélyezett fájltípus
+      "carrierwave_processing_error": >-
+        nem sikerült feldolgozni
+      "confirmation": >-
+        nem egyezik %{attribute}
+      "confirmation_period_expired": >-
+        %{period} belül meg kell erősíteni, kérjük igényelj újat!
+      "content_type_blacklist_error": >-
+        Nem engedélyezett a %{content_type} fájlok feltöltése.
+      "content_type_whitelist_error": >-
+        Nem engedélyezett a %{content_type} fájlok feltöltése, engedélyezett típusok:
+        %{allowed_types}
+      "empty": >-
+        nincs megadva
+      "equal_to": >-
+        pontosan %{count} kell legyen
+      "even": >-
+        páros kell legyen
+      "exclusion": >-
+        foglalt
+      "expired": >-
+        lejárt, kérjük igényelj újat
+      "extension_blacklist_error": >-
+        Nem engedélyezett a %{extension} fájlok feltöltése, tiltott típusok: %{prohibited_types}
+      "extension_whitelist_error": >-
+        Nem engedélyezett a %{extension}fájlok feltöltése, engedélyezett típusok:
+        %{allowed_types}
+      "greater_than": >-
+        nagyobb kell legyen, mint %{count}
+      "greater_than_or_equal_to": >-
+        legalább %{count} kell legyen
+      "inclusion": >-
+        nincs a listában
+      "invalid": >-
+        nem megfelelő
+      "less_than": >-
+        kevesebb, mint %{count} kell legyen
+      "less_than_or_equal_to": >-
+        legfeljebb %{count} lehet
+      "max_size_error": >-
+        Fájl méret kevesebb lehet, mint %{max_size}
+      "mini_magick_processing_error": >-
+        Nem sikerült szerkeszteni a MiniMagick alkalmazással, talán ez nem kép? Eredeti
+        hiba:%{e}
+      "min_size_error": >-
+        A fájlméret nagyobbnak kell lennie, mint %{min_size}
+      "model_invalid": >-
+        Érvényesítési hiba: %{errors}
+      "not_an_integer": >-
+        Egész számnak kell lennie.
+      "not_a_number": >-
+        Ez nem szám.
+      "not_found": >-
+        Nem található.
+      "not_locked": >-
+        Nincs lezárva.
+      "not_saved":
+        "one": >-
+          1 hiba megakadályozta %{resource} mentését:
+        "other": >-
+          %{count} számú hiba megakadályozta %{resource} mentését:
+      "odd": >-
+        Páratlannak kell lennie.
+      "other_than": >-
+        Másnak kell lennie, mint %{count}
+      "present": >-
+        Üresnek kell lennie.
+      "required": >-
+        Léteznie kell.
+      "rmagick_processing_error": >-
+        Nem sikerült szerkeszteni az rmagick segítségével, talán ez nem kép?
+      "taken": >-
+        már foglalt.
+      "too_long":
+        "one": >-
+          is too long (maximum is 1 character)
+        "other": >-
+          is too long (maximum is %{count} characters)
+      "too_short":
+        "one": >-
+          is too short (minimum is 1 character)
+        "other": >-
+          is too short (minimum is %{count} characters)
+      "wrong_length":
+        "one": >-
+          is the wrong length (should be 1 character)
+        "other": >-
+          is the wrong length (should be %{count} characters)
+    "template":
+      "body": >-
+        Problémás mezők:
+      "header":
+        "one": >-
+          1 hiba miatt nem menthető a következő: %{model}
+        "other": >-
+          %{count} hiba miatt nem menthető a következő: %{model}
+  "flash":
+    "actions":
+      "create":
+        "notice": >-
+          %{resource_name} sikeresen létre lett hozva.
+      "destroy":
+        "alert": >-
+          %{resource_name} törlése nem sikerült.
+        "notice": >-
+          %{resource_name} törlése sikeres volt.
+      "update":
+        "notice": >-
+          %{resource_name} frissítése sikeres volt.
+  "forgot_your_password": >-
+    Elfelejtette a jelszavát?
+  "for_questions_please_email_to_html": >-
+    Kérdésed, észrevételed van? Kérlek, küldj nekünk egy e-mailt a %{email} címre.
+  "front":
+    "book_progress": >-
+      %{current} / %{total}
+    "finish": >-
+      befejezés
+  "helpers":
+    "label":
+      "profile":
+        "max_age_in_months": >-
+          Max. kor
+        "min_age_in_months": >-
+          Min. kor
+    "page_entries_info":
+      "entry":
+        "nulla": >-
+          bejegyzés
+        "egy": >-
+          bejegyzés
+        "másik": >-
+          bejegyzés
+      "more_pages":
+        "display_entries": >-
+          Megjelenítés %{entry_name} <b>%{first}&nbsp;-&nbsp;%{last}</b> of <b>%{total}</b>
+          teljes
+      "one_page":
+        "display_entries":
+          "zero": >-
+            No %{entry_name} found
+          "one": >-
+            Displaying <b>1</b> %{entry_name}
+          "other": >-
+            Displaying <b>all %{count}</b> %{entry_name}
+    "select":
+      "prompt": >-
+        Kérem válasszon
+    "submit":
+      "create": >-
+        %{model} hozzáadása
+      "submit": >-
+        %{model} mentése
+      "update": >-
+        %{model} módosítása
+  "home": >-
+    Főoldal
+  "language": >-
+    Nyelv
+  "languages":
+    "en": >-
+      Angol
+    "hu": >-
+      Magyar
+    "nl": >-
+      Holland
+  "library": >-
+    Könyvtár
+  "library_settings": >-
+    Könyvtár beállítások
+  "login_as_a_different_user": >-
+    Belépés másik felhasználónévvel
+  "mailer":
+    "closing_html": >-
+      Köszönjük,<br />A Wingzzz csapata
+    "opening": >-
+      Hello %{email},
+  "my_account": >-
+    Fiókom
+  "my_stories": >-
+    Saját meséim
+  "new_password_instructions": >-
+    Hamarosan küldeni fogunk egy e-mailt a jelszó visszaállítási lépésekkel. Kérjük,
+    írja be az e-mail címét.
+  "next_payment_date": >-
+    Következő számlázás dátuma
+  "no_books_found": >-
+    Nem találtunk könyveket.
+  "number":
+    "currency":
+      "format":
+        "delimiter": ''
+        "format": >-
+          %n %u
+        "precision": >-
+          2
+        "separator": >-
+          ,
+        "significant": false
+        "strip_insignificant_zeros": true
+        "unit": >-
+          Ft
+    "format":
+      "delimiter": ''
+      "precision": >-
+        2
+      "separator": >-
+        ,
+      "significant": true
+      "strip_insignificant_zeros": true
+    "human":
+      "decimal_units":
+        "format": >-
+          %n %u
+        "units":
+          "billion": >-
+            milliárd
+          "million": >-
+            millió
+          "quadrillion": >-
+            billiárd
+          "thousand": >-
+            ezer
+          "trillion": >-
+            billió
+          "unit": ''
+      "format":
+        "delimiter": ''
+        "precision": >-
+          1
+        "significant": true
+        "strip_insignificant_zeros": true
+      "storage_units":
+        "format": >-
+          %n %u
+        "units":
+          "byte":
+            "egy": >-
+              bájt
+            "másik": >-
+              bájt
+          "eb": >-
+            EB
+          "gb": >-
+            GB
+          "kb": >-
+            KB
+          "mb": >-
+            MB
+          "pb": >-
+            PB
+          "tb": >-
+            TB
+    "percentage":
+      "format":
+        "delimiter": ''
+        "format": >-
+          %n%
+    "precision":
+      "format":
+        "delimiter": ''
+  "payment_method": >-
+    fizetés módja
+  "paypal": >-
+    PayPal
+  "pdf_to_epub_converter": >-
+    Átalakítás PDF-ből EPUB-ba
+  "preview": >-
+    előnézet
+  "privacy_policy": >-
+    Adatvédelmi tájékoztató
+  "published_by": >-
+    közzétette: %{publisher}
+  "written_by": >-
+    írta: %{author}
+  "ransack":
+    "all": >-
+      Mind
+    "and": >-
+      és
+    "any": >-
+      bármi
+    "asc": >-
+      felmenő
+    "attribute": >-
+      tulajdonság
+    "combinator": >-
+      kombináló
+    "condition": >-
+      feltétel
+    "desc": >-
+      csökkenő
+    "or": >-
+      vagy
+    "predicate": >-
+      állítmány
+    "predicates":
+      "blank": >-
+        üres
+      "cont": >-
+        tartalmaz
+      "cont_all": >-
+        mindent tartalmaz
+      "cont_any": >-
+        bármelyiket tartalmazza
+      "does_not_match": >-
+        nem egyezik
+      "does_not_match_all": >-
+        nem mindennel egyezik
+      "does_not_match_any": >-
+        semminek nem felel meg
+      "end": >-
+        végződik
+      "end_all": >-
+        mindennel végződik
+      "end_any": >-
+        bármelyikkel végződik
+      "eq": >-
+        egyező
+      "eq_all": >-
+        mindennel egyező
+      "eq_any": >-
+        bármelyikkel egyező
+      "false": >-
+        hamis
+      "gt": >-
+        nagyobb mint
+      "gt_all": >-
+        mindegyiknél nagyobb
+      "gt_any": >-
+        bármelyiknél nagyobb
+      "gteq": >-
+        nagyobb vagy egyenlő mint
+      "gteq_all": >-
+        mindegyiknél nagyobb vagy egyenlő mint
+      "gteq_any": >-
+        bármelyiknél nagyobb vagy egyenlő mint
+      "in": >-
+        -ben
+      "in_all": >-
+        mindenben
+      "in_any": >-
+        bármiben
+      "lt": >-
+        kevesebb mint
+      "lt_all": >-
+        mindnél kevesebb
+      "lt_any": >-
+        bármelyiknél kevesebb
+      "lteq": >-
+        kevesebb vagy egyenlő mint
+      "lteq_all": >-
+        mindennél kevesebb vagy egyenlő mint
+      "lteq_any": >-
+        bármelyiknél kevesebb vagy egyenlő mint
+      "matches": >-
+        egyezik
+      "matches_all": >-
+        minddel egyezik
+      "matches_any": >-
+        bármivel egyezik
+      "not_cont": >-
+        nem tartalmaz
+      "not_cont_all": >-
+        nem tartalmazza az összeset
+      "not_cont_any": >-
+        nem tartalmaz semmit
+      "not_end": >-
+        nem végződik
+      "not_end_all": >-
+        nem végződik mindennel
+      "not_end_any": >-
+        nem végződik bármivel
+      "not_eq": >-
+        nem egyenlő
+      "not_eq_all": >-
+        nem egyenlő mindennel
+      "not_eq_any": >-
+        nem egyenlő bármivel
+      "not_in": >-
+        nincs benne
+      "not_in_all": >-
+        nincs mindenben
+      "not_in_any": >-
+        nincs bármiben
+      "not_null": >-
+        nem nulla
+      "not_start": >-
+        doesn't start with
+      "not_start_all": >-
+        doesn't start with all
+      "not_start_any": >-
+        doesn't start with any
+      "null": >-
+        nulla
+      "present": >-
+        jelen van
+      "start": >-
+        kezdődik
+      "start_all": >-
+        mindennel kezdődik
+      "start_any": >-
+        bármivel kezdődik
+      "true": >-
+        igaz
+    "search": >-
+      Keresés
+    "search_results": >-
+      Keresési találatok
+    "sort": >-
+      fajta
+    "value": >-
+      érték
+  "read_book": >-
+    Könyvet olvas
+  "read_to_me": >-
+    Olvass nekem
+  "listen_now": >-
+    Figyelj most
+  "recently_added": >-
+    Újdonságok
+  "reminder_mailer":
+    "last_day_of_trial":
+      "body_html": "<p>Reméljük, hogy sok szép történetet olvastatok a Wingzzz online
+        mesetárban.</p> <p><b>A %{trial_duration_in_days} napos próbaidőszakod holnap
+        le fog járni, és bízunk benne, hogy továbbra is előfizetsz a\r\nszolgáltatásunkra,
+        amelyet később bármikor lemondhatsz.</b><br/>Kérjük, kattints az alábbi gombra
+        az előfizetés meghosszabbításáért!</p>"
+      "opening": >-
+        Kedves Wingzzz Tagunk!
+      "ps_html": "<p>A következő hetekben is\r\nmég számtalan nagyszerű mesét fogunk
+        feltölteni a könyvtárunkba, hogy folyamatosan élhessetek át\r\nújabb és újabb
+        izgalmas kalandokat.</p>"
+      "subject": >-
+        %{trial_duration_in_days} ingyenes próbaidőszakod holnap lejár
+    "last_day_of_trial_for_teachers":
+      "body_html": "<p>Reméljük, hogy sok szép történetet olvastatok a Wingzzz online
+        mesetárban.</p> <p><b>A %{trial_duration_in_days} napos próbaidőszakod holnap
+        le fog járni, és bízunk benne, hogy továbbra is előfizetsz a\r\nszolgáltatásunkra,
+        amelyet később bármikor lemondhatsz.</b><br/>Kérjük, kattints az alábbi gombra
+        az előfizetés meghosszabbításáért!</p>"
+      "opening": >-
+        Kedves Wingzzz Tagunk!
+      "ps_html": "<p>A következő hetekben is\r\nmég számtalan nagyszerű mesét fogunk
+        feltölteni a könyvtárunkba, hogy folyamatosan élhessetek át\r\nújabb és újabb
+        izgalmas kalandokat.</p>"
+      "subject": >-
+        %{trial_duration_in_days} ingyenes próbaidőszakod holnap lejár
+    "trial_ended":
+      "body_html": >-
+        <p><b>A %{trial_duration_in_days} napos próbaidőszakod lejárt.</b> Reméljük,
+        hogy sok szép történetet fedeztetek fel a Wingzzz online mesetárban. Bízunk
+        benne, hogy tetszik a szolgáltatásunk, és továbbra is előfizetsz rá, amelyet
+        természetesen később bármikor lemondhatsz.</p><p>Ne feledd, hogy a következő
+        hetekben is még számtalan nagyszerű mesét fogunk feltölteni a könyvtárunkba,
+        hogy folyamatosan élhessetek át újabb és újabb izgalmas kalandokat.</p><p>
+        Kérjük, kattints az alábbi gombra az előfizetés meghosszabbításáért!</p>
+      "opening": >-
+        Kedves Wingzzz Tagunk!
+      "ps_html": >-
+        <p>Amennyiben mégse hosszabbítod meg az előfizetésed, oszd meg nekünk a véleményed,
+        hogy fejleszteni tudjuk a szolgáltatásunkat. Kérjük, írd meg a javaslataidat
+        a support@mywingzzz.com e-mail címre!</p>
+      "subject": >-
+        %{trial_duration_in_days} napos ingyenes próbaverziója lejárt
+    "trial_ended_for_teachers":
+      "body_html": "<p>Reméljük, hogy sok szép történetet olvastatok a Wingzzz online
+        mesetárban.</p> <p><b>A %{trial_duration_in_days} napos próbaidőszakod holnap
+        le fog járni, és bízunk benne, hogy továbbra is előfizetsz a\r\nszolgáltatásunkra,
+        amelyet később bármikor lemondhatsz.</b><br/>Kérjük, kattints az alábbi gombra
+        az előfizetés meghosszabbításáért!</p>"
+      "opening": >-
+        Kedves Wingzzz Tagunk!
+      "ps_html": "<p>A következő hetekben is\r\nmég számtalan nagyszerű mesét fogunk
+        feltölteni a könyvtárunkba, hogy folyamatosan élhessetek át\r\nújabb és újabb
+        izgalmas kalandokat.</p>"
+      "subject": >-
+        %{trial_duration_in_days} ingyenes próbaidőszakod holnap lejár
+  "required": >-
+    kötelező
+  "reset_all_preferences": >-
+    alap preferenciák visszaállítása
+  "reset_password": >-
+    Jelszó visszaállítása
+  "results_in_other_languages": >-
+    keresési eredmény más nyelveken
+  "save": >-
+    mentés
+  "search": >-
+    keresés
+  "settings": >-
+    beállítások
+  "show_book": >-
+    mutasd a könyvet
+  "show_books_in_language": >-
+    mutasd a könyvet különböző nyelveken
+  "show_only_books_from_ages": >-
+    mutasd a kornak megfelelő könyveket
+  "sign_in": >-
+    bejelentkezés
+  "sign_in_here": >-
+    Belépés itt
+  "sign_out": >-
+    kijelentkezés
+  "sign_up": >-
+    regisztrálás
+  "sign_in_with_provider": >-
+    belépés %{provider} fiókkal
+  "sign_up_with_provider": >-
+    regisztráció %{provider} fiókkal
+  "sign_up_disclaimer_html": >-
+    A lenti  <b>%{sign_up}</b> gombra kattintva automatikusan elfogadja az %{terms_of_service_link}et
+    és az %{privacy_policy_link}t.
+  "sign_up_for_wingzzz": >-
+    Feliratkozás a Wingzzz-re
+  "sign_up_for_wingzzz_as_a_teacher": >-
+    Felíratkozás a Wingzzz-re tanárként
+  "sign_up_description_for_teaceher": >-
+    Íratkozz fel tanárként a Wingzzz-re
+  "sign_up_success_text": >-
+    A visszaigazoló linket elküldtük az e-mail címedre. Kattints a linkre, hogy aktiváld
+    a fiókodat!
+  "sign_up_success_title": >-
+    Köszönjük a feliratkozást!
+  "simple_form":
+    "error_notification":
+      "default_message": >-
+        Kérjük, tekintsd át az alábbi problémákat:
+    "hints":
+      "user":
+        "edit":
+          "password": >-
+            (minimum %{minimum_password_length} karakter)
+        "new":
+          "password": >-
+            (minimum %{minimum_password_length} karakter)
+    "labels":
+      "user":
+        "edit":
+          "password": >-
+            Új jelszó
+          "password_confirmation": >-
+            Új jelszó megerősítése
+    "no": >-
+      Nem
+    "required":
+      "html": >-
+        <div class="input-label__required">*</div>
+      "mark": >-
+        *
+      "text": >-
+        kötelező
+    "yes": >-
+      Igen
+  "statistics": >-
+    statisztikák
+  "subscription_and_billing": >-
+    előfizetés & fizetés
+  "subscription_and_billing_not_found": >-
+    nem találtunk aktív előfizetést
+  "subscription_not_yet_activated": >-
+    Az előfizetésed még nincs befejezve.
+  "support":
+    "array":
+      "last_word_connector": >-
+        és
+      "two_words_connector": >-
+        és
+      "words_connector": >-
+        ,
+  "terms_of_use": >-
+    Általános szerződési feltételek
+  "time_ago": >-
+    %{time} óta
+  "time":
+    "am": >-
+      de.
+    "formats":
+      "default": >-
+        %Y. %b %e., %H:%M
+      "long": >-
+        %Y. %B %e., %A, %H:%M
+      "short": >-
+        %b %e., %H:%M
+      "us": >-
+        %m/%d/%Y %I:%M %p
+    "pm": >-
+      du.
+  "trending_now": >-
+    Aktuális kedvenceink
+  "trial_days_left":
+    "one": >-
+      %{count} nap van hátra a próbaidőszakból
+    "other": >-
+      %{count} nap van hátra a próbaidőszakból
+  "try_again": >-
+    próbáld újra
+  "user_mailer":
+    "activation_email":
+      "body_html": >-
+        <p> Mostantól gyermekeddel együtt azonnal hozzáfértek a gyorsan növekvő, többnyelvű
+        digitális könyvtárunkhoz és bárhol, bármikor és bármilyen eszközön olvashatjátok
+        a meséket.</p> <p><b>Hamarosan további könyvek érkeznek!</b></p> <p>A következő
+        számládat %{next_payment_on} napján fogjuk számlázni.</p> <p> Könnyedén, bármikor
+        törölheted az előfizetésed az applikáció <b>Fiókom</b> menüpontjában.</p>
+        <p><b>Jó szórakozást a mesékhez!</b></p>
+      "opening": >-
+        Köszönjük, hogy aktiváltad előfizetésedet!
+      "subject": >-
+        Köszönjük, hogy előfizettél a Wingzzzre!
+    "activation_email_for_class_subscription":
+      "body_html": >-
+        <p> Mostantól gyermekeddel együtt azonnal hozzáfértek a gyorsan növekvő, többnyelvű
+        digitális könyvtárunkhoz és bárhol, bármikor és bármilyen eszközön olvashatjátok
+        a meséket.</p> <p><b>Hamarosan további könyvek érkeznek!</b></p> <p>A következő
+        számládat %{next_payment_on} napján fogjuk számlázni.</p> <p> Könnyedén, bármikor
+        törölheted az előfizetésed az applikáció <b>Fiókom</b> menüpontjában.</p>
+        <p><b>Jó szórakozást a mesékhez!</b></p>
+      "opening": >-
+        Köszönjük, hogy aktiváltad előfizetésedet!
+      "subject": >-
+        Köszönjük, hogy előfizettél a Wingzzzre!        
+    "unsubscribe_email":
+      "body_html": >-
+        <p>Sajnáljuk, hogy úgy döntöttél, hogy törlöd a Wingzzz előfizetésedet.</p>
+        <p>Reméljük, megosztod velünk véleményed a support@mywingzzz.com e-mail címen,
+        hogyan tudjuk a szolgáltatásunkat jobbá tenni, és hamarosan újra előfizetőként
+        köszönthetünk. Kérésednek megfelelően előfizetésedet töröltük, azonban az
+        utolsó kifizetett időszak végéig még belépésed van a Wingzzz-be.</p>
+      "go_to_wingzzz": >-
+        Kapcsolatfelvétel
+      "subject": >-
+        A Wingzzz előfizetésedet sikeresen töröltük.
+    "welcome_email":
+      "body_html": >-
+        <p>Köszönjük, hogy csatlakoztál a Wingzzz közösségébe, örülünk, hogy itt vagy!</p>
+        <p>A Wingzzz-nél abban hisszük, hogy a történetek olvasása a legegyszerűbb és leghatékonyabb módja a gyermek érzelmi, szociális és kognitív fejlesztésének.
+        Most számtalan, gondosan válogatott történethez adunk hozzáférést, amellyel támogatni szeretnénk
+        Téged abban, hogy magabiztos, boldog és életrevaló „pillangókat” nevelhess fel!</p>
+        <p>A próbaverziód automatikus lejárati ideje: %{trial_period_up_to_and_including}</p>
+        <p>Könnyedén, bármikor előfizethetsz szolgáltatásunkra (a Fiókom menüpont alatt) mindössze %{subscription_amount} havi díjért, amelyet bármikor törölhetsz.</p>
+        <p>Fedezd fel a legújabb meséinket! Kellemes időtöltést kívánunk!</p>
+        <p>Üdvözlettel:<br>
+        A Wingzzz csapata</p>
+      "opening": >-
+        Köszöntünk a Wingzzz-en!
+      "subject": >-
+        Üdvözlünk
+  "verifying_your_payment": >-
+    fizetését ellenőrizzük
+  "views":
+    "pagination":
+      "first": >-
+        &laquo; Első
+      "last": >-
+        Utolsó &raquo;
+      "next": >-
+        Következő&rsaquo;
+      "previous": >-
+        &lsaquo; Előző
+      "truncate": >-
+        &hellip;
+  "you_can_cancel_anytime": >-
+    Előfizetését bármikor lemondhatja.
+  "start_to_read": >-
+    Tovább a könyvekre!
+  "website_address": >-
+    https://mywingzzz.com/home-hu-fejleszd/
+  "school_name": >-
+    Iskola neve
+  "click": >-
+    Klikk

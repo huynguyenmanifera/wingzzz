@@ -1,0 +1,32 @@
+<% content_for(:title) { t('edit_book').capitalize } %>
+
+<header class="main-content__header" role="banner">
+  <h1 class="main-content__page-title">
+    <%= content_for(:title) %>
+  </h1>
+
+  <div class="mr-4">
+    <%= link_to(
+      t("show_book").capitalize,
+      [namespace, @book],
+      class: "button",
+    ) %>
+  </div>
+</header>
+
+<section class="main-content__body">
+  <div class="mb-12">
+    <%= @book.title %>
+  </div>
+  <div>
+    <p><%= t('edit_epub_instructions') %></p>
+    <p class="mb-8"><%= link_to_pdf_to_epub_converter %></p>
+    <%= form_for :epub, method: :put, url: admin_book_epub_path(book_id: @book) do |f| %>
+      <%= f.file_field :file, accept: 'application/epub+zip,application/zip' %>
+
+      <div class="mt-6">
+        <%= f.submit  %>
+      </div>
+    <% end  %>
+  </div>
+</section>

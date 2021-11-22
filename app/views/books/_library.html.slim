@@ -1,0 +1,3 @@
+.library
+    h2.text-xl.tracking-wide.text-wz-white.my-2= t('library').capitalize
+    = render(Books::GridComponent.new(books: library.results_current_language.decorate))

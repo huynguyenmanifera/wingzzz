@@ -1,0 +1,136 @@
+img {
+  border: none;
+  -ms-interpolation-mode: bicubic;
+  max-width: 100%;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+}
+
+body {
+  font-family: "Poppins", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 15px;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+table {
+  border-collapse: separate;
+  mso-table-lspace: 0pt;
+  mso-table-rspace: 0pt;
+  width: 100%;
+}
+
+table td {
+  font-family: "Poppins", Helvetica, Arial, sans-serif;
+  vertical-align: top;
+}
+
+.body {
+  width: 100%;
+}
+
+.container {
+  display: block;
+  margin: 0 auto !important;
+  max-width: 100%;
+  padding: 10px;
+}
+
+.content {
+  box-sizing: border-box;
+  display: block;
+  margin: 10px auto;
+  max-width: 600px;
+}
+
+.content-inner {
+  max-width: 560px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.main {
+  background: #ffffff;
+  border-radius: 7px;
+  width: 100%;
+}
+
+.logo {
+  max-width: 203px;
+  margin: 0 auto 50px auto;
+}
+
+.wrapper {
+  box-sizing: border-box;
+  padding: 60px 20px 20px 20px;
+}
+
+.content-block {
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.hr {
+  margin: 20px 0;
+  border-top: none;
+  border-bottom-color: black;
+}
+
+.link,
+.link:visited {
+  color: #006dec;
+  text-decoration: none;
+}
+
+.btn {
+  box-sizing: border-box;
+  text-decoration: none;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.65rem;
+  padding-bottom: 0.65rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-cta {
+  background-color: #19c2f2;
+  color: #ffffff;
+  border-color: #0f9ece;
+}
+
+.btn-cta .cta-highlight {
+  color: yellow;
+}
+.btn-cta-subtext {
+  color: #19c2f2;
+  font-size: 14px;
+}
+
+.opening {
+  font-size: 20px;
+  margin-top: 0;
+  margin-bottom: 32px;
+}
+
+.closing {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.centered {
+  text-align: center;
+}

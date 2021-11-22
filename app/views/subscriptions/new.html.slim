@@ -1,0 +1,5 @@
+= render(Page::Bare::Component.new) do |page|
+  - flash.each do |_type, message|
+    h1.text-xl.text-center.mb-5.text-wz-black= message
+
+  = render 'form', method: :post

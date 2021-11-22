@@ -1,0 +1,50 @@
+inherit_from: .rubocop_todo.yml
+
+# The behavior of RuboCop can be controlled via the .rubocop.yml
+# configuration file. It makes it possible to enable/disable
+# certain cops (checks) and to alter their behavior if they accept
+# any parameters. The file can be placed either in your home
+# directory or in some project directory.
+#
+# RuboCop will start looking for the configuration file in the directory
+# where the inspected file is and continue its way up to the root directory.
+#
+# See https://github.com/rubocop-hq/rubocop/blob/master/manual/configuration.md
+require:
+  - rubocop-rails
+
+AllCops:
+  NewCops: disable
+  Exclude:
+    - "bin/**/*"
+    - "config/**/*"
+    - "db/**/*"
+    - "features/step_definitions/email_steps.rb"
+    - "features/support/env.rb"
+    - "lib/tasks/**/*"
+    - "node_modules/**/*"
+    - "script/**/*"
+    - "test/**/*"
+    - "vendor/bundle/**/*"
+    - "Gemfile"
+    - "Rakefile"
+    - "Guardfile"
+    - "lib/i18n_csv_tasks.rb"
+
+Metrics/BlockLength:
+  Exclude:
+    - spec/**/*.rb
+
+Style/Documentation:
+  Enabled: false
+
+Layout/LineLength:
+  Max: 100
+  Exclude:
+    - spec/**/*.rb
+
+Rails/UnknownEnv:
+  Environments:
+    - production
+    - development
+    - test

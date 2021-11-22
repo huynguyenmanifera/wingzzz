@@ -1,0 +1,66 @@
+<% content_for(:title) { t("administrate.actions.show_resource", name: page.page_title) } %>
+
+<header class="main-content__header" role="banner">
+  <h1 class="main-content__page-title">
+    <%= content_for(:title) %>
+  </h1>
+
+  <% if valid_action?(:edit) && show_action?(:edit, page.resource) %>
+    <div class="mr-4">
+      <%= link_to(
+        t("edit_book").capitalize,
+        [:edit, namespace, page.resource],
+        class: "button",
+      ) %>
+    </div>
+
+    <div class="mr-4">
+      <%= link_to(
+        t("edit_epub").upcase_first,
+        edit_admin_book_epub_path(book_id: page.resource),
+        class: "button",
+      ) %>
+    </div>
+  <% end %>
+</header>
+
+<section class="main-content__body">
+  <div class="flex">
+    <div class="flex-1">
+      <div class="relative h-full overflow-hidden">
+        <dl>
+          <% page.attributes.each do |attribute| %>
+            <dt class="attribute-label" id="<%= attribute.name %>">
+            <%= t(
+              "helpers.label.#{resource_name}.#{attribute.name}",
+              default: attribute.name.titleize,
+            ) %>
+            </dt>
+
+            <dd class="attribute-data attribute-data--<%=attribute.html_class%>"
+                ><%= render_field attribute, page: page %></dd>
+          <% end %>
+        </dl>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <div class="text-right">
+      <div class="mb-2">
+        <%= link_to book_path(page.resource), target: '_blank' do %>
+          <div>
+            <%= render(Books::CoverImageComponent.new(book: page.resource.decorate)) %>
+          </div>
+        <% end %>
+      </div>
+      <div>
+        <div class="mb-2">
+          <%= link_to book_path(page.resource), target: '_blank' do %>
+            <div class="btn btn-secondary text-center">
+              <%= t('preview').capitalize %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

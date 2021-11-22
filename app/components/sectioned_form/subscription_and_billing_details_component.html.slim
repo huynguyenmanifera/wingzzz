@@ -1,0 +1,9 @@
+- if details?
+  = render(SectionedForm::MandateDetailsComponent.new(mandate: user.mollie_mandate))
+  = render(SectionedForm::InputPreviewComponent.new(label: t('next_payment_date').capitalize)) do
+    .font-black= user.subscription.formatted_next_payment_date
+- elsif school_subscription_member?
+  .text-wz-gray-500.px-2.py-2.text-sm
+    =  t('valid_school_subscription', school_subscription: user.active_subscription.end_date).html_safe
+- else
+  = render(SectionedForm::InputPreviewComponent.new(label: t('subscription_and_billing_not_found').capitalize))

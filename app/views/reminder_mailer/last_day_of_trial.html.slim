@@ -1,0 +1,11 @@
+= render layout: 'shared/simple_html_email_layout' do
+  .opening= t('reminder_mailer.last_day_of_trial.opening', email: @user.email)
+  p= t('reminder_mailer.last_day_of_trial.body_html', trial_duration_in_days: @trial_duration_in_days)
+  .closing= t('mailer.closing_html')
+  = render('shared/button', label: t('activate_subscription.cta_activate'), url: new_subscription_url)
+  p.centered
+    b= t('activate_subscription.pricing', amount: localized_subscription_amount)
+    br
+    = t('you_can_cancel_anytime')
+
+  p= t('reminder_mailer.last_day_of_trial.ps_html')

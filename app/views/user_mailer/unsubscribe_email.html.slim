@@ -1,0 +1,9 @@
+= render layout: 'shared/simple_html_email_layout' do
+
+  .opening= t('mailer.opening', email: @email)
+
+  p= t('user_mailer.unsubscribe_email.body_html')
+  = render('shared/button', label: t('user_mailer.unsubscribe_email.go_to_wingzzz').upcase_first, url: Wingzzz.config.external_urls[:contact])
+
+  .closing= t('mailer.closing_html')
+

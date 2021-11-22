@@ -1,0 +1,15 @@
+div.min-w-screen
+  div.py-10.flex.items-center
+    div.pl-12
+      = link_to root_path do
+        = render(LogoComponent.new(dark_mode: true))
+    div.flex-1
+      = content
+
+    div.text-wz-dm-blue-400.text-lg.pr-16.text-right
+      span.pr-2.whitespace-no-wrap= link_to(t('my_account').capitalize, account_path, class: 'link text-wz-dm-blue-400')
+      span -
+      span.pl-2.whitespace-no-wrap= link_to(t('sign_out').capitalize, destroy_user_session_path, method: Rails.application.config.devise.sign_out_via, class: 'link text-wz-dm-blue-400')
+
+  .px-16.pb-4
+    = render(TrialLinkComponent.new(user: helpers.current_user))

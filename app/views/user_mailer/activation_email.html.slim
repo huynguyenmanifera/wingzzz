@@ -1,0 +1,5 @@
+= render layout: 'shared/simple_html_email_layout' do
+  .opening= t('user_mailer.activation_email.opening', email: @user.email)
+  p= t('user_mailer.activation_email.body_html', next_payment_on: l(@next_payment_on, format: :long))
+
+  .closing= t('mailer.closing_html')

@@ -1,0 +1,13 @@
+.link {
+  @apply text-blue-600 bg-transparent cursor-pointer;
+}
+
+.link:hover,
+.link:active,
+.link:focus {
+  @apply underline outline-none;
+}
+
+.link-transparent {
+  @apply text-wz-white-trn-500;
+}

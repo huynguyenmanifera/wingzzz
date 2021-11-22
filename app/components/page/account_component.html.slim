@@ -1,0 +1,9 @@
+= render(Page::Default::Component.new(show_background_image: false)) do |page|
+  - page.with(:header) { header }
+
+  span.link.text-wz-white.flex.items-center.mb-4
+    .pr-3 = render(IconComponent.new(icon: 'page-back', size: 'small'))
+    = link_to t('back_to_library').capitalize, root_path
+
+  div.bg-wz-white.py-10.px-12
+    = content

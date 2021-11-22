@@ -1,0 +1,474 @@
+<div class="mb-12 flex">
+  <div class="mr-24 w-1/2">
+    <div class="mb-8">
+      <h3 class="text-xl mb-4 text-gray-700">Input</h3>
+      <p class="text-sm mb-2">Simple input without label</p>
+      <input placeholder="Placeholder" class="input" />
+    </div>
+    <div class="mb-8 bg-wz-blue-600 text-wz-white p-4">
+      <h3 class="input-label">Search input</h3>
+      <div style="max-width: 40rem;">
+        <form _lpchecked="1">
+          <div class="relative">
+            <div class="w-12 absolute top-0 bottom-0 flex justify-center">
+              <div class="self-center text-wz-gray-600">
+                <div class="fill-current relative icon-small">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="1 1 31 31"
+                    class="left-0 top-0 w-full h-full">
+                    <defs>
+                      <path id="search_svg__a"
+                        d="M14 1c7.18 0 13 5.82 13 13 0 2.793-.88 5.38-2.38 7.499l6.83 6.83a2 2 0 11-2.829 2.828l-6.783-6.785A12.943 12.943 0 0114 27C6.82 27 1 21.18 1 14S6.82 1 14 1zm0 4a9 9 0 100 18 9 9 0 000-18z">
+                      </path>
+                    </defs>
+                    <use fill-rule="evenodd" xlink:href="#search_svg__a"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <input
+              class="input input-icon-left input-icon-right focus:border-wz-gray-400 active:border-wz-gray-400 text-wz-gray-300"
+              style="background-color: rgba(255,255,255,0.15)" autofocus="" placeholder="Search" name="" value=""
+              onfocus="var temp_value=this.value; this.value=''; this.value=temp_value" />
+            <a class="hide-if-input-before-has-placeholder-shown w-12 absolute top-0 right-0 bottom-0 flex justify-center text-wz-gray-600 hover:text-wz-gray-500"
+              href="?">
+              <div class="self-center">
+                <div class="fill-current relative icon-small">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="4 2 22 30"
+                    class="left-0 top-0 w-full h-full">
+                    <defs>
+                      <path id="close_svg__a"
+                        d="M4.268 2.732l10.606 10.606L25.481 2.732a2.5 2.5 0 113.536 3.536L18.409 16.874l10.608 10.607a2.5 2.5 0 01-3.536 3.536L14.874 20.409 4.268 31.017A2.5 2.5 0 01.732 27.48l10.606-10.607L.732 6.268a2.5 2.5 0 113.536-3.536z">
+                      </path>
+                    </defs>
+                    <use fill-rule="evenodd" xlink:href="#close_svg__a"></use>
+                  </svg>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="hidden">
+            <input type="submit" name="commit" value="Save changes" data-disable-with="Save changes" />
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="mb-6">
+      <h3 class="text-xl mb-4 text-gray-700">With input labels</h3>
+    </div>
+    <div class="mb-8">
+      <label class="input-wrapper">
+        <div class="input-label">
+          First name
+        </div>
+
+        <div class="input-hint">
+          Some helper text
+        </div>
+
+        <input placeholder="First name" class="input" />
+      </label>
+      <label class="input-wrapper">
+        <div class="input-label">
+          Phone number
+          <div class="input-label__required">
+            (required)
+          </div>
+        </div>
+
+        <input placeholder="Phone number" type="phone" class="input" />
+      </label>
+      <label class="input-wrapper">
+        <div class="input-label">
+          Email
+        </div>
+        <input placeholder="Email" class="input" />
+      </label>
+    </div>
+    <div class="mb-6">
+      <h3 class="text-xl mb-4 text-gray-700">With error</h3>
+    </div>
+    <div class="mb-8">
+      <label class="input-wrapper input-wrapper--invalid">
+        <div class="input-label">
+          Phone number
+          <div class="input-label__required">
+            (required)
+          </div>
+        </div>
+
+        <div class="input-hint">
+          Can be either mobile or home phone
+        </div>
+
+        <input placeholder="Phone number" type="phone" class="input" />
+
+        <div class="input-error">phone number can't be blank</div>
+      </label>
+    </div>
+  </div>
+  <div class="w-1/2">
+    <div class="input-wrapper">
+      <div class="input-label">
+        Checkboxes
+      </div>
+
+      <div class="input-hint">
+        Just a bunch of checkboxes
+      </div>
+
+      <div class="mb-1">
+        <label class="checkbox">
+          <input class="checkbox__input" type="checkbox" false="" />
+          <span class="checkbox__box">
+            <span class="checkbox__box__mark"></span>
+          </span>
+          <span class="checkbox__label">Enabled</span>
+        </label>
+      </div>
+      <div class="mb-1">
+        <label class="checkbox">
+          <input class="checkbox__input" type="checkbox" checked="'checked'" false="" />
+          <span class="checkbox__box">
+            <span class="checkbox__box__mark"></span>
+          </span>
+          <span class="checkbox__label">Enabled and checked</span>
+        </label>
+      </div>
+    </div>
+
+    <div class="input-wrapper">
+      <div class="input-label">
+        Checkboxes (disabled)
+      </div>
+
+      <div class="mb-1">
+        <label class="checkbox">
+          <input class="checkbox__input" type="checkbox" false="" disabled="'disabled'" />
+          <span class="checkbox__box">
+            <span class="checkbox__box__mark"></span>
+          </span>
+          <span class="checkbox__label">Disabled</span>
+        </label>
+      </div>
+      <div class="mb-1">
+        <label class="checkbox">
+          <input class="checkbox__input" type="checkbox" checked="'checked'" disabled="'disabled'" />
+          <span class="checkbox__box">
+            <span class="checkbox__box__mark"></span>
+          </span>
+          <span class="checkbox__label">Disabled and checked</span>
+        </label>
+      </div>
+    </div>
+
+    <div class="mb-8 bg-wz-blue-600 text-wz-white p-4 block">
+      <div class="input-wrapper">
+        <div class="input-label">
+          Transparent checkboxes
+        </div>
+
+        <div class="mb-1">
+          <label class="checkbox checkbox--transparent">
+            <input class="checkbox__input" type="checkbox" false="" />
+            <span class="checkbox__box">
+              <span class="checkbox__box__mark"></span>
+            </span>
+            <span class="checkbox__label">Enabled</span>
+          </label>
+        </div>
+        <div class="mb-1">
+          <label class="checkbox checkbox--transparent">
+            <input class="checkbox__input" type="checkbox" checked="'checked'" false="" />
+            <span class="checkbox__box">
+              <span class="checkbox__box__mark"></span>
+            </span>
+            <span class="checkbox__label">Enabled and checked</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="input-wrapper">
+      <div class="input-label">
+        Radio buttons
+        <div class="input-label__required">
+          (required)
+        </div>
+      </div>
+
+      <div class="input-hint">
+        Some radio buttons
+      </div>
+
+      <div class="mb-1">
+        <label class="radio-button">
+          <input class="radio-button__input" name="radio_button1%" type="radio" false="" />
+          <span class="radio-button__box"></span>
+          <span class="radio-button__label">Enabled</span>
+        </label>
+      </div>
+      <div class="mb-1">
+        <label class="radio-button">
+          <input class="radio-button__input" name="radio_button1%" type="radio" checked="'checked'" false="" />
+          <span class="radio-button__box"></span>
+          <span class="radio-button__label">Enabled and checked</span>
+        </label>
+      </div>
+    </div>
+    <div class="input-wrapper">
+      <div class="input-label">
+        Radio buttons (disabled)
+      </div>
+
+      <div class="mb-1">
+        <label class="radio-button">
+          <input class="radio-button__input" name="radio_button2%" type="radio" false="" disabled="'disabled'" />
+          <span class="radio-button__box"></span>
+          <span class="radio-button__label">Disabled</span>
+        </label>
+      </div>
+      <div class="mb-1">
+        <label class="radio-button">
+          <input class="radio-button__input" name="radio_button2%" type="radio" checked="'checked'"
+            disabled="'disabled'" />
+          <span class="radio-button__box"></span>
+          <span class="radio-button__label">Disabled and checked</span>
+        </label>
+      </div>
+    </div>
+    <label class="input-wrapper">
+      <div class="input-label">
+        Select
+        <div class="input-label__required">
+          (required)
+        </div>
+      </div>
+
+      <div class="input-hint">
+        Native select box
+      </div>
+
+      <div class="select-box">
+        <select class="select-box__select">
+          <option class="select-box__select__option">
+            Option 1
+          </option>
+          <option class="select-box__select__option">
+            Option 2
+          </option>
+          <option class="select-box__select__option">
+            Option 3
+          </option>
+          <option class="select-box__select__option">
+            Option 4
+          </option>
+        </select>
+
+        <div class="select-box__caret">
+          <div class="select-box__caret__icon"></div>
+        </div>
+      </div>
+    </label>
+    <label class="input-wrapper">
+      <div class="input-label">
+        Select
+        <div class="input-label__required">
+          (required)
+        </div>
+      </div>
+
+      <div class="input-hint">
+        With default option
+      </div>
+
+      <div class="select-box">
+        <select class="select-box__select">
+          <option class="select-box__select__option">
+            Alternative 1
+          </option>
+          <option class="select-box__select__option">
+            Alternative 2
+          </option>
+          <option selected="true" class="select-box__select__option">
+            Default option
+          </option>
+        </select>
+
+        <div class="select-box__caret">
+          <div class="select-box__caret__icon"></div>
+        </div>
+      </div>
+    </label>
+    <label class="input-wrapper">
+      <div class="input-label">
+        Select with long text
+      </div>
+
+      <div class="select-box">
+        <select class="select-box__select">
+          <option class="select-box__select__option">
+            Option 4 with a very long label lorem ipsum dolet dies irae requiem
+            mozart something running out of creativity
+          </option>
+        </select>
+
+        <div class="select-box__caret">
+          <div class="select-box__caret__icon"></div>
+        </div>
+      </div>
+    </label>
+    <label class="input-wrapper">
+      <div class="input-label">
+        Select with placeholder
+      </div>
+
+      <div class="select-box">
+        <select class="select-box__select" placeholder="Select country">
+          <option disabled="disabled" selected="true" value="" class="select-box__select__option">
+            Select country
+          </option>
+
+          <option class="select-box__select__option">
+            United Kingdom
+          </option>
+          <option class="select-box__select__option">
+            Hungary
+          </option>
+          <option class="select-box__select__option">
+            The Netherlands
+          </option>
+        </select>
+
+        <div class="select-box__caret">
+          <div class="select-box__caret__icon"></div>
+        </div>
+      </div>
+    </label>
+    <label class="input-wrapper">
+      <div class="input-label">
+        Select (disabled)
+        <div class="input-label__required">
+          (required)
+        </div>
+      </div>
+
+      <div class="input-hint">
+        This feature is only available for premium users
+      </div>
+
+      <div class="select-box disabled">
+        <select class="select-box__select" disabled="disabled">
+          <option class="select-box__select__option">
+            Option 1
+          </option>
+          <option class="select-box__select__option">
+            Option 2
+          </option>
+        </select>
+
+        <div class="select-box__caret">
+          <div class="select-box__caret__icon"></div>
+        </div>
+      </div>
+    </label>
+
+    <label class="mb-8 block">
+      <div class="flex text-wz-gray-600 mb-1">
+        <div class="flex-1 text-lg">
+          Compact select
+        </div>
+        <div class="italic">
+          (required)
+        </div>
+      </div>
+
+      <div class="text-wz-gray-600 mb-1">
+        A smaller version of the select box
+      </div>
+
+      <div class="select-box select-box--compact">
+        <select class="select-box__select">
+          <option class="select-box__select__option">
+            Option 1
+          </option>
+          <option class="select-box__select__option">
+            Option 2
+          </option>
+        </select>
+
+        <div class="select-box__caret">
+          <div class="select-box__caret__icon"></div>
+        </div>
+      </div>
+    </label>
+
+    <div class="mb-8 bg-wz-blue-600 text-wz-white p-4 block">
+      <h3 class="input-label">Transparent select box</h3>
+      <div class="select-box select-box--transparent mb-8">
+        <select class="select-box__select">
+          <option class="select-box__select__option">
+            Option 1
+          </option>
+          <option class="select-box__select__option">
+            Option 2
+          </option>
+          <option class="select-box__select__option">
+            Option 3
+          </option>
+          <option class="select-box__select__option">
+            Option 4
+          </option>
+        </select>
+
+        <div class="select-box__caret">
+          <div class="select-box__caret__icon"></div>
+        </div>
+      </div>
+
+      <h3 class="input-label">Transparent select box (disabled)</h3>
+      <div class="select-box select-box--transparent disabled mb-8">
+        <select class="select-box__select" disabled="disabled">
+          <option class="select-box__select__option">
+            Option 1
+          </option>
+          <option class="select-box__select__option">
+            Option 2
+          </option>
+          <option class="select-box__select__option">
+            Option 3
+          </option>
+          <option class="select-box__select__option">
+            Option 4
+          </option>
+        </select>
+
+        <div class="select-box__caret">
+          <div class="select-box__caret__icon"></div>
+        </div>
+      </div>
+
+      <h3 class="text-xl mb-4 text-wz-dm-blue-300">Compact transparent select box</h3>
+      <div class="select-box select-box--transparent select-box--compact mb-8">
+        <select class="select-box__select">
+          <option class="select-box__select__option">
+            Option 1
+          </option>
+          <option class="select-box__select__option">
+            Option 2
+          </option>
+          <option class="select-box__select__option">
+            Option 3
+          </option>
+          <option class="select-box__select__option">
+            Option 4
+          </option>
+        </select>
+
+        <div class="select-box__caret">
+          <div class="select-box__caret__icon"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

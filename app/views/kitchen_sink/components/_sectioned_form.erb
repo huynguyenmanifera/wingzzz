@@ -1,0 +1,66 @@
+<div class="py-6">
+  <div class="max-w-6xl">
+      <%= render(SectionedForm::Component.new(title: 'Account (form preview)')) do %>
+        <%= render(SectionedForm::SectionComponent.new) do %>
+
+          <%= render(SectionedForm::SectionTitleComponent.new(title: 'Membership')) do %>
+            <a href="#" class="link text-sm">Cancel membership</a>
+          <% end %>
+
+          <%= render(SectionedForm::SectionContentComponent.new) do %>
+            <%=  render(SectionedForm::InputPreviewComponent.new(label: 'Username')) { 'Mary - Ann' }%>
+            <%=  render(SectionedForm::InputPreviewComponent.new(label: 'Email address')) { 'maryannsmith@gmail.com' }%>
+            <%=  render(SectionedForm::InputPreviewComponent.new(label: 'Password')) { '********' }%>
+
+            <div class="text-right">
+              <a href="#" class="link text-sm">Change password</a>
+            </div>
+
+            <%=  render(SectionedForm::InputPreviewComponent.new(label: 'Date of birth')) { 'August 2, 1980' }%>
+            <%=  render(SectionedForm::InputPreviewComponent.new(label: 'Language')) { 'English' }%>
+
+            <div class="text-right mt-6">
+              <button class="btn btn-light btn-border">Edit account</button>
+            </div>
+          <% end%>
+        <% end %>
+
+        <%= render(SectionedForm::SectionComponent.new) do %>
+          <%= render(SectionedForm::SectionTitleComponent.new(title: 'Subscription & Billing')) %>
+
+          <%= render(SectionedForm::SectionContentComponent.new) do %>
+            <%=  render(SectionedForm::InputPreviewComponent.new(label: 'Subscription')) { 'Pilot' }%>
+            <%=  render(SectionedForm::InputPreviewComponent.new(label: 'Mastercard')) { '•••• •••• •••• 2102' }%>
+            <%=  render(SectionedForm::InputPreviewComponent.new(label: 'Your next billing date is')) do %>
+              <span class="font-bold text-wz-red-500">18 March 2020</span>
+            <% end %>
+
+            <div class="text-right mt-6">
+              <button class="btn btn-light btn-border">
+                Change subscription details
+              </button>
+            </div>
+          <% end%>
+        <% end %>
+      <% end %>
+  </div>
+  <div class="max-w-6xl pt-8">
+    <div>
+      <%= render(SectionedForm::Component.new(title: 'Account (simple form)')) do %>
+        <%= render(SectionedForm::SectionComponent.new) do %>
+
+          <%= render(SectionedForm::SectionTitleComponent.new(title: 'Membership')) %>
+
+          <%= render(SectionedForm::SectionContentComponent.new) do %>
+            <% simple_form_for(User.new, url: '#') do |f| %>
+              <div class="max-w-sm">
+                <%= f.input :email, as: :string, hint: 'Some helper text' %>
+                <%= f.input :email, as: :select, collection: %w(Yes No), label: 'Select', required: true, hint: 'Native select box' %>
+              </div>
+            <% end %>
+          <% end%>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>

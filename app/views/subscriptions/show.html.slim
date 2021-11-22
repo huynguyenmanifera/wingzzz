@@ -1,0 +1,4 @@
+= render(Page::Bare::Component.new) do |page|
+  h1.text-xl.mb-8.text-wz-black= t('verifying_your_payment').capitalize
+
+  = link_to t('try_again').capitalize, root_path, class: 'btn btn-cta w-full'

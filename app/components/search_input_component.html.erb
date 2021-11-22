@@ -1,0 +1,26 @@
+<form class="mb-0">
+  <div class="relative">
+    <div class="w-12 absolute top-0 bottom-0 flex justify-center">
+      <div class="self-center text-wz-gray-600">
+        <%= render(IconComponent.new(icon: "search", size: "small")) %>
+      </div>
+    </div>
+    <input
+      class="input input-icon-left input-icon-right focus:border-wz-gray-400 active:border-wz-gray-400 text-wz-gray-300"
+      style="background-color: rgba(255,255,255,0.15)"
+      autofocus
+      placeholder="<%= t('components.search_input.placeholder').capitalize %>""
+      name="<%= name %>"
+      value="<%= value %>"
+
+      <%# Hack to automatically set cursor to end of input value upon refreshing the page %>
+      <%# See https://stackoverflow.com/a/24891345/2911452 %>
+      onfocus="var temp_value=this.value; this.value=''; this.value=temp_value"
+    />
+    <%= link_to '?', class: "hide-if-input-before-has-placeholder-shown w-12 absolute top-0 right-0 bottom-0 flex justify-center text-wz-gray-600 hover:text-wz-gray-500" do %>
+      <div class="self-center">
+        <%= render(IconComponent.new(icon: "close", size: "small")) %>
+      </div>
+    <% end %>
+  </div>
+</form>

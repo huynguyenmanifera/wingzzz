@@ -1,0 +1,12 @@
+= render(Page::AccountComponent.new) do |page|
+  = render(SectionedForm::Component.new(title: t('account').capitalize)) do
+    = render(SectionedForm::SectionComponent.new) do
+      = render(SectionedForm::SectionTitleComponent.new(title: (t('settings').capitalize))) do
+      = render(SectionedForm::SectionContentComponent.new) do
+        = simple_form_for current_user, url: account_settings_path do |f|
+          .max-w-sm
+            = f.input :locale, as: :select, collection: I18n.available_locales.map { |locale| [t("languages.#{locale}"), locale] }, include_blank: false
+
+            div.text-right.mt-16
+              = link_to t('cancel').capitalize, account_path, class: 'btn btn-secondary mr-4'
+              = f.button :submit, t('save').capitalize, class: 'btn btn-primary'

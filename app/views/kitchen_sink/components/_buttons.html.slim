@@ -1,0 +1,41 @@
+div.mb-12.flex
+  div class="w-1/2"
+    = render "kitchen_sink/components/button", class_names: ["btn-cta"]
+    = render "kitchen_sink/components/button", class_names: ["btn-primary"]
+    = render "kitchen_sink/components/button", class_names: ["btn-secondary"]
+    = render "kitchen_sink/components/button", class_names: ["btn-light", "btn-border"]
+
+  div class="w-1/2"
+    h3.text-xl.mb-4.text-gray-700 Transparent button
+    div.pb-4 Should use opacity to blend in with the background color.
+    .bg-wz-black.text-wz-white.px-4.pt-4
+      = render "kitchen_sink/components/button", class_names: ["btn-transparent", "btn-border"]
+
+    .bg-wz-blue-600.text-wz-white.px-4.pt-4
+      = render "kitchen_sink/components/button", class_names: ["btn-transparent", "btn-border"]
+
+    .bg-wz-blue-500.text-wz-white.px-4.pt-4
+      = render "kitchen_sink/components/button", class_names: ["btn-transparent", "btn-border"]
+
+div.mb-12
+  div.pb-4 Buttons with icon
+  div.inline-block.m-4
+    button.btn.btn-sm.btn-cta.btn-with-icon
+      = render(IconComponent.new(icon: 'checkmark'))
+      span Finish
+
+  div.inline-block.m-4
+    button.btn.btn.btn-cta.btn-with-icon
+      = render(IconComponent.new(icon: 'checkmark'))
+      span Finish
+
+  div.inline-block.m-4
+    button.btn.btn-lg.btn-cta.btn-with-icon
+      = render(IconComponent.new(icon: 'checkmark'))
+      span Finish
+
+  div.inline-block.m-4.bg-wz-blue-600.text-wz-white.p-4
+    .inline-block
+      button.btn.btn.btn-transparent.btn-border.btn-with-icon
+        = render(IconComponent.new(icon: 'checkmark'))
+        span Finish

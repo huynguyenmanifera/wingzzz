@@ -1,0 +1,44 @@
+.mb-12.flex
+  div.mr-24 class="w-1/2"
+    h3.text-xl.mb-4.text-gray-700 Default usage
+
+    pre.m-0.p-0
+      code.inline-block.p-4.scrolling-touch
+        |
+          = simple_form_for(User.new) do |f|
+            = f.input :email, autofocus: true, autocomplete: :email
+            = f.input :password, autocomplete: 'current-password'
+
+            .inline-block.m-1
+              = f.button :submit, class: 'btn-cta'
+            .inline-block.m-1
+              = link_to 'Cancel', '#', class: 'btn btn-secondary', type: :button
+
+    = simple_form_for(User.new, url: '#') do |f|
+      = f.input :email, autofocus: true, autocomplete: :email
+      = f.input :password, autocomplete: 'current-password'
+
+      .inline-block.m-1
+        = f.button :submit, class: 'btn-cta'
+      .inline-block.m-1
+        = link_to 'Cancel', '#', class: 'btn btn-secondary', type: :button
+
+  div class="w-1/2"
+    h3.text-xl.mb-4.text-gray-700 Some variations
+
+    = simple_form_for(User.new, url: '#') do |f|
+      = f.input :email, as: :string, hint: 'Some helper text'
+      = f.input :email, required: true
+      = f.input :password
+      = f.input :email, as: :select, collection: %w(Yes No), label: 'Select', required: true, hint: 'Native select box'
+      = f.input :email, as: :select, collection: %w(Yes No Maybe), selected: 'Maybe', label: 'Select', required: true, hint: 'With default option'
+      = f.input :email, as: :select, collection: %w(Yes No), label: 'Select (disabled)', disabled: true, required: true, hint: 'This feature is only available for premium users'
+
+      label.mb-8.bg-wz-blue-600.text-wz-white.p-4.block
+        h3.text-xl.mb-4.text-wz-dm-blue-300 Transparent select box
+        = f.input :email, as: :select, collection: %w(Yes No), label: 'Select', required: true, hint: 'Native select box', input_html: { wz_wrapper_html: { class: "select-box select-box--transparent" } }
+
+      .inline-block.m-1
+        = f.button :submit, class: 'btn-cta'
+      .inline-block.m-1
+        = link_to 'Cancel', '#', class: 'btn btn-secondary', type: :button

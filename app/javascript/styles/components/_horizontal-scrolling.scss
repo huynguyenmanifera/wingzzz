@@ -1,0 +1,55 @@
+//See: https://iamsteve.me/blog/entry/using-flexbox-for-horizontal-scrolling-navigation
+// and https://www.geeksforgeeks.org/hide-scroll-bar-but-while-still-being-able-to-scroll-using-css/
+.horizontal-scrolling {
+  @apply -mx-16;
+  @apply text-wz-white;
+  position: relative;
+  ul {
+    @apply flex flex-no-wrap overflow-x-auto;
+    @apply scrolling-touch;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 4rem;
+
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      width: 0 !important;
+    }
+
+    li {
+      @apply flex-none;
+      scroll-snap-align: end;
+      &:first-child {
+        @apply pl-16;
+      }
+      &:last-child {
+        @apply pr-16;
+      }
+    }
+  }
+
+  .forward,
+  .backward {
+    position: absolute;
+    top: 0;
+    height: calc(255px + 0.75em);
+    width: 4rem;
+    @apply flex items-center justify-center;
+    @apply bg-wz-blue-600 bg-opacity-25;
+    @apply transition duration-300;
+
+    &:hover {
+      @apply bg-opacity-50;
+    }
+  }
+
+  .backward {
+    left: 0;
+  }
+
+  .forward {
+    right: 0;
+  }
+}

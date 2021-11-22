@@ -1,0 +1,4 @@
+= render layout: 'shared/system_html_email_layout' do
+  .opening= t("devise.mailer.invitation_instructions.hello", email: @resource.email)
+  p = t("devise.mailer.invitation_instructions.teacher_invite").html_safe
+  = render('shared/button', label: t("devise.mailer.invitation_instructions.accept").html_safe, url: accept_invitation_url(@resource, invitation_token: @token, locale: 'nl'))

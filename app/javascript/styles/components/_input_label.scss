@@ -1,0 +1,17 @@
+.input-label {
+  @apply flex-1 text-base text-wz-gray-600 mb-1;
+
+  &__required {
+    @apply inline float-none text-red-700;
+  }
+}
+
+.input-wrapper--dark-mode {
+  .input-label {
+    @apply text-wz-white;
+  }
+}
+
+.input-label::first-letter {
+  @apply capitalize;
+}

@@ -1,0 +1,6 @@
+- if books.empty?
+  .text-lg.italic.text-wz-white-trn-700.mb-8
+    = t('no_books_found').capitalize
+- else
+  ul(*ul_attributes)
+    = render(Books::ListItemComponent.with_collection(books))

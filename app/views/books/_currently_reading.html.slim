@@ -1,0 +1,5 @@
+- if currently_reading.any?
+  .currently-reading
+    h2.text-xl.tracking-wide.text-wz-white.my-2= t('currently_reading')
+
+    = render(Books::CarouselComponent.new(books: currently_reading, show_preview: false))

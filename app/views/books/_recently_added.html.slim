@@ -1,0 +1,3 @@
+  .recently-added
+    h2.text-xl.tracking-wide.text-wz-white.my-2= t('recently_added')
+    = render(Books::CarouselComponent.new(books: recently_added))

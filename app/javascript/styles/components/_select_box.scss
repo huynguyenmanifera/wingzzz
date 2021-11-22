@@ -1,0 +1,128 @@
+// Exceptional case: use BEM instead of template system because of complex CSS selectors
+.select-box {
+  @apply relative text-wz-gray-600 border border-wz-gray-600 rounded-sm;
+
+  &__select {
+    @apply w-full block pl-4 pr-6 py-5/2 appearance-none outline-none rounded-sm bg-wz-white appearance-none leading-tight text-sm;
+
+    &:active,
+    &:focus {
+      @apply bg-wz-gray-400 text-wz-blue-400;
+
+      & + .select-box__caret {
+        background: linear-gradient(
+          to right,
+          color(theme("colors.wz-gray-400") a(0%)),
+          theme("colors.wz-gray-400")
+        );
+
+        &__icon {
+          @apply border-wz-blue-400;
+        }
+      }
+    }
+
+    option {
+      @apply text-wz-gray-700;
+    }
+
+    &__option[value=""][disabled] {
+      @apply hidden;
+    }
+  }
+
+  &__caret {
+    @apply absolute right-0 top-0 w-20 h-full rounded-r-sm pointer-events-none;
+
+    // Gradient to make long option text fade away when near caret icon
+    background: linear-gradient(
+      to right,
+      color(theme("colors.wz-white") a(0%)),
+      theme("colors.wz-white")
+    );
+
+    &__icon {
+      @apply border-wz-gray-500 border-b-3 border-l-3 h-3 w-3 absolute m-auto;
+
+      transform: rotate(-45deg);
+      top: 28%;
+      right: 25%;
+    }
+  }
+
+  &:hover:not(.disabled),
+  &:focus-within {
+    @apply border-wz-blue-400 text-wz-blue-400;
+
+    .select-box__caret__icon {
+      @apply border-wz-blue-400;
+    }
+  }
+
+  &.disabled {
+    @apply opacity-50 cursor-not-allowed;
+
+    .select-box__select {
+      @apply cursor-not-allowed;
+    }
+  }
+
+  &--transparent {
+    @apply text-wz-white  border-wz-white;
+
+    .select-box {
+      &__select {
+        background: none;
+
+        &:active,
+        &:focus {
+          @apply text-wz-white;
+
+          background: rgba(255, 255, 255, 0.5);
+
+          & + .select-box__caret {
+            background: none;
+
+            &__icon {
+              @apply border-wz-white;
+            }
+          }
+        }
+      }
+
+      &__caret {
+        background: none;
+
+        &__icon {
+          @apply border-wz-white;
+        }
+      }
+    }
+
+    &:hover:not(.disabled),
+    &:focus-within {
+      @apply border-wz-white text-wz-white;
+
+      background: rgba(255, 255, 255, 0.25);
+
+      .select-box__caret__icon {
+        @apply border-wz-white;
+      }
+    }
+  }
+
+  &--compact {
+    .select-box {
+      &__select {
+        @apply pl-4 pr-6 py-5/2;
+      }
+
+      &__caret {
+        &__icon {
+          @apply h-3 w-3;
+          top: 28%;
+        }
+      }
+    }
+  }
+}

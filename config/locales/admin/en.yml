@@ -1,0 +1,11 @@
+en:
+  preview: preview
+  edit_book: edit book
+  show_book: show book
+  edit_epub: edit EPUB
+  edit_epub_instructions: EPUB contents should be merged (META-INF, mimetype and OEBPS) into a single file. If you compress the parent folder containing these files instead, the EPUB will not load correctly.
+  epub_was_successfully_updated: EPUB was successfully updated.
+  link: Link
+  administrate:
+    actions:
+      unsubscribe: Unsubscribe

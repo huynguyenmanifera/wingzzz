@@ -1,0 +1,9 @@
+.inline-block.m-2
+  .w-24
+
+  .text-xs= icon
+  - IconComponent::ALLOWED_SIZES.each do |size|
+    div.text-xs.text-center.pb-2
+      div.inline-block.border.border-dashed.h-16.w-16.flex.justify-center
+        div.inline-block.self-center.border.border-dashed
+          = render(IconComponent.new(icon: icon, size: size))

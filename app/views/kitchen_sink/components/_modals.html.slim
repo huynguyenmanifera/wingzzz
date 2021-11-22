@@ -1,0 +1,29 @@
+javascript:
+  // This inline JS code has been added solely for demonstrating
+  // the modal component. In actual code the modal should be
+  // opened using a Stimulus controller.
+
+  function openModal(id) {
+    const element = window.document.getElementById(id);
+
+    window.document.body.appendChild(
+      element.content.cloneNode(true)
+    );
+  }
+
+button.btn.btn-primary.mr-6 id="modal-button" onClick="openModal('modal');"
+  = "Open modal"
+template id="modal"
+  = render(ModalComponent.new) do
+    = "Hello World!"
+    div.pt-6 data-action="click->modal#destroy"
+      button.btn.btn-secondary= "Custom close button"
+
+button.btn.btn-primary id="modal-button-large" onClick="openModal('modal-large');"
+  = "Open large modal"
+template id="modal-large"
+  = render(ModalComponent.new(size: :medium)) do
+    = "Hello World!"
+    p= "This modal is bigger"
+    div.pt-6 data-action="click->modal#destroy"
+      button.btn.btn-secondary= "Custom close button"
