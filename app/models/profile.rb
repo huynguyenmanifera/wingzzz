@@ -14,6 +14,11 @@ class Profile < ApplicationRecord
             presence: true,
             inclusion: { in: I18n.available_locales.collect(&:to_s) }
 
+  validates :book_type,
+            numericality: {
+              only_integer: true, allow_nil: true, greater_than_or_equal_to: 0
+            }
+
   before_validation :set_content_language
 
   private

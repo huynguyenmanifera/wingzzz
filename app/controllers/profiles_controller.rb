@@ -13,7 +13,8 @@ class ProfilesController < ApplicationController
     params.require(:profile).permit(
       :min_age_in_months,
       :max_age_in_months,
-      :content_language
+      :content_language,
+      :book_type
     )
   end
 
@@ -21,7 +22,8 @@ class ProfilesController < ApplicationController
     {
       min_age_in_months: nil,
       max_age_in_months: nil,
-      content_language: I18n.locale
+      content_language: I18n.locale,
+      book_type: nill
     }
   end
 end
