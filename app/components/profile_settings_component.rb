@@ -3,12 +3,11 @@ class ProfileSettingsComponent < ViewComponent::Base
 
   AGE_RANGE_YEARS = [0.5, 1, 1.5, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].freeze
 
-  BOOK_TYPE = { "Regular": 0, "Narrated": 1, "Audio Only": 2 }
+  attr_reader :profile, :book_types
 
-  attr_reader :profile
-
-  def initialize(profile:)
+  def initialize(profile:, book_types:)
     @profile = profile.decorate
+    @book_types = book_types
   end
 
   def min_age_in_months_collection
@@ -42,5 +41,9 @@ class ProfileSettingsComponent < ViewComponent::Base
     AGE_RANGE_YEARS.map do |years|
       [label_for_years(years), months_for_years(years)]
     end
+  end
+
+  def list_book_types
+    @book_types.transform_keys { |key, variable| key = t(key)}
   end
 end

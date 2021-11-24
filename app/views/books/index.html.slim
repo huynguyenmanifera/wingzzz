@@ -4,7 +4,7 @@
       .mx-auto.max-w-2xl
         .flex.items-center
           .flex-1= search_input(value: @search_results.filters.fetch(:q, nil), name: "filters[q]")
-          div= render(ProfileSettingsComponent.new(profile: current_profile))
+          div= render(ProfileSettingsComponent.new(profile: current_profile, book_types: @book_types))
 
   = render partial: 'search_results', object: @search_results
   = render partial: 'trending_now', object: @trending_now

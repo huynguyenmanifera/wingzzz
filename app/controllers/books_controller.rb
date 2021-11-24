@@ -8,6 +8,7 @@ class BooksController < ApplicationController
     set_currently_reading
     set_recently_added
     set_book_collection
+    set_book_types
   end
 
   def show
@@ -54,5 +55,9 @@ class BooksController < ApplicationController
   def set_search_results
     @search_results =
       BookCollection.from_filters(filter_params, current_profile)
+  end
+
+  def set_book_types
+    @book_types = Book.book_types
   end
 end

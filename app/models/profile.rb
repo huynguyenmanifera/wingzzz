@@ -16,7 +16,7 @@ class Profile < ApplicationRecord
 
   validates :book_type,
             numericality: {
-              only_integer: true, allow_nil: true, greater_than_or_equal_to: 0
+              only_integer: true, greater_than_or_equal_to: 0, less_than_or_equal_to: 2
             }
 
   before_validation :set_content_language

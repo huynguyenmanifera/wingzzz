@@ -23,7 +23,7 @@ class ProfilesController < ApplicationController
       min_age_in_months: nil,
       max_age_in_months: nil,
       content_language: I18n.locale,
-      book_type: nill
+      book_type: 0
     }
   end
 end

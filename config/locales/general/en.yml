@@ -10,6 +10,9 @@ en:
   for_questions_please_email_to_html: Questions? Please send an email to %{email}
   show_books_in_language: show books in languages
   show_books_in_book_type: show books in book type
+  regular: Regular
+  narrated: Narrated
+  audio_only: Audio only
   language: language
   library: library
   library_settings: library settings
