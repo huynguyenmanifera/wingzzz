@@ -9,6 +9,7 @@ en:
   edit_settings: edit settings
   for_questions_please_email_to_html: Questions? Please send an email to %{email}
   show_books_in_language: show books in languages
+  show_books_in_book_type: show books in book type
   language: language
   library: library
   library_settings: library settings

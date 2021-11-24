@@ -3,6 +3,8 @@ class ProfileSettingsComponent < ViewComponent::Base
 
   AGE_RANGE_YEARS = [0.5, 1, 1.5, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].freeze
 
+  BOOK_TYPE = { "Regular": 0, "Narrated": 1, "Audio Only": 2 }
+
   attr_reader :profile
 
   def initialize(profile:)

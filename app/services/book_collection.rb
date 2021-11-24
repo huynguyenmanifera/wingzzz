@@ -45,7 +45,7 @@ class BookCollection
     {
       title_or_publisher_name_or_authors_name_or_keywords_name_i_cont:
         filters.fetch(:q, nil)
-    }.merge age_range_params
+    }.merge(age_range_params).merge(book_type_params).compact
   end
 
   def ransack_params_current_language
@@ -59,7 +59,7 @@ class BookCollection
   def ransack_base_params
     {
       title_or_publisher_name_or_authors_name_or_keywords_name_i_cont: query
-    }.merge(age_range_params)
+    }.merge(age_range_params).merge(book_type_params)
       .compact
   end
 
@@ -75,5 +75,11 @@ class BookCollection
         max_age_in_months_gt: profile.min_age_in_months
       }
     end
+  end
+
+  def book_type_params
+    {
+      book_type_eq: profile.book_type
+    }
   end
 end

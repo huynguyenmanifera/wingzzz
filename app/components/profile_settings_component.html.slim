@@ -42,14 +42,14 @@ div(data={ controller: 'profile-settings' })
                     input_html: { wz_wrapper_html: { class: 'select-box select-box--transparent' }, data: { target: 'profile-settings.contentLanguage' } }
 
               .mb-5
-                .text-sm.mb-2= t('show_books_in_language').capitalize
+                .text-sm.mb-2= t('show_books_in_book_type').capitalize
                 .flex-1(style='max-width: 12rem;')
-                  = f.input :content_language,
-                    collection: language_collection,
+                  = f.input :book_type,
+                    collection: BOOK_TYPE,
                     include_blank: false,
                     wz_label: false,
                     wrapper: false,
-                    input_html: { wz_wrapper_html: { class: 'select-box select-box--transparent' }, data: { target: 'profile-settings.contentLanguage' } }
+                    input_html: { wz_wrapper_html: { class: 'select-box select-box--transparent' }, data: { target: 'profile-settings.bookType' } }
 
             .flex.items-center.justify-between.mt-5
               = f.submit t('reset_all_preferences'), class: 'text-wz-white bg-transparent link text-sm', name: 'reset', tabindex: -1
