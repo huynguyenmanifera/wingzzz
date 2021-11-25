@@ -106,4 +106,39 @@ RSpec.describe Profile, type: :model do
       end
     end
   end
+
+  describe '#book_type' do
+    subject do
+      build(
+        :profile,
+        book_type: book_type
+      )
+    end
+    describe 'validations' do
+      context 'not set' do
+        let(:book_type) { nil }
+        it { is_expected.to be_invalid }
+      end
+
+      context 'not numeric' do
+        let(:book_type) { 'notanumber' }
+        it { is_expected.to be_invalid }
+      end
+
+      context 'not integer' do
+        let(:book_type) { 12.23 }
+        it { is_expected.to be_invalid }
+      end
+
+      context 'is in list book_types' do
+        let(:book_type) { 0 }
+        it { is_expected.to be_valid }
+      end
+
+      context 'is not in list book_types' do
+        let(:book_type) { 4 }
+        it { is_expected.to be_invalid }
+      end
+    end
+  end
 end
