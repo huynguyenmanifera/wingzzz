@@ -32,12 +32,19 @@ RSpec.describe ProfilesController, type: :controller do
       }.to('nl')
     end
 
+    it 'updates book_type' do
+      expect { do_put(profile: { book_type: 1 }) }.to change {
+        profile.reload.book_type
+      }.to(1)
+    end
+
     context 'when reset is true' do
       let(:profile) do
         create :profile,
                content_language: 'hu',
                min_age_in_months: 12,
-               max_age_in_months: 36
+               max_age_in_months: 36,
+               book_type: 0
       end
 
       let(:user) do
@@ -60,6 +67,10 @@ RSpec.describe ProfilesController, type: :controller do
 
       it 'sets max_age_in_months to nil' do
         expect { do_put }.to change { profile.reload.max_age_in_months }.to(nil)
+      end
+
+      it 'sets book_type to default' do
+        expect { do_put }.to change { profile.reload.book_type }.to(0)
       end
     end
   end
